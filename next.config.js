@@ -15,11 +15,11 @@ const nextConfig = {
 		return [
 			{
 				source: '/api/:path*',
-				destination: `http://localhost:3000/api/:path*`,
+				destination: `https://atory-qnfo-42xdwzsh2-hodor72.vercel.app/api/:path*`,
 			},
 			{
 				source: '/uploads/:path*',
-				destination: `http://localhost:3000/uploads/:path*`,
+				destination: `https://atory-qnfo-42xdwzsh2-hodor72.vercel.app/uploads/:path*`,
 			},
 		]
 	},
