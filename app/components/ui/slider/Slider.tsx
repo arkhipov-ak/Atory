@@ -17,6 +17,9 @@ const Slider: FC<ISlider> = ({ buttonTitle, slides }) => {
 	const { handleClick, index, isNext, isPrev, slideIn } = useSlider(
 		slides.length
 	)
+
+	if(!slides.length) return null
+
 	return (
 		<div className={styles.slider}>
 			{isPrev && (
