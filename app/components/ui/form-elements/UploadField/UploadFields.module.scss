@@ -1,0 +1,54 @@
+.field {
+	background-color: #282828;
+	@apply cursor-pointer mr-8 relative rounded-full w-40 h-40;
+	> input {
+		@apply absolute left-0 top-0 w-full h-full rounded-full opacity-0 z-50 cursor-pointer;
+	}
+	.shadow {
+		transition: all 0.2s ease;
+		background-color: rgba(51, 49, 45, 0.4);
+		transition: all 0.2s ease;
+		@apply rounded-full absolute top-0 left-0 w-full h-full z-2 opacity-0;
+	}
+	> div {
+		> img {
+			@apply rounded-full h-full object-cover;
+		}
+	}
+	.uploadImage {
+		> svg {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 75px;
+			height: 75px;
+			fill: #7f7f7f;
+			transition: all 0.2s ease;
+			@apply absolute;
+		}
+	}
+	.edit {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: all 0.4s ease;
+		@apply w-full absolute flex flex-col items-center opacity-0 z-3;
+		> svg {
+			@apply w-12 h-12;
+		}
+		> p {
+			@apply text-center;
+		}
+	}
+}
+.field:hover {
+	.uploadImage {
+		> svg {
+			@apply opacity-0;
+		}
+	}
+	.edit,
+	.shadow {
+		@apply opacity-100;
+	}
+}

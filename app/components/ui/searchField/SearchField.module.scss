@@ -1,0 +1,13 @@
+.search {
+	@apply relative w-[80%] max-w-[600px] h-max mr-auto pr-2 sm3:mb-5 sm3:w-[90%];
+	> input {
+		@apply py-[10px] placeholder-[#8D8D8D] pl-[40px] pr-[20px] rounded-3xl w-full outline-none bg-gray-700;
+	}
+	> svg {
+		@apply fill-[#8D8D8D] w-5 h-5;
+		position: absolute;
+		top: 53%;
+		left: 15px;
+		transform: translateY(-50%);
+	}
+}

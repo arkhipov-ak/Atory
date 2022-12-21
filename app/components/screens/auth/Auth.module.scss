@@ -1,0 +1,29 @@
+.auth {
+	@apply flex flex-col items-center p-10 max-w-fit mx-auto;
+	> div:first-child {
+		@apply mb-7;
+	}
+	> h1 {
+		@apply text-3xl font-semibold mb-5 opacity-80;
+	}
+	.authForm {
+		@apply w-full flex flex-col max-w-[380px];
+		> button {
+			transition: all 0.5s ease;
+			@apply text-xl mb-3 bg-darkGreen w-fit mx-auto px-16 py-2 rounded-xl text-black opacity-80;
+		}
+		> button:hover {
+			opacity: 1;
+		}
+		> p {
+			@apply text-sm text-center opacity-80;
+			> a {
+				transition: all 0.5s ease;
+				@apply border-b border-solid border-green text-green opacity-90;
+			}
+			> a:hover {
+				opacity: 1;
+			}
+		}
+	}
+}

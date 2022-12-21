@@ -1,0 +1,15 @@
+.favoriteWrapper {
+	@apply absolute -left-[50px] cursor-pointer sm2:-left-[33px];
+}
+
+.favoriteActive {
+	opacity: 1 !important;
+	> svg {
+		@apply fill-blue w-5 h-5;
+	}
+}
+.favorite {
+	> svg {
+		@apply fill-gray-300 w-5 h-5;
+	}
+}

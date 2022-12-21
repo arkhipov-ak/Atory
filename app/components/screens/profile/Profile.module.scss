@@ -1,0 +1,22 @@
+.containerLoader {
+	@apply w-full flex justify-between flex-wrap mt-10;
+
+	.skeletonLoader {
+		@apply relative mb-8 h-[222px] w-[182px] rounded-2xl;
+	}
+	.skeletonLoader:first-child {
+		@apply relative mb-5 h-9 w-full;
+	}
+}
+.emptyFavorite {
+	@apply flex items-center flex-col pt-24;
+	> h1 {
+		@apply text-4xl mb-6 opacity-90 font-semibold;
+	}
+	> p {
+		@apply text-2xl mb-8 opacity-80;
+	}
+	> button {
+		@apply bg-white rounded-2xl text-black px-10 py-3 uppercase font-semibold;
+	}
+}

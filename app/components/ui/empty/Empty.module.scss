@@ -1,0 +1,13 @@
+.emptyFavorite {
+	@apply flex items-center flex-col pt-24;
+	> h1 {
+		@apply text-4xl mb-6 opacity-90 font-semibold sm3:text-2xl sm3:mb-3 sm3:text-center;
+	}
+	> p {
+		@apply text-2xl mb-8 opacity-80 sm3:text-xl sm3:mb-4 sm3:text-center;
+	}
+	> a,
+	button {
+		@apply bg-white rounded-2xl text-black px-10 py-3 uppercase font-semibold;
+	}
+}

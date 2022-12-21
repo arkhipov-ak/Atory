@@ -1,0 +1,76 @@
+.menu {
+	box-shadow: 0px 5px 10px 2px rgba(19, 19, 19, 0.2);
+	transition: all 0.8s ease-in-out;
+	@apply py-10 pb-24 px-4 bg-gray-800 relative z-20 xl2:z-50  xl2:-translate-x-full xl2:pb-10;
+	> div {
+		@apply mb-6 animate-fade;
+		> img {
+			@apply h-[32px] w-[130px];
+		}
+	}
+	.ul {
+		@apply animate-fade;
+		> li {
+			@apply mb-6;
+			> a {
+				@apply flex items-center cursor-pointer;
+				> svg {
+					transition: all 0.5s ease;
+					@apply h-7 w-7 fill-gray-300 mr-3;
+				}
+				> span {
+					transition: all 0.5s ease;
+					@apply text-gray-300;
+				}
+			}
+			> a:hover {
+				> svg {
+					@apply fill-[#b9b9b9];
+				}
+				> span {
+					@apply text-[#b9b9b9];
+				}
+			}
+			&.active {
+				> a > svg {
+					@apply fill-white;
+				}
+				> a > span {
+					@apply text-white;
+				}
+			}
+		}
+		> li:last-child {
+			@apply mb-6;
+		}
+	}
+	.submenu {
+		@apply animate-fade;
+		> ul {
+			border-top: 1px solid #282828;
+			padding-top: 14px;
+			> li {
+				transition: all 0.5s ease;
+				@apply text-gray-400 flex justify-between items-center;
+				> a {
+					@apply text-ellipsis overflow-hidden whitespace-nowrap;
+				}
+			}
+			> li:hover {
+				@apply text-white;
+			}
+		}
+	}
+}
+
+.wrapper {
+	@apply hidden absolute top-[16px] right-1 xl2:flex z-40;
+}
+.wrapperBg {
+	background-color: rgba(134, 134, 134, 0.3);
+	transition: all 0.6s ease-in-out;
+	@apply w-full h-full top-0 fixed z-40  -translate-x-full;
+}
+.active {
+	@apply xl2:translate-x-0;
+}

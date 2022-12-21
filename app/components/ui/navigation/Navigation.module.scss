@@ -1,0 +1,42 @@
+.navigation {
+	> svg {
+		transition: all 0.5s ease;
+		@apply fill-gray-300 opacity-0 cursor-pointer w-5 h-5 relative;
+	}
+	.modal {
+		@apply absolute right-0 bg-gray-700 z-50 hidden p-1.5 rounded-lg w-max;
+		> div {
+			@apply relative p-3 cursor-pointer flex items-center justify-between;
+			> p,
+			a {
+				@apply opacity-80 pr-2 block w-full;
+			}
+			> svg {
+				@apply w-6 h-6;
+			}
+			.modalBlock {
+				border-radius: 8px 0px 0px 8px;
+				@apply absolute -left-[185px] w-[190px] opacity-0 pointer-events-none bg-gray-700 z-50 p-1.5 max-h-[232px] overflow-y-scroll;
+				> div {
+					@apply relative;
+					> a,
+					p {
+						@apply opacity-80 text-sm pr-2 text-ellipsis overflow-hidden whitespace-nowrap p-3;
+					}
+				}
+				> div:hover {
+					@apply bg-gray-500;
+				}
+			}
+		}
+		> div:hover {
+			@apply bg-gray-500;
+		}
+
+		.modalWrapper:hover {
+			.modalBlock {
+				@apply opacity-100 pointer-events-auto;
+			}
+		}
+	}
+}

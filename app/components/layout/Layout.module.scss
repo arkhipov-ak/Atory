@@ -1,0 +1,47 @@
+$bar-width: 250px;
+
+.layout {
+	@apply relative;
+	> div:first-child {
+		width: $bar-width;
+		@apply fixed top-0 bottom-0 overflow-y-scroll;
+	}
+	::-webkit-scrollbar {
+		width: 12px;
+		height: 12px;
+	}
+	> .center {
+		@apply p-10 pt-6 xl2:py-5 xl2:px-3;
+		margin: 0 0 0px $bar-width;
+		@apply xl2:ml-0;
+		.header {
+			@apply flex justify-end;
+		}
+	}
+	.active {
+		@apply mb-20;
+	}
+}
+
+.layoutActive {
+	@apply pb-16;
+}
+
+.gradient {
+	height: 320px;
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	transition: background 1s ease 0s;
+}
+
+.gradientPurple {
+	background: linear-gradient(transparent, rgb(12, 12, 14)) rgb(80, 56, 160);
+}
+
+.gradientBlue {
+	background: linear-gradient(transparent, rgb(12, 12, 14))
+		rgba(16, 144, 184, 0.3);
+}
