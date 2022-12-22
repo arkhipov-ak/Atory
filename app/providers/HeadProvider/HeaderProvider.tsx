@@ -21,7 +21,7 @@ const HeadProvider: FC<IHeadProvider> = ({ children }) => {
 				<meta charSet="UTF-8" />
 				<meta
 					name="viewport"
-					content="width=device-width, initial-scale=1, maximum-scale=1.0"
+					content="width=device-width, initial-scale=1, maximum-scale=2"
 				/>
 				<Favicons />
 				<meta name="theme-color" content={'#181B1E'} />

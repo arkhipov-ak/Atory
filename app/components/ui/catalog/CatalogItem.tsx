@@ -90,7 +90,7 @@ const CatalogItem: FC<ICatalogItem> = ({
 					draggable={false}
 				/>
 				<div>
-					<h3>{title}</h3>
+					<p>{title}</p>
 					<p>
 						{author.map((author: IAuthor, i: number) => (
 							<Link key={i} href={getAuthorUrl(author.slug)}>

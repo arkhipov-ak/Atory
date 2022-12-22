@@ -43,10 +43,10 @@
 					}
 					> div {
 						@apply ml-3 sm2:ml-1.5;
-						> h3 {
+						> p {
 							@apply text-lg xl:text-base sm:text-sm;
 						}
-						> p {
+						> p:nth-child(2){
 							@apply text-base text-gray-300 mx-auto xl:text-sm sm:text-xs;
 							> a {
 								@apply mr-1;

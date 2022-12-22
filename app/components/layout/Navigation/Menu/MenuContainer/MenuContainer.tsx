@@ -1,7 +1,7 @@
 import cn from 'clsx'
 import { Twirl as Hamburger } from 'hamburger-react'
 import dynamic from 'next/dynamic'
-import { FC, useRef, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 
 import { usePlaylist } from '@/components/screens/playlist/usePlaylist'
 import { Logo } from '@/components/ui'

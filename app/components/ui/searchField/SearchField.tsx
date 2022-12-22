@@ -16,7 +16,7 @@ const SearchField: FC<ISearchField> = ({ searchTerm, handleSearch }) => {
 		<div className={styles.search}>
 			<MaterialIcon name="MdSearch" />
 			<input
-				placeholder={t('Search for song, artist, lyrics...')}
+				placeholder={t('Search for song, artist, album...')}
 				value={searchTerm}
 				onChange={handleSearch}
 			/>

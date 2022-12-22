@@ -1,0 +1,9 @@
+.header {
+	@apply flex items-center sm3:flex-col-reverse;
+	> div::first-child {
+		@apply pt-2;
+	}
+	> div {
+		@apply ml-auto;
+	}
+}

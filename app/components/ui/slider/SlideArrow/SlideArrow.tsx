@@ -16,6 +16,7 @@ const SlideArrow: FC<ISlideArrow> = ({ variant, clickHandler }) => {
 	return (
 		<button
 			onClick={clickHandler}
+			aria-label="Next"
 			className={cn(styles.arrow, {
 				[styles.left]: isLeft,
 				[styles.right]: !isLeft,

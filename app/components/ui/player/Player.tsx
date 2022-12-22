@@ -3,8 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 
-import { FavoriteButton } from '@/components/ui'
-
 import { useAuth } from '@/hooks/useAuth'
 
 import { IAlbum, IAuthor } from '@/shared/types/track.types'
@@ -14,8 +12,7 @@ import { useUpdateCountOpened } from './useUpdateCountOpened'
 
 type IPlayer = Omit<IAlbum, 'link'>
 
-const Player: FC<IPlayer> = ({ poster, author, title, slug, _id }) => {
-	const { user } = useAuth()
+const Player: FC<IPlayer> = ({ poster, author, title, slug }) => {
 	useUpdateCountOpened(slug)
 
 	return (
@@ -37,7 +34,6 @@ const Player: FC<IPlayer> = ({ poster, author, title, slug, _id }) => {
 					))}
 				</div>
 			</div>
-			{user && <FavoriteButton trackId={_id} />}
 		</div>
 	)
 }

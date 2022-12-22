@@ -1,11 +1,5 @@
-import Heading from '@/components/ui/heading/Heading'
+import Error404 from '@/components/screens/404/404';
 
-import Meta from '@/utils/Meta'
-
-export default function Error404() {
-	return (
-		<Meta title="Page not found">
-			<Heading title="404 - PAGE NOT FOUND" />
-		</Meta>
-	)
+export default function Error404Page() {
+	return <Error404 />
 }

@@ -29,30 +29,29 @@
 	@apply relative mx-auto pt-5;
 
 	.slide {
-		@apply relative h-96 rounded-3xl overflow-hidden shadow-xl flex items-end;
+		@apply relative h-96 rounded-3xl overflow-hidden shadow-xl flex items-end sm3:h-72;
 
 		@include fade-bg-gradient();
 
 		.image {
 			object-position: 40% 33%;
-			pointer-events: none;
-			object-fit: cover;
+			@apply object-cover pointer-events-none;
 		}
 
 		.content {
-			@apply relative z-2 p-8;
+			@apply relative z-2 p-8 max-w-[100%];
 			.heading {
 				text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
-				@apply text-white uppercase text-5xl font-semibold mb-1;
+				@apply text-white uppercase text-5xl font-semibold mb-1 text-ellipsis overflow-hidden whitespace-nowrap sm3:text-2xl;
 			}
 			.subHeading {
 				text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
-				@apply text-gray-300 font-medium  mb-4;
+				@apply text-gray-300 font-medium  mb-4 sm3:text-sm;
 			}
 
 			.button {
 				transition: background-color 0.3s ease-in-out;
-				@apply p-2 px-10 bg-blue rounded-xl;
+				@apply p-2 px-10 bg-blue rounded-xl sm3:px-8;
 			}
 			.button:hover {
 				@apply bg-blueLight;

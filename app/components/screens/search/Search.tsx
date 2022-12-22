@@ -5,7 +5,7 @@ import { FC } from 'react'
 import Layout from '@/components/layout/Layout'
 import useSearch from '@/components/layout/Search/useSearch'
 import { Catalog, Empty, Gallery, SearchField } from '@/components/ui'
-
+import styles from './Search.module.scss'
 import Meta from '@/utils/Meta'
 
 const DynamicUser = dynamic(() => import('../../layout/User/User'), {
@@ -24,7 +24,7 @@ const Search: FC = () => {
 			description="Listen to popular music right in your browser"
 		>
 			<Layout showUser={false}>
-				<div className="flex items-center sm3:flex-col">
+				<div className={styles.header}>
 					<SearchField searchTerm={searchTerm} handleSearch={handleSearch} />
 					<div>
 						<DynamicUser />
@@ -58,7 +58,6 @@ const Search: FC = () => {
 						) : (
 							<span />
 						)}
-
 						{!isHaveData && (
 							<Empty
 								title="Nothing found😞"
@@ -67,12 +66,10 @@ const Search: FC = () => {
 						)}
 					</>
 				) : (
-					<div>
-						<Empty
-							title="Find your favorite tracks"
-							subtitle="Find the track you are interested in."
-						/>
-					</div>
+					<Empty
+						title="Find your favorite tracks"
+						subtitle="Find the track you are interested in."
+					/>
 				)}
 			</Layout>
 		</Meta>

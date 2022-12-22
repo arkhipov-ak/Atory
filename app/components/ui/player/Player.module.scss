@@ -1,15 +1,15 @@
 .plug {
-	@apply h-[88px] sm4:h-[156px];
+	@apply h-[88px];
 }
 .playerWrapper {
 	border-top: 1px solid #282828;
 	@apply fixed bottom-0 left-0 w-full bg-[#181818] z-30;
 	.player {
-		@apply p-4 grid grid-cols-[1fr_2fr_1fr] items-center xl2:px-2 sm3:px-1 sm4:flex sm4:flex-wrap;
+		@apply p-4 grid grid-cols-[1fr_2fr_1fr] items-center xl2:px-2 sm3:px-1 sm4:grid-cols-[1fr_2fr];
 		.info {
-			@apply flex items-center w-full sm4:justify-center sm4:mb-5;
+			@apply flex items-center w-full;
 			> img {
-				@apply xl2:w-12 xl2:h-12 sm:hidden sm4:block;
+				@apply xl2:w-12 xl2:h-12 sm:hidden;
 			}
 			> div {
 				@apply pl-3 max-w-full relative left-0 xl2:pl-1.5;
@@ -28,7 +28,7 @@
 			}
 		}
 		.control {
-			@apply flex flex-col w-full sm4:w-[65%];
+			@apply flex flex-col w-full;
 
 			> div:first-child {
 				@apply flex items-center w-24 justify-between mx-auto mb-1;
@@ -39,8 +39,7 @@
 				}
 				> span {
 					svg {
-						width: 27px;
-						height: 27px;
+						@apply w-[27px] h-[27px];
 					}
 				}
 				svg:hover {
@@ -60,7 +59,7 @@
 			}
 		}
 		.volume {
-			@apply max-w-[120px] w-full flex items-center ml-auto pl-5 sm4:pl-2 sm4:w-[35%] sm4:mt-auto;
+			@apply max-w-[120px] w-full flex items-center ml-auto pl-5 sm4:hidden;
 			> div {
 				> svg {
 					@apply w-5 h-5;

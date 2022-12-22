@@ -21,7 +21,7 @@ const FavoriteButton: FC<{ trackId: string }> = ({ trackId }) => {
 
 		const isHasTrack = favoriteTracks.some((f) => f._id == trackId)
 		if (isFavorite !== isHasTrack) setIsFavorite(isHasTrack)
-	}, [favoriteTracks, isFavorite, trackId])
+	}, [favoriteTracks, trackId])
 
 	const { mutateAsync } = useMutation(
 		'update favorites',
@@ -30,15 +30,16 @@ const FavoriteButton: FC<{ trackId: string }> = ({ trackId }) => {
 			onError: (error) => {
 				toastrError(error, t('Update favorite list'))
 			},
-			onSuccess() {
-				setIsFavorite(!isFavorite)
-				refetch()
-			},
 		}
 	)
 
+	const handleFavorite = () => {
+		setIsFavorite(!isFavorite)
+		mutateAsync()
+	}
+
 	return (
-		<div className={styles.favoriteWrapper} onClick={() => mutateAsync()}>
+		<div className={styles.favoriteWrapper} onClick={handleFavorite}>
 			{isFavorite ? (
 				<span className={styles.favoriteActive}>
 					<MaterialIcon name="MdFavorite" />

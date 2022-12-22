@@ -35,6 +35,7 @@ module.exports = {
 				sm3: { max: '600px' },
 				sm4: { max: '500px' },
 				sm5: { max: '400px' },
+				sm6: { max: '350px' },
 			},
 			keyframes: {
 				fade: {
