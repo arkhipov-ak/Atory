@@ -1,4 +1,4 @@
-export const API_URL = `https://atory.vercel.app`
+export const API_URL = `https://atorybg-production.up.railway.app/api`
 export const API_SERVER_URL = `https://atorybg-production.up.railway.app/api`
 
 export const getAuthUrl = (string: string) => `/auth${string}`

@@ -15,11 +15,11 @@ const nextConfig = {
 		return [
 			{
 				source: '/api/:path*',
-				destination: `http://localhost:4300/api/:path*`,
+				destination: `https://atorybg-production.up.railway.app/api/:path*`,
 			},
 			{
 				source: '/uploads/:path*',
-				destination: `http://localhost:3000/uploads/:path*`,
+				destination: `https://atorybg-production.up.railway.app/uploads/:path*`,
 			},
 		]
 	},
