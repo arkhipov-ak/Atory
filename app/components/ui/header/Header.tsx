@@ -72,6 +72,7 @@ const Header: FC<IHeader> = ({
 							draggable={false}
 							alt="Avatar"
 							layout="fill"
+							priority
 							objectFit="cover"
 						/>
 					) : (

@@ -6,7 +6,7 @@ import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
 import Layout from '@/components/layout/Layout'
-import { Button, Field, Heading, Select } from '@/components/ui'
+import { Button, Field, Heading } from '@/components/ui'
 
 import t from '@/hooks/getLang'
 import { useAuth } from '@/hooks/useAuth'
@@ -18,12 +18,12 @@ import { useProfile } from '../profile/useProfile'
 
 import styles from './Settings.module.scss'
 
-// const DynamicSelect = dynamic(
-// 	() => import('@/components/ui/select/SelectItem'),
-// 	{
-// 		ssr: false,
-// 	}
-// )
+const DynamicSelect = dynamic(
+	() => import('@/components/ui/select/SelectItem'),
+	{
+		ssr: false,
+	}
+)
 
 const Settings: FC = () => {
 	const options = [
@@ -92,7 +92,7 @@ const Settings: FC = () => {
 					)}
 					<div>
 						<Heading title="Language" />
-						<Select
+						<DynamicSelect
 							isTranslate
 							options={options}
 							defaultValue={activeLang}
