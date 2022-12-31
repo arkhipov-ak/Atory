@@ -10,7 +10,7 @@ interface ISelectItem {
 	defaultValue: any
 	handleChange: (arg: SingleValue<any>) => void
 	text?: string
-	isTranslate: boolean
+	isTranslate?: boolean
 	isMulti?: boolean
 }
 
@@ -19,7 +19,7 @@ const SelectItem: FC<ISelectItem> = ({
 	defaultValue,
 	handleChange,
 	text,
-	isTranslate,
+	isTranslate = false,
 	isMulti = false,
 }) => {
 	if (isTranslate) {
