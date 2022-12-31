@@ -25,7 +25,7 @@ const Playlist: FC = () => {
 			<Layout haveGradient="gradientBlue">
 				<DynamicHeader
 					subtitle="Open playlist"
-					title={playlist?.name || t('Loading...')}
+					title={playlist?.name === 'My playlist' ? t('My playlist') :  playlist?.name || t('Loading...')}
 					description={`${
 						playlist?.author[0].name
 							? playlist?.author[0].name

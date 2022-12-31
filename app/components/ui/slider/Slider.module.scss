@@ -1,4 +1,4 @@
-@mixin fade-bg-gradient($direction: 90deg) {
+@mixin fade-bg-gradient($direction: 45deg) {
 	&::before {
 		@apply w-full h-full absolute top-0 left-0 z-1;
 		content: '';
@@ -43,7 +43,7 @@
 			}
 			.subHeading {
 				text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
-				@apply text-gray-300 font-medium  mb-4 sm2:text-sm;
+				@apply text-gray-300 font-medium  mb-4 sm2:text-sm sm3:text-white sm3:opacity-80;
 			}
 			> button {
 				@apply sm4:py-1 sm4:text-sm sm4:px-5;

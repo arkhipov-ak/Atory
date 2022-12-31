@@ -106,7 +106,7 @@ const Header: FC<IHeader> = ({
 									{author.title}
 								</Link>
 							))}
-						{description}
+					 <span>{description}</span>	
 					</p>
 				</div>
 			</div>

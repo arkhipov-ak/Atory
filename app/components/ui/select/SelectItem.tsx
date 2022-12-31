@@ -1,17 +1,16 @@
 import { FC } from 'react'
 import Select, { GroupBase, OptionsOrGroups, SingleValue } from 'react-select'
 
-import { IActive } from '@/components/screens/admin/newTrack/newTrack.interface'
-
 import t from '@/hooks/getLang'
 
 import styles from './Select.module.scss'
 
 interface ISelectItem {
 	options: OptionsOrGroups<string, GroupBase<string>> | any
-	defaultValue: string | IActive[] | IActive
+	defaultValue: any
 	handleChange: (arg: SingleValue<any>) => void
 	text?: string
+	isTranslate: boolean
 	isMulti?: boolean
 }
 
@@ -20,8 +19,15 @@ const SelectItem: FC<ISelectItem> = ({
 	defaultValue,
 	handleChange,
 	text,
+	isTranslate,
 	isMulti = false,
 }) => {
+	if (isTranslate) {
+		defaultValue.label = t(
+			defaultValue.value.charAt(0).toUpperCase() + defaultValue.value.slice(1)
+		)
+	}
+
 	return (
 		<div>
 			{text && <p>{t(text)}</p>}

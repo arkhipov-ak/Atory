@@ -45,7 +45,7 @@
 	"Login and listen music for free": "Connectez-vous et écoutez de la musique gratuitement",
 	"SignUp": "S'inscrire",
 	"Already have an account?": "Vous avez déjà un compte?",
-	"Don't have an account?": "Vous n'avez pas de compte?",
+	"Don't have an account?": "Vous n'avez pas de compte ?",
 	"Login": "Connexion",
 	"Logout": "Se déconnecter",
 	"Settings": "Réglages",
@@ -117,5 +117,12 @@
 	"Or create a new one-Album": "Ou créez un nouvel album",
 	"Create new track": "Créer une nouvelle piste",
 	"Generate": "produire",
-	"Select...": "Sélectionner..."
+	"Select...": "Sélectionner...",
+	"Russian": "russe",
+	"English": "Anglais",
+	"French": "Français",
+	"Italian": "italien",
+	"German": "Allemand",
+	"Ukrainian": "ukrainien",
+	"Turkish": "turc"
 }

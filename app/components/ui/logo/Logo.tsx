@@ -10,7 +10,6 @@ const Logo: FC<{ isBig?: boolean }> = ({ isBig = false }) => {
 				src={logoImg}
 				width={isBig ? 220 : 130}
 				height={isBig ? 60 : 32}
-				priority
 				alt="Atory logo"
 				draggable={false}
 			/>

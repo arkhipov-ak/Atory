@@ -6,7 +6,7 @@ import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
 import Layout from '@/components/layout/Layout'
-import { Button, Field, Heading } from '@/components/ui'
+import { Button, Field, Heading, Select } from '@/components/ui'
 
 import t from '@/hooks/getLang'
 import { useAuth } from '@/hooks/useAuth'
@@ -18,24 +18,25 @@ import { useProfile } from '../profile/useProfile'
 
 import styles from './Settings.module.scss'
 
-const options = [
-	{ value: 'russian', label: 'Russian', locale: 'ru' },
-	{ value: 'english', label: 'English', locale: 'en' },
-	{ value: 'french', label: 'French', locale: 'fr' },
-	{ value: 'italian', label: 'Italian', locale: 'it' },
-	{ value: 'german', label: 'German', locale: 'de' },
-	{ value: 'ukrainian', label: 'Ukrainian', locale: 'uk' },
-	{ value: 'turkish', label: 'Turkish', locale: 'tr' },
-]
-
-const DynamicSelect = dynamic(
-	() => import('@/components/ui/select/SelectItem'),
-	{
-		ssr: false,
-	}
-)
+// const DynamicSelect = dynamic(
+// 	() => import('@/components/ui/select/SelectItem'),
+// 	{
+// 		ssr: false,
+// 	}
+// )
 
 const Settings: FC = () => {
+	const options = [
+		{ value: 'russian', label: t('Russian'), locale: 'ru' },
+		{ value: 'english', label: t('English'), locale: 'en' },
+		{ value: 'french', label: t('French'), locale: 'fr' },
+		{ value: 'italian', label: t('Italian'), locale: 'it' },
+		{ value: 'german', label: t('German'), locale: 'de' },
+		{ value: 'ukrainian', label: t('Ukrainian'), locale: 'uk' },
+		{ value: 'turkish', label: t('Turkish'), locale: 'tr' },
+	]
+	console.log(options)
+
 	const lang = Cookies.get('language')
 	const [activeLang, setActiveLang] = useState(
 		lang ? JSON.parse(lang) : options[0]
@@ -45,7 +46,6 @@ const Settings: FC = () => {
 	const { user } = useAuth()
 
 	useEffect(() => {
-		console.log(activeLang.locale)
 		Cookies.set('language', JSON.stringify(activeLang))
 
 		activeLang && push('/settings', undefined, { locale: activeLang.locale })
@@ -93,7 +93,8 @@ const Settings: FC = () => {
 					)}
 					<div>
 						<Heading title="Language" />
-						<DynamicSelect
+						<Select
+							isTranslate
 							options={options}
 							defaultValue={activeLang}
 							handleChange={setActiveLang}
