@@ -1,12 +1,13 @@
-import { getAlbumsUrl, getAuthorsUrl } from 'config/url.config'
 import dynamic from 'next/dynamic'
 import { FC } from 'react'
 
 import Layout from '@/components/layout/Layout'
 import useSearch from '@/components/layout/Search/useSearch'
 import { Catalog, Empty, Gallery, SearchField } from '@/components/ui'
-import styles from './Search.module.scss'
+
 import Meta from '@/utils/Meta'
+
+import styles from './Search.module.scss'
 
 const DynamicUser = dynamic(() => import('../../layout/User/User'), {
 	ssr: false,
@@ -19,10 +20,7 @@ const Search: FC = () => {
 		tracks.data?.length || authors.data?.length || albums.data?.length
 
 	return (
-		<Meta
-			title="Listen music online"
-			description="Listen to popular music right in your browser"
-		>
+		<Meta>
 			<Layout showUser={false}>
 				<div className={styles.header}>
 					<SearchField searchTerm={searchTerm} handleSearch={handleSearch} />
@@ -30,38 +28,21 @@ const Search: FC = () => {
 						<DynamicUser />
 					</div>
 				</div>
-
 				{isSuccess ? (
 					<>
-						{tracks.data.length ? (
+						{tracks.data.length > 0 && (
 							<Catalog tracks={tracks.data.slice(0, 15)} title="TracksU" />
-						) : (
-							<span />
 						)}
-						{authors.data.length ? (
-							<Gallery
-								title="Performers"
-								data={authors.data}
-								type="authors"
-								link={getAuthorsUrl()}
-							/>
-						) : (
-							<span />
+						{authors.data.length > 0 && (
+							<Gallery title="Performers" data={authors.data} type="authors" />
 						)}
-						{albums.data.length ? (
-							<Gallery
-								title="Albums"
-								data={albums.data}
-								type="albums"
-								link={getAlbumsUrl()}
-							/>
-						) : (
-							<span />
+						{albums.data.length > 0 && (
+							<Gallery title="Albums" data={albums.data} type="albums" />
 						)}
 						{!isHaveData && (
 							<Empty
 								title="Nothing found😞"
-								subtitle="Try reformulating your request."
+								subtitle="The track you are looking for may not be available on our website. Try reformulating your request."
 							/>
 						)}
 					</>

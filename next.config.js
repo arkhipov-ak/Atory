@@ -8,7 +8,7 @@ const nextConfig = {
 		APP_SERVER_URL: process.env.REACT_APP_SERVER,
 	},
 	i18n: {
-		locales: ['ru', 'en'],
+		locales: ['ru', 'en','it', 'fr', 'de', 'uk', 'tr'],
 		defaultLocale: 'ru',
 	},
 	async rewrites() {

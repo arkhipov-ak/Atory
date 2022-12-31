@@ -1,25 +1,29 @@
+import dynamic from 'next/dynamic'
 import { FC } from 'react'
 
 import Layout from '@/components/layout/Layout'
-import { Catalog, Empty, Header, SkeletonLoader } from '@/components/ui'
+import { Catalog, Empty, SkeletonLoader } from '@/components/ui'
 
 import t from '@/hooks/getLang'
+import { useAuth } from '@/hooks/useAuth'
 
 import Meta from '@/utils/Meta'
 
 import styles from './Playlist.module.scss'
 import { usePlaylist } from './usePlaylist'
 
+const DynamicHeader = dynamic(() => import('@/components/ui/header/Header'), {
+	ssr: false,
+})
+
 const Playlist: FC = () => {
 	const { playlist, isLoading } = usePlaylist()
+	const { user } = useAuth()
 
 	return (
-		<Meta
-			title="Listen music online"
-			description="Listen to popular music right in your browser"
-		>
+		<Meta>
 			<Layout haveGradient="gradientBlue">
-				<Header
+				<DynamicHeader
 					subtitle="Open playlist"
 					title={playlist?.name || t('Loading...')}
 					description={`${
@@ -36,7 +40,7 @@ const Playlist: FC = () => {
 					id={playlist?._id}
 					poster={playlist?.poster}
 					useFunc={usePlaylist}
-					isEdit
+					isEdit={user?._id === playlist?.author[0]._id}
 				/>
 
 				{isLoading || !playlist?.tracks ? (

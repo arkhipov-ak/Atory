@@ -14,6 +14,8 @@ module.exports = {
 				400: '#868686',
 				450: '#2A2A2A',
 				500: '#262626',
+				600: '#282828',
+				650: '#202020',
 				700: '#1C1B1C',
 				800: '#131313',
 				900: '#0c0c0e',
@@ -57,7 +59,9 @@ module.exports = {
 				fade: 'fade .5s ease-in-out',
 				up: 'up .5s ease-in-out',
 			},
-
+			transition: {
+				base: 'all 0.3s ease',
+			},
 			zIndex: {
 				1: '1',
 				2: '2',

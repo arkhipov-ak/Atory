@@ -10,6 +10,8 @@
 		@apply text-3xl mb-5 sm4:text-xl whitespace-nowrap sm:text-xl sm4:whitespace-normal;
 	}
 	> a {
-		@apply bg-blue px-10 py-2 rounded-xl inline-block  whitespace-nowrap;
+		> button {
+			@apply py-3;
+		}
 	}
 }

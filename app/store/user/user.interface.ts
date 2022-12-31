@@ -4,6 +4,7 @@ export interface IUserState {
 	name: string
 	poster: string | null
 	isAdmin: boolean
+	_id: string
 }
 
 export interface ITokens {
@@ -20,6 +21,8 @@ export interface IAuthUser {
 	email: string
 	password: string
 	name: string
+	errorText: string
+	errorTitle: string
 }
 
 export interface IAuthResponse extends ITokens {

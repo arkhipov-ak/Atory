@@ -25,10 +25,7 @@ const Author: FC<IAuthorProps> = ({ title, poster, data, totalPlays }) => {
 	const { data: albums } = useAuthor(String(query.slug))
 
 	return (
-		<Meta
-			title="Your favorite artists are here"
-			description="Listen to popular music right in your browser"
-		>
+		<Meta title="Your favorite artists are here">
 			<Layout haveGradient="gradientBlue">
 				<Header
 					subtitle="Performer"
@@ -38,8 +35,10 @@ const Author: FC<IAuthorProps> = ({ title, poster, data, totalPlays }) => {
 					)}`}
 					poster={poster}
 				/>
-				<Catalog title="Trending right now" tracks={data} />
-				<Gallery title="Albums" data={albums} type="albums" isWrap />
+				<Catalog title="Trending right now" tracks={data.slice(0, 20)} />
+				{albums && albums?.length > 0 && (
+					<Gallery title="Albums" data={albums} type="albums" isWrap />
+				)}
 			</Layout>
 		</Meta>
 	)

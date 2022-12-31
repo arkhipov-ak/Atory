@@ -1,9 +1,11 @@
-import { NextPage } from 'next'
-
 import Playlists from '@/components/screens/playlists/Playlists'
 
-const PlaylistsPage: NextPage = () => {
+import { NextPageAuth } from '@/shared/types/auth.types'
+
+const PlaylistsPage: NextPageAuth = () => {
 	return <Playlists />
 }
+
+PlaylistsPage.isOnlyUser = true
 
 export default PlaylistsPage

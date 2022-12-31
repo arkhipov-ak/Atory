@@ -3,12 +3,12 @@ import { useMutation } from 'react-query'
 
 import { TrackService } from '@/services/track.service'
 
-export const useUpdateCountOpened = async (slug: string) => {
+export const useUpdateCountOpened = async (_id: string) => {
 	const { mutateAsync } = useMutation('update count opened', () =>
-		TrackService.updateCountOpened(slug)
+		TrackService.updateCountOpened(_id)
 	)
 
 	useEffect(() => {
 		mutateAsync()
-	}, [slug])
+	}, [_id])
 }

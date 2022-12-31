@@ -17,6 +17,13 @@ export interface IAlbum {
 	author: IAuthor[]
 }
 
+export interface IAlbumCreate {
+	title: string
+	slug: string
+	poster: string
+	author: IAuthor[]
+}
+
 export interface IAuthor {
 	name: string
 	_id: string
@@ -30,6 +37,12 @@ export interface IAuthor {
 	albums: IAlbum[]
 }
 
+export interface IAuthorCreate {
+	title: string
+	slug: string
+	poster: string
+}
+
 export interface ITrack {
 	_id: string
 	poster: string
@@ -40,5 +53,13 @@ export interface ITrack {
 	countPlays: number
 	album: IAlbum[]
 	author: IAuthor[]
-	createdAt: string
+}
+
+export interface ITrackCreate {
+	poster: string
+	title: string
+	duration: number
+	trackUrl: string
+	album?: IAlbum[]
+	author: string[]
 }

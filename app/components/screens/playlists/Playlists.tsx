@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
 import Layout from '@/components/layout/Layout'
-import { Gallery, SkeletonLoader } from '@/components/ui'
+import { Empty, Gallery, SkeletonLoader } from '@/components/ui'
 
 import Meta from '@/utils/Meta'
 
@@ -12,20 +12,26 @@ import styles from './Playlist.module.scss'
 const Playlists: FC = () => {
 	const { queryData } = usePlaylist()
 	const { isLoading, data } = queryData
+	const { createAsync } = usePlaylist()
+
 	return (
-		<Meta
-			title="Listen music online"
-			description="Listen to popular music right in your browser"
-		>
+		<Meta>
 			<Layout haveGradient="gradientBlue">
 				{isLoading || !data ? (
 					<SkeletonLoader
-						count={5}
+						count={12}
 						className={styles.skeletonLoader}
 						containerClassName={styles.containerLoader}
 					/>
+				) : data.length ? (
+					<Gallery data={data} title="Playlists" type="playlists" isWrap />
 				) : (
-					<Gallery data={data} title="Playlists" type="playlist" isWrap />
+					<Empty
+						title="Playlists missing"
+						subtitle="Create a new playlist."
+						handleData={createAsync}
+						text="Create playlist"
+					/>
 				)}
 			</Layout>
 		</Meta>

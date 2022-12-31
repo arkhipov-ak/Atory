@@ -1,0 +1,14 @@
+.wrapper {
+	@apply relative w-[300px];
+	> div:nth-child(1) {
+		> label {
+			> input {
+				@apply pr-20;
+			}
+		}
+	}
+}
+.badge {
+	transition: all 0.4s ease;
+	@apply uppercase absolute top-[20%] right-3 cursor-pointer rounded-lg py-0.5 px-2 border-gray-500 bg-gray-500 hover:bg-gray-400 text-xs;
+}

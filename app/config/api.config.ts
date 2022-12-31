@@ -1,5 +1,5 @@
 export const API_URL = `https://atorybg-production.up.railway.app/api`
-export const API_SERVER_URL = `https://atorybg-production.up.railway.app/api`
+export const API_SERVER_URL = `http://localhost:3200/api`
 
 export const getAuthUrl = (string: string) => `/auth${string}`
 export const getUserUrl = (string: string) => `/user${string}`

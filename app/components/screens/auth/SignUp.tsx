@@ -21,10 +21,14 @@ const SignUp = () => {
 		register: registerInput,
 		handleSubmit,
 		formState,
+		setValue,
 		reset,
 	} = useForm<IAuthInput>({
 		mode: 'onChange',
 	})
+
+	setValue('errorText', t('User already exists'))
+	setValue('errorTitle', t('Error'))
 
 	const { register } = useActions()
 

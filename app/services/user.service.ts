@@ -2,7 +2,7 @@ import axios from 'api/interceptors'
 import { getUserUrl } from 'config/api.config'
 
 import { IPlaylist, ITrack } from '@/shared/types/track.types'
-import { IUser } from '@/shared/types/user.types'
+import { IUser, IUserUpdate } from '@/shared/types/user.types'
 
 export const UserService = {
 	async getFavorites() {
@@ -13,7 +13,7 @@ export const UserService = {
 		return axios.put<string>(getUserUrl('/profile/favorites'), { trackId })
 	},
 
-	async updateProfile(data: IUser) {
+	async updateProfile(data: IUserUpdate) {
 		return axios.put<string>(getUserUrl('/profile'), data)
 	},
 
@@ -21,7 +21,7 @@ export const UserService = {
 		return axios.get<IPlaylist[]>(getUserUrl('/playlists'))
 	},
 
-	async getProfile() {
-		return axios.get<IUser>(getUserUrl('/profile'))
+	async getProfile(id: string) {
+		return axios.get<IUser>(getUserUrl(`/profile/${id}`))
 	},
 }

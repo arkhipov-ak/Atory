@@ -1,7 +1,7 @@
 import axios, { axiosClassic } from 'api/interceptors'
 import { getAlbumUrl } from 'config/api.config'
 
-import { IAlbum } from '@/shared/types/track.types'
+import { IAlbum, IAlbumCreate } from '@/shared/types/track.types'
 
 export const AlbumService = {
 	async getBySlug(slug: string) {
@@ -21,7 +21,7 @@ export const AlbumService = {
 		return axios.get<IAlbum[]>(getAlbumUrl('/most-popular'))
 	},
 
-	async create(data: IAlbum) {
+	async create(data: IAlbumCreate) {
 		return axios.post<string>(getAlbumUrl(''), data)
 	},
 }

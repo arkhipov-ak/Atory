@@ -15,6 +15,7 @@ import useFavorites from './useFavorites'
 const FavoriteButton: FC<{ trackId: string }> = ({ trackId }) => {
 	const [isFavorite, setIsFavorite] = useState(false)
 	const { favoriteTracks, refetch } = useFavorites()
+	const updateError = t('Update favorite list')
 
 	useEffect(() => {
 		if (!favoriteTracks) return
@@ -26,9 +27,13 @@ const FavoriteButton: FC<{ trackId: string }> = ({ trackId }) => {
 	const { mutateAsync } = useMutation(
 		'update favorites',
 		() => UserService.toggleFavorite(trackId),
+
 		{
+			onSuccess: () => {
+				refetch()
+			},
 			onError: (error) => {
-				toastrError(error, t('Update favorite list'))
+				toastrError(error, updateError)
 			},
 		}
 	)

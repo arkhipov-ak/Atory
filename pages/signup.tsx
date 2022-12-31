@@ -2,8 +2,8 @@ import { NextPage } from 'next'
 
 import SignUp from '@/components/screens/auth/SignUp'
 
-const signUpPage: NextPage = () => {
+const SignUpPage: NextPage = () => {
 	return <SignUp />
 }
 
-export default signUpPage
+export default SignUpPage

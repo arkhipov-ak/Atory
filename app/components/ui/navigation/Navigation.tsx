@@ -55,7 +55,7 @@ const Navigation: FC<INavigation> = ({
 		>
 			<AiOutlineEllipsis />
 			<div className={cn(styles.modal, { '!block': isOpen })}>
-				{author && (
+				{author && author?.length > 0 && (
 					<div className={styles.modalWrapper}>
 						<p>{t('To the artist')}</p>
 						<MaterialIcon name="MdArrowRight" />
@@ -70,7 +70,7 @@ const Navigation: FC<INavigation> = ({
 						</div>
 					</div>
 				)}
-				{album && (
+				{album && album?.length > 0 && (
 					<div>
 						<Link href={getAlbumUrl(album[0].slug)}>
 							<p>{t('To the album')}</p>

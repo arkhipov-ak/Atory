@@ -10,9 +10,7 @@
 	}
 	.error {
 		color: red;
-		opacity: 0.8;
-		font-size: 14px;
-		text-align: right;
+		@apply opacity-80 text-right text-sm;
 	}
 	.fieldError {
 		border: 1px solid red;

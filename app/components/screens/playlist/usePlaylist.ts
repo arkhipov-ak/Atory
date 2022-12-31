@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import { useMemo } from 'react'
 import { SubmitHandler } from 'react-hook-form'
 import { useMutation, useQuery } from 'react-query'
-import { toastr } from 'react-redux-toastr'
 
 import t from '@/hooks/getLang'
 import { useAuth } from '@/hooks/useAuth'
@@ -19,16 +18,12 @@ export const usePlaylist = (
 	setIsOpen?: (arg: boolean) => void,
 	id?: string
 ) => {
-	const { query, push } = useRouter()
+	const { query, push, pathname } = useRouter()
 	const { user } = useAuth()
 
-	const updateSuccessTitle = t('Update playlist')
-	const updateSuccess = t('Update was successful')
 	const updateError = t('Update profile')
 	const queryDataError = t('Get playlist')
 	const createError = t('Create playlist')
-	const createSuccessTitle = t('Create playlist')
-	const createSuccess = t('Create was successfully')
 
 	const queryData = useQuery(
 		'playlist list',
@@ -54,7 +49,7 @@ export const usePlaylist = (
 		['playlist', query.id],
 		() => PlaylistService.getById(String(query?.id)),
 		{
-			enabled: !!query.id && !!user,
+			enabled: !!query.id && pathname !== '/profile/[id]',
 			select: ({ data }) => data,
 		}
 	)
@@ -66,9 +61,7 @@ export const usePlaylist = (
 			onError: (error) => {
 				toastrError(error, createError)
 			},
-
 			onSuccess({ data: _id }) {
-				toastr.success(createSuccessTitle, createSuccess)
 				push(getPlaylistUrl(`${_id}`))
 				queryData.refetch()
 			},
@@ -80,7 +73,6 @@ export const usePlaylist = (
 		(data: IPlaylist) => PlaylistService.updatePlaylist(id || '', data),
 		{
 			onSuccess() {
-				toastr.success(updateSuccessTitle, updateSuccess)
 				refetch()
 				queryData.refetch()
 				setIsOpen && setIsOpen(false)

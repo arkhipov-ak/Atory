@@ -1,6 +1,5 @@
 import { useMemo } from 'react'
 import { useMutation } from 'react-query'
-import { toastr } from 'react-redux-toastr'
 
 import { usePlaylist } from '@/components/screens/playlist/usePlaylist'
 
@@ -11,9 +10,8 @@ import { PlaylistService } from '@/services/playlist.service'
 import { toastrError } from '@/utils/toastr-error'
 
 export const useNavigation = (trackId: string) => {
-	const addSuccessTitle = t('Add track to playlist')
-	const addSuccess = t('Add was successfully')
-	const addError = t('Update favorite list')
+	const errorText = t('Update favorite list')
+
 	const { refetch } = usePlaylist()
 
 	const { mutateAsync } = useMutation(
@@ -21,10 +19,9 @@ export const useNavigation = (trackId: string) => {
 		(_id: string) => PlaylistService.updatePlaylistTracks(_id, trackId),
 		{
 			onError: (error) => {
-				toastrError(error, addError)
+				toastrError(error, errorText)
 			},
 			onSuccess() {
-				toastr.success(addSuccessTitle, addSuccess)
 				refetch()
 			},
 		}

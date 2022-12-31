@@ -3,8 +3,7 @@ import { useRouter } from 'next/router'
 import { FC, useEffect } from 'react'
 import { IntlProvider } from 'react-intl'
 
-import en from '../../../lang/en.json'
-import ru from '../../../lang/ru.json'
+import { de, en, fr, it, ru, tr, uk } from '../../../lang'
 
 interface ILangProvider {
 	children: React.ReactNode
@@ -12,6 +11,11 @@ interface ILangProvider {
 const messages: any = {
 	ru,
 	en,
+	fr,
+	it,
+	de,
+	uk,
+	tr,
 }
 
 const LangProvider: FC<ILangProvider> = ({ children }) => {
@@ -27,6 +31,7 @@ const LangProvider: FC<ILangProvider> = ({ children }) => {
 	}, [])
 
 	if (!locale) return null
+
 	return (
 		<IntlProvider locale={locale} messages={messages[locale]}>
 			{children}

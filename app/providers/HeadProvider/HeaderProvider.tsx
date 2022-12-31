@@ -30,6 +30,7 @@ const HeadProvider: FC<IHeadProvider> = ({ children }) => {
 					name="apple-mobile-web-app-status-bar-style"
 					content={'#181B1E'}
 				/>
+				<meta name="msapplication-TileColor" content="#1090b8" />
 			</Head>
 			{children}
 		</>

@@ -1,7 +1,7 @@
-import { axiosClassic } from 'api/interceptors'
+import axios, { axiosClassic } from 'api/interceptors'
 import { getAuthorUrl } from 'config/api.config'
 
-import { IAuthor } from '@/shared/types/track.types'
+import { IAuthor, IAuthorCreate } from '@/shared/types/track.types'
 
 export const AuthorService = {
 	async getBySlug(slug: string) {
@@ -10,6 +10,10 @@ export const AuthorService = {
 
 	async getBySlugAlbums(slug: string) {
 		return axiosClassic.get<IAuthor[]>(getAuthorUrl(`/by-slug/albums/${slug}`))
+	},
+
+	async create(data: IAuthorCreate) {
+		return axios.post<string>(getAuthorUrl(''), data)
 	},
 
 	async getAll(searchTerm?: string) {

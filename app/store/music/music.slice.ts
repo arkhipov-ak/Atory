@@ -50,4 +50,5 @@ export const musicSlice = createSlice({
 
 export const { setActiveIndex, setActiveId, setActivePlaylist, setIsPlaying } =
 	musicSlice.actions
+
 export default musicSlice.reducer

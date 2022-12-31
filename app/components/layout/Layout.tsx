@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 import { FC } from 'react'
 
 import styles from './Layout.module.scss'
-import MenuContainer from './Navigation/Menu/MenuContainer/MenuContainer'
+import MenuContainer from './Navigation/MenuContainer/MenuContainer'
 
 interface ILayout {
 	children: React.ReactNode

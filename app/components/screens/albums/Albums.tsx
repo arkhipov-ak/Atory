@@ -14,10 +14,7 @@ interface IAlbumsPage {
 
 const Albums: FC<IAlbumsPage> = ({ albums, title }) => {
 	return (
-		<Meta
-			title="Listen music online"
-			description="Listen to popular music right in your browser"
-		>
+		<Meta>
 			<Layout haveGradient="gradientBlue">
 				<Gallery data={albums} title={title} type="albums" isWrap />
 			</Layout>

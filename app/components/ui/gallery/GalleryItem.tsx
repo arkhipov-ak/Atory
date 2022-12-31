@@ -1,4 +1,4 @@
-import { getAuthorUrl, getPlaylistUrl } from 'config/url.config'
+import { getAlbumUrl, getAuthorUrl, getPlaylistUrl } from 'config/url.config'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
@@ -28,7 +28,6 @@ const GalleryItem: FC<IGalleryProps> = ({
 	name,
 	poster,
 	author,
-	link,
 	slug,
 	_id,
 	type,
@@ -37,11 +36,11 @@ const GalleryItem: FC<IGalleryProps> = ({
 		<Link
 			className={styles.block}
 			href={
-				link
-					? link
-					: type === 'playlist'
+				type === 'playlists'
 					? getPlaylistUrl(_id)
-					: getAuthorUrl(slug)
+					: type === 'authors'
+					? getAuthorUrl(slug)
+					: getAlbumUrl(slug)
 			}
 		>
 			<div>
@@ -64,9 +63,8 @@ const GalleryItem: FC<IGalleryProps> = ({
 			<p>{title ? title : name}</p>
 			<span>
 				{author
-					? author
-							.map((author: IAuthor) => author?.title || author?.name)
-							.join(', ')
+					? +author[0]?.title?.length > 0 &&
+					  author.map((author: IAuthor) => author?.title).join(', ')
 					: t('Performer')}
 			</span>
 		</Link>

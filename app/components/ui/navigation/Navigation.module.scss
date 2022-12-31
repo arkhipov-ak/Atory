@@ -4,24 +4,24 @@
 		@apply fill-gray-300 opacity-0 cursor-pointer w-5 h-5 relative;
 	}
 	.modal {
-		@apply absolute right-0 bg-gray-700 z-50 hidden p-1.5 rounded-lg w-max;
+		@apply absolute right-0 bg-gray-700 z-50 hidden p-1.5 rounded-lg w-max sm4:p-1;
 		> div {
-			@apply relative p-3 cursor-pointer flex items-center justify-between;
+			@apply relative p-3 cursor-pointer flex items-center justify-between sm4:p-1.5;
 			> p,
 			a {
-				@apply opacity-80 pr-2 block w-full;
+				@apply opacity-80 pr-2 block w-full sm4:text-xs sm4:p-0;
 			}
 			> svg {
 				@apply w-6 h-6;
 			}
 			.modalBlock {
 				border-radius: 8px 0px 0px 8px;
-				@apply absolute -left-[185px] w-[190px] opacity-0 pointer-events-none bg-gray-700 z-50 p-1.5 max-h-[232px] overflow-y-scroll;
+				@apply absolute -left-[185px] w-[190px] opacity-0 pointer-events-none bg-gray-700 z-50 p-1.5 max-h-[232px] overflow-y-scroll sm4:w-[160px] sm4:-left-[155px] sm4:p-1;
 				> div {
 					@apply relative;
 					> a,
 					p {
-						@apply opacity-80 text-sm pr-2 text-ellipsis overflow-hidden whitespace-nowrap p-3;
+						@apply opacity-80 text-sm pr-2 text-ellipsis overflow-hidden whitespace-nowrap p-3 sm4:text-xs sm4:p-2;
 					}
 				}
 				> div:hover {

@@ -3,20 +3,20 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FC, useRef, useState } from 'react'
 
-import { useProfile } from '@/components/screens/profile/useProfile'
 import { MaterialIcon } from '@/components/ui'
 
 import { clickOutside } from '@/hooks/clickOutside'
 import t from '@/hooks/getLang'
 import { useActions } from '@/hooks/useActions'
+import { useAuth } from '@/hooks/useAuth'
 
 import styles from './User.module.scss'
 
 const UserPopup: FC = () => {
 	const [isOpen, setIsOpen] = useState(false)
 	const menuRef = useRef(null)
+	const { user } = useAuth()
 
-	const { profile } = useProfile()
 	const { logout } = useActions()
 
 	clickOutside(menuRef, () => {
@@ -27,24 +27,25 @@ const UserPopup: FC = () => {
 		<div className={styles.user} ref={menuRef}>
 			<div className={styles.userWrapper} onClick={() => setIsOpen(!isOpen)}>
 				<div>
-					<MaterialIcon name="MdPersonOutline" />
-					{profile?.poster && (
+					{user?.poster ? (
 						<Image
-							src={profile.poster}
+							src={user.poster}
 							width={37}
 							height={37}
 							draggable={false}
 							alt="Avatar"
 						/>
+					) : (
+						<MaterialIcon name="MdPersonOutline" />
 					)}
 				</div>
 				<div>
-					<p>{profile?.name}</p>
+					<p>{user?.name}</p>
 					<span className={isOpen ? styles.active : ''}></span>
 				</div>
 			</div>
 			<div className={cn(styles.popup, { '!hidden': !isOpen })}>
-				<Link href="/profile">
+				<Link href={`/profile/${user?._id}`}>
 					<p>{t('Profile')}</p>
 					<MaterialIcon name="MdPeople" />
 				</Link>

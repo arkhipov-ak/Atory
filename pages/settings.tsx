@@ -1,9 +1,16 @@
-import { NextPage } from 'next'
+import dynamic from 'next/dynamic'
 
-import Settings from '@/components/screens/settings/Settings'
+import { NextPageAuth } from '@/shared/types/auth.types'
 
-const SettingsPage: NextPage = () => {
-	return <Settings />
+const DynamicSettings = dynamic(
+	() => import('@/components/screens/settings/Settings'),
+	{
+		ssr: false,
+	}
+)
+
+const SettingsPage: NextPageAuth = () => {
+	return <DynamicSettings />
 }
 
 export default SettingsPage

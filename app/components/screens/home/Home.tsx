@@ -21,10 +21,7 @@ const Home: FC<IHome> = ({
 	slides,
 }) => {
 	return (
-		<Meta
-			title="Listen music online"
-			description="Listen to popular music right in your browser"
-		>
+		<Meta>
 			<Layout>
 				<Slider slides={slides} buttonTitle="Listen now" />
 				<Gallery

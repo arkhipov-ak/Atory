@@ -1,7 +1,7 @@
 import { siteName, titleMerge } from 'config/seo.config'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import React, { FC, MetaHTMLAttributes, ReactNode } from 'react'
+import React, { FC } from 'react'
 
 import t from '@/hooks/getLang'
 
@@ -10,13 +10,18 @@ import logoImage from '@/assets/images/logo.png'
 import { onlyText } from './string/clearText'
 
 interface IMeta {
-	title: string
+	title?: string
 	description?: string
 	image?: any
 	children: React.ReactNode
 }
 
-const Meta: FC<IMeta> = ({ title, description, image = null, children }) => {
+const Meta: FC<IMeta> = ({
+	title = 'Listen music online',
+	description = 'Listen to popular music right in your browser',
+	image = null,
+	children,
+}) => {
 	const { asPath } = useRouter()
 	const currentUrl = `${process.env.APP_URL}${asPath}`
 

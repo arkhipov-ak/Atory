@@ -1,5 +1,5 @@
 .header {
-	@apply flex items-center  mb-10;
+	@apply flex items-center mb-10 pt-2;
 
 	.info {
 		@apply flex flex-col overflow-hidden;
@@ -30,32 +30,23 @@
 	}
 }
 .avatar {
-	background-color: #282828;
-	@apply mr-8 relative rounded-full min-w-[240px] min-h-[240px] xl3:min-w-[180px] xl3:min-h-[180px] sm2:mr-4 sm3:min-h-[120px] sm3:min-w-[120px];
+	@apply bg-gray-600 mr-8 relative rounded-full min-w-[240px] min-h-[240px] xl3:min-w-[180px] xl3:min-h-[180px] sm2:mr-4 sm3:min-h-[120px] sm3:min-w-[120px];
 	.shadow {
 		background-color: rgba(51, 49, 45, 0.4);
 		transition: all 0.2s ease;
 		@apply rounded-full absolute top-0 left-0 w-full h-full z-2 opacity-0;
 	}
 	> img {
-		@apply rounded-full h-full object-cover;
+		@apply rounded-full h-full object-cover w-full;
 	}
 	> svg {
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 90px;
-		height: 90px;
 		fill: #7f7f7f;
 		transition: all 0.2s ease;
-		@apply absolute xl3:w-16 xl3:h-16 sm4:w-12 sm4:h-12 sm3:w-8 sm3:h-8;
+		@apply w-[90px] h-[90px] top-1/2 left-1/2 absolute xl3:w-16 xl3:h-16 sm4:w-12 sm4:h-12 sm3:w-8 sm3:h-8 -translate-y-1/2 -translate-x-1/2;
 	}
 	.edit {
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
 		transition: all 0.4s ease;
-		@apply w-full absolute flex flex-col items-center opacity-0 z-3;
+		@apply w-full top-1/2 left-1/2 absolute flex flex-col items-center opacity-0 z-3 -translate-y-1/2 -translate-x-1/2;
 		> svg {
 			@apply w-12 h-12 xl3:w-8 xl3:h-8 sm3:w-6 sm3:h-6;
 		}
@@ -64,7 +55,7 @@
 		}
 	}
 }
-.avatar:hover {
+.avatarAuth:hover {
 	> svg {
 		@apply opacity-0;
 	}
@@ -77,10 +68,7 @@
 	background-color: rgba(5, 5, 5, 0.6);
 	@apply fixed top-0 left-0 w-full h-full hidden z-50;
 	> div {
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		@apply absolute bg-gray-700 p-10 rounded-lg w-[550px] sm3:w-[300px] sm3:p-8;
+		@apply absolute top-1/2 left-1/2 bg-gray-700 p-10 rounded-lg w-[550px] -translate-y-1/2 -translate-x-1/2 sm3:w-[300px] sm3:p-8;
 		> form {
 			@apply sm3:flex-col;
 		}
@@ -88,13 +76,12 @@
 		div {
 			@apply flex justify-between items-center;
 			.avatar {
-				width: 180px;
-				height: 180px;
+				@apply w-[180px] h-[180px];
 			}
 			> div {
 				@apply flex flex-col sm3:mr-0;
 				> button {
-					@apply bg-white text-black rounded-2xl py-3 w-40 ml-auto sm3:w-full;
+					@apply py-3 w-40 ml-auto sm3:w-full;
 				}
 			}
 		}

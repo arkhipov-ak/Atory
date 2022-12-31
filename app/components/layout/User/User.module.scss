@@ -3,9 +3,7 @@
 	.userWrapper {
 		@apply flex items-center ml-auto;
 		> div:first-of-type {
-			width: 37px;
-			height: 37px;
-			@apply bg-gray-500 rounded-full pl-0 relative;
+			@apply bg-gray-500 w-[37px] h-[37px] rounded-full pl-0 relative;
 			> svg {
 				fill: #7f7f7f;
 				@apply mx-auto;
@@ -22,8 +20,7 @@
 			> span {
 				border: solid #858586;
 				border-width: 0 3px 3px 0;
-				padding: 3px;
-				@apply inline-block rotate-[45deg];
+				@apply inline-block rotate-[45deg] p-[3px];
 			}
 			.active {
 				@apply rotate-[225deg] mt-1.5;

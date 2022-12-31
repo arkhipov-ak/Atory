@@ -110,7 +110,7 @@ const CatalogItem: FC<ICatalogItem> = ({
 				</p>
 			</div>
 			<div>
-				<p>{countPlays.toLocaleString()}</p>
+				<p>{countPlays?.toLocaleString()}</p>
 			</div>
 			<div>
 				<FavoriteItem trackId={_id} />

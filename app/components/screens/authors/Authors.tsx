@@ -9,10 +9,7 @@ import { IAuthorsPage } from '../../../../pages/authors'
 
 const Authors: FC<IAuthorsPage> = ({ authors }) => {
 	return (
-		<Meta
-			title="Listen music online"
-			description="Listen to popular music right in your browser"
-		>
+		<Meta>
 			<Layout haveGradient="gradientBlue">
 				<Gallery
 					data={authors}

@@ -1,15 +1,18 @@
 import { FC } from 'react'
 import Select, { GroupBase, OptionsOrGroups, SingleValue } from 'react-select'
 
+import { IActive } from '@/components/screens/admin/newTrack/newTrack.interface'
+
 import t from '@/hooks/getLang'
 
 import styles from './Select.module.scss'
 
 interface ISelectItem {
 	options: OptionsOrGroups<string, GroupBase<string>> | any
-	defaultValue: string
-	handleChange: (arg: SingleValue<string>) => void
-	text: string
+	defaultValue: string | IActive[] | IActive
+	handleChange: (arg: SingleValue<any>) => void
+	text?: string
+	isMulti?: boolean
 }
 
 const SelectItem: FC<ISelectItem> = ({
@@ -17,15 +20,18 @@ const SelectItem: FC<ISelectItem> = ({
 	defaultValue,
 	handleChange,
 	text,
+	isMulti = false,
 }) => {
 	return (
 		<div>
-			<p>{t(text)}</p>
+			{text && <p>{t(text)}</p>}
 			<Select
 				options={options}
 				className={styles.select}
 				onChange={(obj) => handleChange(obj)}
 				isSearchable={false}
+				isMulti={isMulti}
+				placeholder={t('Select...')}
 				defaultValue={defaultValue}
 				name="lang"
 				instanceId="select language"

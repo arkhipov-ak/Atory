@@ -5,12 +5,14 @@ import Link from 'next/link'
 import { FC, useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { HiOutlinePencil } from 'react-icons/hi'
+import { FormattedMessage } from 'react-intl'
 
 import t from '@/hooks/getLang'
 
 import { IAuthor } from '@/shared/types/track.types'
 
 import MaterialIcon from '../MaterialIcon'
+import Button from '../button/Button'
 import Field from '../form-elements/Field'
 import UploadField from '../form-elements/UploadField/UploadFields'
 import Navigation from '../navigation/Navigation'
@@ -40,7 +42,7 @@ const Header: FC<IHeader> = ({
 }) => {
 	const [isOpen, setIsOpen] = useState(false)
 
-	const data = isEdit && useFunc(setIsOpen, id)
+	const data = useFunc && useFunc(setIsOpen, id)
 
 	const { handleSubmit, register, control } = useForm({
 		mode: 'onChange',
@@ -48,10 +50,9 @@ const Header: FC<IHeader> = ({
 
 	const handleIsOpen = () => {
 		if (isEdit) {
-			setIsOpen(isEdit && !isOpen)
+			setIsOpen(!isOpen)
 		}
 	}
-
 	return (
 		<>
 			<div
@@ -60,14 +61,18 @@ const Header: FC<IHeader> = ({
 				})}
 				onClick={handleIsOpen}
 			>
-				<div className={styles.avatar}>
+				<div
+					className={cn(styles.avatar, {
+						[styles.avatarAuth]: isEdit,
+					})}
+				>
 					{poster ? (
 						<Image
 							src={poster}
 							draggable={false}
 							alt="Avatar"
-							width={250}
-							height={250}
+							layout="fill"
+							objectFit="cover"
 						/>
 					) : (
 						<MaterialIcon name="MdPersonOutline" />
@@ -77,7 +82,9 @@ const Header: FC<IHeader> = ({
 							<div className={styles.shadow}></div>
 							<div className={styles.edit}>
 								<HiOutlinePencil />
-								<p>{t('Select photo')}</p>
+								<p>
+									<FormattedMessage id="Select photo" />
+								</p>
 							</div>
 						</>
 					)}
@@ -118,12 +125,11 @@ const Header: FC<IHeader> = ({
 						<Controller
 							control={control}
 							name="poster"
-							// @ts-ignore
 							defaultValue={poster ? poster : ''}
 							render={({ field: { value, onChange } }) => (
 								<UploadField
 									onChange={onChange}
-									value={value}
+									value={value ? value : poster}
 									folder="profile"
 								/>
 							)}
@@ -134,7 +140,7 @@ const Header: FC<IHeader> = ({
 								text="Name"
 								{...register('name')}
 							/>
-							<button type="submit">{t('Save')}</button>
+							<Button text="Save" />
 						</div>
 					</form>
 				</div>

@@ -10,3 +10,10 @@ export interface IUser {
 	isAdmin: boolean
 	playlists: IPlaylist[]
 }
+
+export interface IUserUpdate {
+	email?: string
+	password?: string
+	poster?: string
+	name?: string
+}

@@ -20,10 +20,7 @@ interface IAlbum {
 
 const Album: FC<IAlbum> = ({ title, poster, totalDuration, data, author }) => {
 	return (
-		<Meta
-			title="Listen music online"
-			description="Listen to popular music right in your browser"
-		>
+		<Meta>
 			<Layout haveGradient="gradientBlue">
 				<Header
 					subtitle="Album"

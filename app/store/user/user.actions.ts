@@ -3,18 +3,19 @@ import { errorCatch } from 'api/api.helpers'
 
 import { AuthService } from '@/services/auth/auth.service'
 
-import { toastrError } from '@/utils/toastr-error'
+import { toastrErrorT } from '@/utils/toastr-error'
 
 import { IAuthResponse, IAuthUser } from './user.interface'
 
 export const register = createAsyncThunk<IAuthResponse, IAuthUser>(
 	'auth/register',
-	async ({ email, password, name }, thunkAPI) => {
+	async ({ email, password, name, errorText, errorTitle }, thunkAPI) => {
 		try {
 			const response = await AuthService.register(email, password, name)
 			return response.data
 		} catch (error) {
-			toastrError(error)
+			console.log(errorText, errorTitle)
+			toastrErrorT(errorText, errorTitle)
 			return thunkAPI.rejectWithValue(error)
 		}
 	}
@@ -22,12 +23,12 @@ export const register = createAsyncThunk<IAuthResponse, IAuthUser>(
 
 export const login = createAsyncThunk<IAuthResponse, IAuthUser>(
 	'auth/login',
-	async ({ email, password }, thunkAPI) => {
+	async ({ email, password, errorText, errorTitle }, thunkAPI) => {
 		try {
 			const response = await AuthService.login(email, password)
 			return response.data
 		} catch (error) {
-			toastrError(error)
+			toastrErrorT(errorText, errorTitle)
 			return thunkAPI.rejectWithValue(error)
 		}
 	}

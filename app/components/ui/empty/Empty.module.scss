@@ -1,5 +1,5 @@
 .emptyFavorite {
-	@apply flex items-center flex-col pt-24;
+	@apply flex items-center flex-col pt-24 max-w-3xl mx-auto text-center animate-up;
 	> h1 {
 		@apply text-4xl mb-6 opacity-90 font-semibold text-center sm3:text-2xl sm3:mb-3;
 	}
@@ -8,6 +8,14 @@
 	}
 	> a,
 	button {
-		@apply bg-white rounded-2xl text-black px-10 py-3 uppercase font-semibold;
+		transition: all 0.3s ease;
+		@apply bg-white rounded-2xl text-black px-10 py-3 uppercase font-semibold opacity-90 transition;
+	}
+	> a:hover {
+		@apply opacity-100;
+	}
+
+	> button:hover {
+		@apply opacity-100;
 	}
 }

@@ -1,6 +1,8 @@
 import { NextPage } from 'next'
 import Link from 'next/link'
 
+import { Button } from '@/components/ui'
+
 import t from '@/hooks/getLang'
 
 import Meta from '@/utils/Meta'
@@ -14,7 +16,9 @@ const Error404: NextPage = () => {
 				<h1>404</h1>
 				<p>{t('Oops! Something wrong…')}</p>
 				<p>{t('The page you were looking for does not exist')}</p>
-				<Link href="/">{t('Go home')}</Link>
+				<Link href="/">
+					<Button text="Go home" />
+				</Link>
 			</div>
 		</Meta>
 	)

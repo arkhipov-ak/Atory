@@ -6,6 +6,8 @@ import t from '@/hooks/getLang'
 
 import { IAuthor } from '@/shared/types/track.types'
 
+import Button from '../button/Button'
+
 import styles from './Slider.module.scss'
 
 interface ISlideItem {
@@ -35,9 +37,7 @@ const SlideItem: FC<ISlideItem> = ({ slide, buttonTitle = 'Watch' }) => {
 						slide.countTracks
 					} ${t('Tracks')}`}
 				</div>
-				<button className={styles.button} onClick={() => push(slide.link)}>
-					{buttonTitle}
-				</button>
+				<Button text={buttonTitle} onClick={() => push(slide.link)} />
 			</div>
 		</div>
 	)

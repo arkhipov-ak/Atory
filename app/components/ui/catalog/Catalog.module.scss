@@ -46,7 +46,7 @@
 						> p {
 							@apply text-lg xl:text-base sm:text-sm;
 						}
-						> p:nth-child(2){
+						> p:nth-child(2) {
 							@apply text-base text-gray-300 mx-auto xl:text-sm sm:text-xs;
 							> a {
 								@apply mr-1;
@@ -63,7 +63,7 @@
 				}
 				> div:first-child {
 					> img {
-						@apply sm2:w-4 sm2:h-4;
+						@apply w-4 h-4 ml-0.5;
 					}
 				}
 				> div:nth-child(2) {
@@ -75,7 +75,7 @@
 							@apply text-ellipsis overflow-hidden sm4:max-w-[120px] sm4:whitespace-nowrap sm4:text-xs;
 						}
 						> p {
-							@apply text-ellipsis overflow-hidden whitespace-nowrap sm4:max-w-[140px];
+							@apply text-ellipsis overflow-hidden  sm4:whitespace-nowrap sm4:max-w-[200px] sm5:max-w-[140px];
 						}
 					}
 				}

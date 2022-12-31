@@ -27,10 +27,7 @@ const Favorite: FC = () => {
 	const tracksMissingT = t('Favorite tracks missing')
 
 	return (
-		<Meta
-			title="Listen music online"
-			description="Listen to popular music right in your browser"
-		>
+		<Meta>
 			<Layout haveGradient="gradientPurple">
 				<Header
 					subtitle="Playlist"

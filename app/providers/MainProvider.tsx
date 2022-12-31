@@ -34,7 +34,6 @@ const MainProvider: FC<TypeComponentAuthFields> = ({ children, Component }) => {
 				<LangProvider>
 					<QueryClientProvider client={queryClient}>
 						<AuthProvider Component={Component}>{children}</AuthProvider>
-
 						<DynamicPlayer />
 						<ReduxToastr />
 					</QueryClientProvider>

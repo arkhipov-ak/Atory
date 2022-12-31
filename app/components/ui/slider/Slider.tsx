@@ -18,7 +18,7 @@ const Slider: FC<ISlider> = ({ buttonTitle, slides }) => {
 		slides.length
 	)
 
-	if(!slides.length) return null
+	if (!slides.length) return null
 
 	return (
 		<div className={styles.slider}>

@@ -48,7 +48,7 @@
 		@apply animate-fade;
 		> ul {
 			border-top: 1px solid #282828;
-			padding-top: 14px;
+			@apply pt-3.5;
 			> li {
 				transition: all 0.5s ease;
 				@apply text-gray-400 flex justify-between items-center;

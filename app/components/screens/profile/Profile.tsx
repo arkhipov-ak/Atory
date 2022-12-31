@@ -1,30 +1,38 @@
 import { getPlaylistsUrl } from 'config/url.config'
+import dynamic from 'next/dynamic'
 import { FC } from 'react'
 
 import Layout from '@/components/layout/Layout'
-import { Empty, Gallery, Header, SkeletonLoader } from '@/components/ui'
+import { Gallery, SkeletonLoader } from '@/components/ui'
+
+import t from '@/hooks/getLang'
+import { useAuth } from '@/hooks/useAuth'
 
 import Meta from '@/utils/Meta'
-
-import { usePlaylist } from '../playlist/usePlaylist'
 
 import styles from './Profile.module.scss'
 import { useProfile } from './useProfile'
 
+const DynamicHeader = dynamic(() => import('@/components/ui/header/Header'), {
+	ssr: false,
+})
+
 const Profile: FC = () => {
 	const { profile, isLoading } = useProfile()
-	const { createAsync } = usePlaylist()
+	const { user } = useAuth()
 
 	return (
 		<Meta title="Edit profile" description="Your profile">
 			<Layout haveGradient="gradientBlue">
-				<Header
+				<DynamicHeader
 					subtitle="Profile"
 					title={profile?.name || ''}
-					description={`${profile?.playlists.length} open playlists`}
+					description={`${profile?.playlists.length || '0'} ${t(
+						'Open playlists'
+					)}`}
 					poster={profile?.poster}
 					useFunc={useProfile}
-					isEdit
+					isEdit={user?._id === profile?._id}
 				/>
 				{isLoading || !profile?.playlists ? (
 					<SkeletonLoader
@@ -32,20 +40,15 @@ const Profile: FC = () => {
 						className={styles.skeletonLoader}
 						containerClassName={styles.containerLoader}
 					/>
-				) : profile?.playlists.length ? (
-					<Gallery
-						title="My playlists"
-						data={profile.playlists}
-						link={getPlaylistsUrl()}
-						type="playlist"
-					/>
 				) : (
-					<Empty
-						title="Playlists missing"
-						subtitle="Create a new playlist."
-						handleData={createAsync}
-						text="Create playlist"
-					/>
+					profile?.playlists.length > 0 && (
+						<Gallery
+							title="Playlists"
+							data={profile.playlists}
+							link={getPlaylistsUrl()}
+							type="playlists"
+						/>
+					)
 				)}
 			</Layout>
 		</Meta>

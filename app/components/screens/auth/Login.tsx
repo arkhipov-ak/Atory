@@ -21,12 +21,16 @@ const Login: FC = () => {
 		register: registerInput,
 		handleSubmit,
 		formState,
+		setValue,
 		reset,
 	} = useForm<IAuthInput>({
 		mode: 'onChange',
 	})
 
 	const { login } = useActions()
+
+	setValue('errorText', t('Incorrect email address or password entered'))
+	setValue('errorTitle', t('Error'))
 
 	const onSubmit: SubmitHandler<IAuthInput> = (data) => {
 		login(data)
@@ -51,7 +55,7 @@ const Login: FC = () => {
 
 					<button type="submit">{t('Login')}</button>
 					<p>
-						{t(`Don't have an account?`)}{' '}
+						{t(`Don't have an account?`)}
 						<Link href="/signup">{t('SignUp')}</Link>
 					</p>
 				</form>

@@ -9,9 +9,9 @@ import styles from './form.module.scss'
 const Field = forwardRef<HTMLInputElement, IField>(
 	({ text, placeholder, error, type = 'text', style, ...rest }, ref) => {
 		return (
-			<div className={styles.field}>
+			<div className={styles.field} style={style}>
 				<label>
-					<span>{t(text)}</span>
+					<span>{text && t(text)}</span>
 					<input
 						ref={ref}
 						type={type}
