@@ -35,7 +35,6 @@ const Settings: FC = () => {
 		{ value: 'ukrainian', label: t('Ukrainian'), locale: 'uk' },
 		{ value: 'turkish', label: t('Turkish'), locale: 'tr' },
 	]
-	console.log(options)
 
 	const lang = Cookies.get('language')
 	const [activeLang, setActiveLang] = useState(

@@ -14,7 +14,6 @@ export const register = createAsyncThunk<IAuthResponse, IAuthUser>(
 			const response = await AuthService.register(email, password, name)
 			return response.data
 		} catch (error) {
-			console.log(errorText, errorTitle)
 			toastrErrorT(errorText, errorTitle)
 			return thunkAPI.rejectWithValue(error)
 		}
