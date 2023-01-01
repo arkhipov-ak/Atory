@@ -3,9 +3,10 @@ const nextConfig = {
 	poweredByHeader: false,
 	swcMinify: true,
 	env: {
-		APP_URL: process.env.REACT_APP_URL,
 		APP_ENV: process.env.REACT_APP_ENV,
-		APP_SERVER_URL: process.env.REACT_APP_SERVER,
+		APP_URL: process.env.REACT_APP_URL,
+		APP_SERVER: process.env.REACT_APP_SERVER,
+		APP_SERVER_URL: process.env.REACT_APP_SERVER_URL,
 	},
 	i18n: {
 		locales: ['ru', 'en', 'it', 'fr', 'de', 'uk', 'tr'],
@@ -15,11 +16,11 @@ const nextConfig = {
 		return [
 			{
 				source: '/api/:path*',
-				destination: `https://atorybg-production.up.railway.app/api/:path*`,
+				destination: `${process.env.REACT_APP_SERVER_URL}/:path*`,
 			},
 			{
 				source: '/uploads/:path*',
-				destination: `https://atorybg-production.up.railway.app/uploads/:path*`,
+				destination: `${process.env.REACT_APP_SERVER}/uploads/:path*`,
 			},
 		]
 	},

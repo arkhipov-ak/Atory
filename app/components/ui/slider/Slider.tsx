@@ -5,7 +5,6 @@ import { CSSTransition } from 'react-transition-group'
 import { IAuthor } from '@/shared/types/track.types'
 
 import SlideArrow from './SlideArrow/SlideArrow'
-import SlideItem from './SlideItem'
 import styles from './Slider.module.scss'
 import { useSlider } from './useSlider'
 
