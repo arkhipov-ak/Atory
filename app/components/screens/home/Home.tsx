@@ -23,7 +23,7 @@ const Home: FC<IHome> = ({
 	return (
 		<Meta>
 			<Layout>
-				{/* <Slider slides={slides} buttonTitle="Listen now" /> */}
+				<Slider slides={slides} buttonTitle="Listen now" />
 				<Gallery
 					title="Most streamed albums"
 					data={popularAlbums}

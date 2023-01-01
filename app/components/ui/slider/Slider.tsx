@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic'
 import { FC } from 'react'
 import { CSSTransition } from 'react-transition-group'
 
@@ -7,6 +8,10 @@ import SlideArrow from './SlideArrow/SlideArrow'
 import SlideItem from './SlideItem'
 import styles from './Slider.module.scss'
 import { useSlider } from './useSlider'
+
+const DynamicSlideItem = dynamic(() => import('./SlideItem'), {
+	ssr: false,
+})
 
 interface ISlider {
 	buttonTitle?: string
@@ -31,7 +36,7 @@ const Slider: FC<ISlider> = ({ buttonTitle, slides }) => {
 				classNames="slide-animation"
 				unmountOnExit
 			>
-				<SlideItem slide={slides[index]} buttonTitle={buttonTitle} />
+				<DynamicSlideItem slide={slides[index]} buttonTitle={buttonTitle} />
 			</CSSTransition>
 
 			{isNext && (
