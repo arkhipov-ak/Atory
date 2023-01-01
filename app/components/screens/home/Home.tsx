@@ -30,14 +30,14 @@ const Home: FC<IHome> = ({
 					type="albums"
 					link={getPopularAlbumsUrl()}
 				/>
-				{/* <Catalog title="Trending right now" tracks={trendingTracks} /> */}
+				<Catalog title="Trending right now" tracks={trendingTracks} />
 				<Gallery
 					title="Most popular artists"
 					data={authors}
 					type="authors"
 					link={getAuthorsUrl()}
 				/>
-				{/* <Catalog title="News tracks" tracks={newTracks} /> */}
+				<Catalog title="News tracks" tracks={newTracks} />
 				<Gallery
 					title="News albums"
 					data={albums}
