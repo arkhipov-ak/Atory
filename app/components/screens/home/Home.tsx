@@ -23,21 +23,21 @@ const Home: FC<IHome> = ({
 	return (
 		<Meta>
 			<Layout>
-				<Slider slides={slides} buttonTitle="Listen now" />
+				{/* <Slider slides={slides} buttonTitle="Listen now" /> */}
 				<Gallery
 					title="Most streamed albums"
 					data={popularAlbums}
 					type="albums"
 					link={getPopularAlbumsUrl()}
 				/>
-				<Catalog title="Trending right now" tracks={trendingTracks} />
+				{/* <Catalog title="Trending right now" tracks={trendingTracks} /> */}
 				<Gallery
 					title="Most popular artists"
 					data={authors}
 					type="authors"
 					link={getAuthorsUrl()}
 				/>
-				<Catalog title="News tracks" tracks={newTracks} />
+				{/* <Catalog title="News tracks" tracks={newTracks} /> */}
 				<Gallery
 					title="News albums"
 					data={albums}
