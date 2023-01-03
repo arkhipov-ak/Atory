@@ -30,7 +30,7 @@
 	.popup {
 		@apply mt-2 p-2 pl-3 rounded-xl rounded-tr-none bg-gray-700 absolute top-8 right-0 xl2:right-10 flex-col z-[999];
 		> a,
-		div {
+		button {
 			@apply flex items-center mb-1;
 			> p {
 				transition: all 0.5s ease;

@@ -31,6 +31,14 @@
 					@apply text-[#b9b9b9];
 				}
 			}
+			> a:active {
+				> svg {
+					@apply fill-[#c0bdbd];
+				}
+				> span {
+					@apply text-[#c0bdbd];
+				}
+			}
 			&.active {
 				> a > svg {
 					@apply fill-white;

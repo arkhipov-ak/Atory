@@ -1,53 +1,50 @@
 .plug {
-	@apply h-[88px] sm4:h-[148px];
+	@apply h-[88px] sm3:h-[148px];
 }
 .playerWrapper {
 	border-top: 1px solid #282828;
 	@apply fixed bottom-0 left-0 w-full bg-[#181818] z-30 animate-fade;
 	.player {
-		@apply p-4 grid grid-cols-[1fr_2fr_1fr] items-center xl2:px-2 sm4:flex-col sm4:flex sm4:p-5;
+		@apply p-4 grid grid-cols-[1fr_2fr_1fr] items-center xl2:px-2 sm3:flex-col sm3:flex sm3:p-5;
 		.info {
-			@apply flex items-center w-full sm4:justify-center sm4:mb-2;
+			@apply flex items-center w-full sm3:justify-center sm3:mb-2;
 			> img {
-				@apply xl2:w-12 xl2:h-12 sm4:block;
+				@apply xl2:w-12 xl2:h-12 sm3:block;
 			}
 			> div {
 				@apply pl-3 max-w-full relative left-0 xl2:pl-1.5;
 				> p {
-					@apply opacity-80 text-base  max-w-xs xl2:text-xs sm4:text-base;
+					@apply opacity-80 text-base  max-w-xs xl2:text-xs sm3:text-base;
 				}
 				> div {
-					@apply flex items-center sm4:justify-center;
+					@apply flex items-center sm3:justify-center;
 					> a {
 						@apply text-gray-300 text-xs block pt-0.5 pr-1 xl2:text-xs sm3:text-end sm3:text-ellipsis sm3:overflow-hidden sm3:whitespace-nowrap;
 					}
 				}
 			}
 			> div:last-child {
-				@apply sm4:mx-0 sm4:pl-3;
+				@apply sm3:mx-0 sm3:pl-3;
 			}
 		}
 		input[type='range']::-webkit-slider-thumb {
 			transition: all 0.1s ease-in-out;
-			@apply opacity-0;
+			@apply opacity-0 sm3:opacity-100;
 		}
 		input[type='range']:hover::-webkit-slider-thumb {
+			@apply opacity-90 sm3:opacity-100;
+		}
+		input[type='range']:active::-webkit-slider-thumb {
 			@apply opacity-100;
 		}
 		.control {
 			@apply flex flex-col w-full;
 
 			> div:first-child {
-				@apply flex items-center w-24 justify-between mx-auto mb-1 sm4:mb-0;
-
+				@apply flex items-center w-24 justify-between mx-auto mb-1 sm3:mb-0;
 				svg {
 					transition: all 0.5s ease;
 					@apply opacity-80 w-9 h-9;
-				}
-				> span {
-					svg {
-						@apply w-[27px] h-[27px];
-					}
 				}
 				svg:hover {
 					@apply opacity-100;
@@ -67,7 +64,7 @@
 			}
 		}
 		.volume {
-			@apply max-w-[120px] w-full flex items-center ml-auto pl-5 sm4:hidden;
+			@apply max-w-[120px] w-full flex items-center ml-auto pl-5 sm3:hidden;
 			> div {
 				> svg {
 					@apply w-5 h-5;

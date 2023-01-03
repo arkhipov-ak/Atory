@@ -53,10 +53,10 @@ const UserPopup: FC = () => {
 					<p>{t('Settings')}</p>
 					<MaterialIcon name="MdSettings" />
 				</Link>
-				<div onClick={logout}>
+				<button onClick={logout}>
 					<p>{t('Logout')}</p>
 					<MaterialIcon name="MdLogout" />
-				</div>
+				</button>
 			</div>
 		</div>
 	)

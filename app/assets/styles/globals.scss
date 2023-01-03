@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import 'react-redux-toastr/src/styles/index';
 
 *,
 *:before,
 *:after {
 	box-sizing: inherit;
-	font-family: 'Outfit', sans-serif !important;
+	font-family: 'Poppins', sans-serif !important;
 }
 img {
 	width: auto;
@@ -19,6 +19,10 @@ body {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+}
+
+body {
+	@apply text-white bg-gray-900;
 }
 
 a {
@@ -36,8 +40,7 @@ input[type='number'] {
 }
 
 ::-webkit-scrollbar {
-	width: 16px;
-	height: 16px;
+	@apply w-4 h-4 bg-gray-800;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -60,7 +63,7 @@ input[type='range']::-webkit-slider-thumb {
 	@apply cursor-pointer w-3 h-3 rounded-full bg-white;
 }
 
-/* REACT SELECT */
+/* React Select */
 .css-tr4s17-option {
 	background-color: #2d2d2d !important;
 }
@@ -85,9 +88,9 @@ input[type='range']::-webkit-slider-thumb {
 .css-t3ipsp-control {
 	box-shadow: none !important;
 }
-/* REACT SELECT END */
+/* React Select end */
 
-/* REDUX TOASTR */
+/* Redux toastr */
 .toastr-icon {
 	margin-top: 20px !important;
 	margin-left: 20px;
@@ -101,7 +104,7 @@ input[type='range']::-webkit-slider-thumb {
 	z-index: 999 !important;
 }
 
-/* REDUX TOASTR END */
+/* Redux toastr end */
 
 /* Slide animation */
 .slide-animation-enter {
@@ -122,12 +125,3 @@ input[type='range']::-webkit-slider-thumb {
 	transition: opacity 300ms, transform 300ms;
 }
 /* Slide animation end */
-
-@media (prefers-color-scheme: dark) {
-	html {
-		color-scheme: dark;
-	}
-	body {
-		@apply text-white bg-gray-900;
-	}
-}

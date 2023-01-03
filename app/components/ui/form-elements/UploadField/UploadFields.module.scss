@@ -1,5 +1,5 @@
 .field {
-	@apply cursor-pointer mr-8 relative rounded-full w-40 h-40 bg-gray-600;
+	@apply cursor-pointer mr-8 relative rounded-full min-w-[160px] w-40 h-40 bg-gray-600;
 	> div {
 		> img {
 			@apply rounded-full h-full object-cover;

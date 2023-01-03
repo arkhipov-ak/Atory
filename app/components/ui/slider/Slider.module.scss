@@ -43,7 +43,7 @@
 			}
 			.subHeading {
 				text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
-				@apply text-gray-300 font-medium  mb-4 sm2:text-sm sm3:text-white sm3:opacity-80;
+				@apply text-gray-300 font-semibold  mb-4 sm2:text-sm sm3:text-white sm3:opacity-80;
 			}
 			> button {
 				@apply sm4:py-1 sm4:text-sm sm4:px-5;

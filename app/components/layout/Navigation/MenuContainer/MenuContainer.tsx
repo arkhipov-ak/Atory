@@ -46,7 +46,7 @@ const MenuContainer: FC = () => {
 				</ul>
 				{user && <Playlists />}
 			</div>
-			<div className={styles.wrapper} onClick={() => setIsOpen(!isOpen)}>
+			<div className={styles.wrapper}>
 				<Hamburger
 					size={22}
 					color="#858586"

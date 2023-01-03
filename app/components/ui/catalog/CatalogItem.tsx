@@ -60,7 +60,7 @@ const CatalogItem: FC<ICatalogItem> = ({
 	}
 
 	return (
-		<li>
+		<li onDoubleClick={handlePlayAudio}>
 			<div className={styles.playWrapper}>
 				{isPlaying && _id === activeId && activeIndex === index ? (
 					<Image

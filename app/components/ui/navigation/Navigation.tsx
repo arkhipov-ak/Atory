@@ -88,14 +88,14 @@ const Navigation: FC<INavigation> = ({
 						<MaterialIcon name="MdArrowRight" />
 						<div className={styles.modalBlock}>
 							{playlists.data?.map((playlist, i) => (
-								<div key={i} onClick={() => mutateAsync(playlist._id)}>
+								<button key={i} onClick={() => mutateAsync(playlist._id)}>
 									<p>
 										<span>{i + 1}. </span>
 										{playlist.name === 'My playlist'
 											? t(playlist.name)
 											: playlist.name}
 									</p>
-								</div>
+								</button>
 							))}
 						</div>
 					</div>
@@ -105,13 +105,13 @@ const Navigation: FC<INavigation> = ({
 				{isEdit && (
 					<>
 						{handleDelete && (
-							<div onClick={() => handleDelete(id || '')}>
+							<button onClick={() => handleDelete(id || '')}>
 								<p>{t('Delete playlist')}</p>
-							</div>
+							</button>
 						)}
-						<div onClick={() => openModal && openModal(true)}>
+						<button onClick={() => openModal && openModal(true)}>
 							<p>{t('Change information')}</p>
-						</div>
+						</button>
 					</>
 				)}
 			</div>

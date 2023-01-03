@@ -21,7 +21,7 @@
 
 			> a:first-child {
 				> img {
-					@apply mx-0 mr-2 sm3:mr-1 sm3:w-6 sm3:h-6;
+					@apply mx-0 mr-2 w-40 sm3:mr-1 sm3:w-6 sm3:h-6;
 				}
 			}
 			> a:last-child {

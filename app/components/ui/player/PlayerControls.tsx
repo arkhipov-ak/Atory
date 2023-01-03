@@ -36,20 +36,19 @@ const PlayerControls: FC<{ tracks: ITrack[] }> = ({ tracks }) => {
 		<>
 			<div className={styles.control}>
 				<div>
-					<span onClick={toPrevTrack}>
+					<button onClick={toPrevTrack}>
 						<MaterialIcon name="MdSkipPrevious" />
-					</span>
-
-					<div onClick={handlePlayAudio}>
+					</button>
+					<button onClick={handlePlayAudio}>
 						{isPlaying ? (
 							<MaterialIcon name="MdPause" />
 						) : (
 							<MaterialIcon name="MdPlayCircle" />
 						)}
-					</div>
-					<span onClick={toNextTrack}>
+					</button>
+					<button onClick={toNextTrack}>
 						<MaterialIcon name="MdSkipNext" />
-					</span>
+					</button>
 				</div>
 				<div>
 					<span>
