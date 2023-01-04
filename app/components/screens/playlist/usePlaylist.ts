@@ -22,7 +22,6 @@ export const usePlaylist = (
 	const { user } = useAuth()
 
 	const updateError = t('Update profile')
-	const queryDataError = t('Get playlist')
 	const createError = t('Create playlist')
 
 	const queryData = useQuery(
@@ -34,9 +33,6 @@ export const usePlaylist = (
 					...playlist,
 					link: getPlaylistUrl(playlist._id),
 				})),
-			onError: (error) => {
-				toastrError(error, queryDataError)
-			},
 			enabled: !!user,
 		}
 	)
