@@ -73,13 +73,13 @@ const CatalogItem: FC<ICatalogItem> = ({
 				) : (
 					<p>{(parseInt(String(index), 10) + 101).toString().substr(1)}</p> // 0 to 01, 2 to 02...
 				)}
-				<span className={styles.playIndicator} onClick={handlePlayAudio}>
+				<button className={styles.playIndicator} onClick={handlePlayAudio}>
 					{isPlaying && _id === activeId && activeIndex === index ? (
 						<MaterialIcon name="MdPause" />
 					) : (
 						<MaterialIcon name="MdPlayArrow" />
 					)}
-				</span>
+				</button>
 			</div>
 			<div>
 				<Image

@@ -44,7 +44,7 @@ const FavoriteButton: FC<{ trackId: string }> = ({ trackId }) => {
 	}
 
 	return (
-		<div className={styles.favoriteWrapper} onClick={handleFavorite}>
+		<button className={styles.favoriteWrapper} onClick={handleFavorite}>
 			{isFavorite ? (
 				<span className={styles.favoriteActive}>
 					<MaterialIcon name="MdFavorite" />
@@ -54,7 +54,7 @@ const FavoriteButton: FC<{ trackId: string }> = ({ trackId }) => {
 					<MaterialIcon name="MdFavoriteBorder" />
 				</span>
 			)}
-		</div>
+		</button>
 	)
 }
 export default FavoriteButton

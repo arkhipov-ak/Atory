@@ -75,7 +75,7 @@
 							@apply text-ellipsis overflow-hidden sm4:max-w-[120px] sm4:whitespace-nowrap sm4:text-xs;
 						}
 						> p {
-							@apply text-ellipsis overflow-hidden  sm4:whitespace-nowrap sm4:max-w-[200px] sm5:max-w-[140px];
+							@apply text-ellipsis overflow-hidden  sm4:whitespace-nowrap sm4:max-w-[180px] sm5:max-w-[140px] sm5:text-xs sm6:max-w-[100px];
 						}
 					}
 				}
