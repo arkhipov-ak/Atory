@@ -19,7 +19,7 @@ const Empty: FC<IEmpty> = ({ title, subtitle, link, handleData, text }) => {
 			<h1>{t(title)}</h1>
 			<p>{t(subtitle)}</p>
 			{link && text && <Link href={link}>{t(text)}</Link>}
-			{handleData && text && <button onClick={handleData}>{t(text)}</button>}
+			{handleData && text && <button onClick={handleData} aria-label='go'>{t(text)}</button>}
 		</div>
 	)
 }

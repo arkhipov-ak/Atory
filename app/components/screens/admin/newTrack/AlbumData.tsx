@@ -63,7 +63,7 @@ const AlbumData: FC<IAlbumData> = ({
 					setValue('slugAlbum', generateSlug(getValues('titleAlbum')))
 				}
 			/>
-			<Button text="Create" />
+			<Button text="Create" label='Create' />
 		</div>
 	)
 }

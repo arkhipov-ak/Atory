@@ -53,7 +53,7 @@ const Login: FC = () => {
 						isPasswordRequired
 					/>
 
-					<button type="submit">{t('Login')}</button>
+					<button type="submit" aria-label='Login'>{t('Login')}</button>
 					<p>
 						{t(`Don't have an account?`)}
 						<Link href="/signup">{t('SignUp')}</Link>

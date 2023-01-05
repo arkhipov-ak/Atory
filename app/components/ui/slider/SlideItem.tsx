@@ -46,7 +46,7 @@ const SlideItem: FC<ISlideItem> = ({ slide, buttonTitle = 'Watch' }) => {
 						slide.countTracks
 					} ${t('Tracks')}`}
 				</div>
-				<Button text={buttonTitle} onClick={() => push(slide.link)} />
+				<Button text={buttonTitle} onClick={() => push(slide.link)} label='Next' />
 			</div>
 		</div>
 	)

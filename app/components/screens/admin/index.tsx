@@ -13,7 +13,7 @@ const Admin = () => {
 				<div>
 					<Heading title="New track" />
 					<Link href={getAdminsUrl('new-track')}>
-						<Button text="Create new track" />
+						<Button text="Create new track" label='Create track' />
 					</Link>
 				</div>
 			</Layout>

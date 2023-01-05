@@ -86,7 +86,7 @@ const Settings: FC = () => {
 									type="password"
 									error={formState.errors.password}
 								/>
-								<Button text="Change" />
+								<Button text="Change" label='Change' />
 							</form>
 						</div>
 					)}

@@ -17,7 +17,7 @@ const Error404: NextPage = () => {
 				<p>{t('Oops! Something wrong…')}</p>
 				<p>{t('The page you were looking for does not exist')}</p>
 				<Link href="/">
-					<Button text="Go home" />
+					<Button text="Go home" label='Home' />
 				</Link>
 			</div>
 		</Meta>

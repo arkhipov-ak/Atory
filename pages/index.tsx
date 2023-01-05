@@ -55,7 +55,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 		const dataNewTracks = await TrackService.getNewsTracks()
 
-		const newTracks = dataNewTracks.slice(0, 20)
+		const newTracks = dataNewTracks.slice(0, 10)
 
 		const dataTrendingTracks = await TrackService.getPopularTracks()
 

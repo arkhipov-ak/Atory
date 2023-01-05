@@ -7,11 +7,12 @@ import style from './Button.module.scss'
 interface IButton {
 	text: string
 	onClick?: (arg?: any) => void
+	label: string
 }
 
-const Button: FC<IButton> = ({ text, onClick }) => {
+const Button: FC<IButton> = ({ text, onClick, label }) => {
 	return (
-		<button className={style.button} onClick={onClick}>
+		<button className={style.button} onClick={onClick} aria-label={label}>
 			{t(text)}
 		</button>
 	)

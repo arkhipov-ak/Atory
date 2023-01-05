@@ -71,7 +71,7 @@ const AuthorData: FC<IAuthorData> = ({
 					setValue('slugAuthor', generateSlug(getValues('titleAuthor')))
 				}
 			/>
-			<Button text="Next" onClick={() => nextPage(2)} />
+			<Button text="Next" onClick={() => nextPage(2)} label='Next' />
 		</div>
 	)
 }

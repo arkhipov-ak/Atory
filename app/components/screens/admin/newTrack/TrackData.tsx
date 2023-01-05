@@ -50,7 +50,7 @@ const TrackData: FC<ITrackData> = ({ register, control, nextPage }) => {
 			/>
 			<p>{t('Specify track duration')}</p>
 			<Field {...register('duration')} type="number" placeholder="Duration" />
-			<Button text="Next" onClick={() => nextPage(1)} />
+			<Button text="Next" onClick={() => nextPage(1)} label='Next' />
 		</div>
 	)
 }

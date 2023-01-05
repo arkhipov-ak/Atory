@@ -44,7 +44,7 @@ const FavoriteButton: FC<{ trackId: string }> = ({ trackId }) => {
 	}
 
 	return (
-		<button className={styles.favoriteWrapper} onClick={handleFavorite}>
+		<button className={styles.favoriteWrapper} onClick={handleFavorite} aria-label='Add favorite'>
 			{isFavorite ? (
 				<span className={styles.favoriteActive}>
 					<MaterialIcon name="MdFavorite" />

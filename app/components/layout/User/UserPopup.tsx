@@ -53,7 +53,7 @@ const UserPopup: FC = () => {
 					<p>{t('Settings')}</p>
 					<MaterialIcon name="MdSettings" />
 				</Link>
-				<button onClick={logout}>
+				<button onClick={logout} aria-label="Logout">
 					<p>{t('Logout')}</p>
 					<MaterialIcon name="MdLogout" />
 				</button>

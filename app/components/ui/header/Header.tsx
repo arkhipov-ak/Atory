@@ -141,7 +141,7 @@ const Header: FC<IHeader> = ({
 								text="Name"
 								{...register('name')}
 							/>
-							<Button text="Save" />
+							<Button text="Save" label='Save' />
 						</div>
 					</form>
 				</div>

@@ -36,17 +36,17 @@ const PlayerControls: FC<{ tracks: ITrack[] }> = ({ tracks }) => {
 		<>
 			<div className={styles.control}>
 				<div>
-					<button onClick={toPrevTrack}>
+					<button onClick={toPrevTrack} aria-label='Previous track'>
 						<MaterialIcon name="MdSkipPrevious" />
 					</button>
-					<button onClick={handlePlayAudio}>
+					<button onClick={handlePlayAudio} aria-label='Play or pause'>
 						{isPlaying ? (
 							<MaterialIcon name="MdPause" />
 						) : (
 							<MaterialIcon name="MdPlayCircle" />
 						)}
 					</button>
-					<button onClick={toNextTrack}>
+					<button onClick={toNextTrack} aria-label='Next track'>
 						<MaterialIcon name="MdSkipNext" />
 					</button>
 				</div>

@@ -53,7 +53,7 @@ const SignUp = () => {
 						isPasswordRequired
 						isRegister
 					/>
-					<button type="submit">{t('SignUp')}</button>
+					<button type="submit" aria-label='SignUp'>{t('SignUp')}</button>
 					<p>
 						{t('Already have an account?')}
 						<Link href="/login">{t('Login')}</Link>
