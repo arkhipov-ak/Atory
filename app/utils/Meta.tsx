@@ -27,31 +27,24 @@ const Meta: FC<IMeta> = ({
 
 	return (
 		<>
-			{description ? (
-				<Head>
-					<title itemProp="headline">{titleMerge(t(title))}</title>
-					<meta
-						itemProp="description"
-						name="description"
-						content={onlyText(t(description), 152)}
-					/>
-					<link rel="canonical" href={currentUrl} />
-					<meta property="og:locale" content="en" />
-					<meta property="og:title" content={titleMerge(t(title))} />
-					<meta property="og:url" content={currentUrl} />
-					<meta property="og:image" content={image || logoImage} />
-					<meta property="og:site_name" content={siteName} />
-					<meta
-						property="og:description"
-						content={onlyText(t(description), 197)}
-					/>
-				</Head>
-			) : (
-				<Head>
-					<title>{titleMerge(t(title))}</title>
-					<meta name="robots" content="noindex, nofollow" />
-				</Head>
-			)}
+			<Head>
+				<title itemProp="headline">{titleMerge(t(title))}</title>
+				<meta
+					itemProp="description"
+					name="description"
+					content={onlyText(t(description), 152)}
+				/>
+				<link rel="canonical" href={currentUrl} />
+				<meta property="og:locale" content="en" />
+				<meta property="og:title" content={titleMerge(t(title))} />
+				<meta property="og:url" content={currentUrl} />
+				<meta property="og:image" content={image || logoImage} />
+				<meta property="og:site_name" content={siteName} />
+				<meta
+					property="og:description"
+					content={onlyText(t(description), 197)}
+				/>
+			</Head>
 			{children}
 		</>
 	)
