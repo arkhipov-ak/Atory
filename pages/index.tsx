@@ -75,7 +75,7 @@ export const getStaticProps: GetStaticProps = async () => {
 	} catch (err) {
 		return {
 			props: {
-				author: [],
+				authors: [],
 				albums: [],
 				popularAlbums: [],
 				newTracks: [],

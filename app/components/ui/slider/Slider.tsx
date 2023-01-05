@@ -8,9 +8,7 @@ import SlideArrow from './SlideArrow/SlideArrow'
 import styles from './Slider.module.scss'
 import { useSlider } from './useSlider'
 
-const DynamicSlideItem = dynamic(() => import('./SlideItem'), {
-	ssr: false,
-})
+const DynamicSlideItem = dynamic(() => import('./SlideItem'))
 
 interface ISlider {
 	buttonTitle?: string

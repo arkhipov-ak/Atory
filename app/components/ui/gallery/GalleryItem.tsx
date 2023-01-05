@@ -47,8 +47,9 @@ const GalleryItem: FC<IGalleryProps> = ({
 				{poster ? (
 					<Image
 						src={poster}
-						height={150}
-						width={150}
+						fill
+						sizes='(max-width: 600px) 130px,
+										(max-width: 400px) 100px,'
 						className={author ? '' : 'rounded-full'}
 						alt="Album poster"
 						draggable={false}

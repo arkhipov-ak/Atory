@@ -12,9 +12,9 @@
 			transition: all 0.5s ease;
 			@apply p-4 rounded-2xl relative w-[182px] bg-gray-700  h-[249px] sm3:w-[162px] sm3:h-[220px] sm5:w-[130px] sm5:h-[190px];
 			> div {
-				@apply relative mb-3;
+				@apply relative mb-3 w-[150px] h-[150px] sm3:w-[130px] sm3:h-[130px] sm5:h-[100px] sm5:w-[100px];
 				> img {
-					@apply object-cover w-[150px] h-[150px] sm3:w-[130px] sm3:h-[130px] sm5:h-[100px] sm5:w-[100px];
+					@apply object-cover ;
 				}
 				.emptyAvatar {
 					box-shadow: 0px 5px 10px 2px rgba(19, 19, 19, 0.2);

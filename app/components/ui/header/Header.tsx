@@ -107,7 +107,7 @@ const Header: FC<IHeader> = ({
 									{author.title}
 								</Link>
 							))}
-					 <span>{description}</span>	
+						<span>{description}</span>
 					</p>
 				</div>
 			</div>
@@ -141,7 +141,7 @@ const Header: FC<IHeader> = ({
 								text="Name"
 								{...register('name')}
 							/>
-							<Button text="Save" label='Save' />
+							<Button text="Save" label="Save" />
 						</div>
 					</form>
 				</div>
