@@ -17,9 +17,8 @@
 			}
 			.modalBlock {
 				border-radius: 8px 0px 0px 8px;
-				@apply absolute -left-[185px] w-[190px] opacity-0 pointer-events-none bg-gray-700 z-50 p-1.5 max-h-[232px] overflow-y-scroll sm4:w-[160px] sm4:-left-[155px] sm4:p-1;
-				> div,
-				button {
+				@apply absolute -left-[185px] w-[190px] opacity-0 pointer-events-none bg-gray-700 z-50 p-1.5 max-h-[232px] overflow-y-scroll sm4:w-40 sm4:-left-[155px] sm4:p-1;
+				> div {
 					@apply relative;
 					> a,
 					p {
@@ -27,9 +26,6 @@
 					}
 				}
 				> div:hover {
-					@apply bg-gray-500;
-				}
-				> button:hover {
 					@apply bg-gray-500;
 				}
 			}

@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	poweredByHeader: false,
+	experimental: {
+		appDir: true,
+	},
 	env: {
 		APP_ENV: process.env.REACT_APP_ENV,
 		APP_URL: process.env.REACT_APP_URL,

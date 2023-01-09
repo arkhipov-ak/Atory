@@ -60,7 +60,7 @@
 }
 
 .containerLoader {
-	@apply w-[160px] h-[160px] absolute z-50 -top-1 left-0;
+	@apply w-40 h-40 absolute z-50 -top-1 left-0;
 
 	.skeletonLoader {
 		@apply relative h-full w-full rounded-full;

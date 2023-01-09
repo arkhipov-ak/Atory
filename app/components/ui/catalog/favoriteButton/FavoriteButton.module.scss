@@ -10,6 +10,8 @@
 }
 .favorite {
 	> svg {
-		@apply fill-gray-300 w-5 h-5;
+		transition: all 0.3s ease;
+		@apply fill-gray-300 opacity-0 w-5 h-5;
+		
 	}
 }

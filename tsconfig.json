@@ -26,8 +26,20 @@
 			"@/assets/*": ["assets/*"],
 			"@/configs/*": ["configs/*"],
 			"@/store/*": ["store/*"]
-		}
+		},
+		"plugins": [
+			{
+				"name": "next"
+			}
+		]
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_document.tsx", "app/hooks/getLang.ts"],
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		"pages/_document.tsx",
+		"app/hooks/getLang.ts",
+		".next/types/**/*.ts"
+	],
 	"exclude": ["node_modules"]
 }

@@ -62,6 +62,7 @@ const PlayerControls: FC<{ tracks: ITrack[] }> = ({ tracks }) => {
 						max={duration ? duration : `${duration}`}
 						onChange={(e) => onScrub(+e.target.value)}
 						onMouseUp={(e) => onScrubEnd(e)}
+						onTouchEnd={(e) => onScrubEnd(e)}
 						onKeyUp={(e) => onScrubEnd(e)}
 						style={{ background: inputStyling(percentageDuration) }}
 					/>

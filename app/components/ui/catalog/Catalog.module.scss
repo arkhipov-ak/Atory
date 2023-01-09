@@ -88,7 +88,6 @@
 				> div:nth-child(4) {
 					@apply xl:hidden;
 				}
-
 				> div:last-child {
 					> p {
 						@apply mx-auto;
@@ -105,11 +104,15 @@
 				@apply bg-gray-450;
 				> div {
 					> div {
-						> span {
-							@apply opacity-100;
-						}
 						> svg {
 							@apply opacity-100;
+						}
+					}
+					> button {
+						> span {
+							> svg {
+								@apply opacity-100;
+							}
 						}
 					}
 				}

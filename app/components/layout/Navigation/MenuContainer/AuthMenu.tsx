@@ -15,15 +15,15 @@ const AuthMenu: FC<{ handleData: () => void }> = ({ handleData }) => {
 		<>
 			{user?.isAdmin && (
 				<MenuItem
-					icon="MdOutlineLock"
+					icon='MdOutlineLock'
 					link={getAdminUrl()}
-					title="Admin panel"
+					title='Admin panel'
 				/>
 			)}
 			{user && (
 				<li>
 					<a onClick={() => handleData()}>
-						<MaterialIcon name="MdAdd" />
+						<MaterialIcon name='MdAdd' />
 						<span>{t('Create playlist')}</span>
 					</a>
 				</li>

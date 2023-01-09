@@ -12,7 +12,7 @@ interface IAlbumsPage {
 }
 
 const AlbumsPage: NextPage<IAlbumsPage> = ({ albums }) => {
-	return <Albums albums={albums} title="News albums" />
+	return <Albums albums={albums} title='News albums' />
 }
 
 export const getStaticProps: GetStaticProps = async () => {

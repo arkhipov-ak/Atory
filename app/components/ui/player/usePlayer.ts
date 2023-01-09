@@ -120,6 +120,7 @@ const usePlayer = (tracks: ITrack[]) => {
 	}
 
 	const onScrubEnd = (e: any) => {
+		console.log(e)
 		audioRef.current.currentTime = e.target.value
 		if (!isPlaying) {
 			setIsPlaying(true)
