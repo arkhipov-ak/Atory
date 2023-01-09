@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 interface IPlaylistItem {
 	index: number

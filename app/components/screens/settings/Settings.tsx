@@ -8,7 +8,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import Layout from '@/components/layout/Layout'
 import { Button, Field, Heading } from '@/components/ui'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 import { useAuth } from '@/hooks/useAuth'
 
 import Meta from '@/utils/Meta'
@@ -86,7 +86,7 @@ const Settings: FC = () => {
 									type="password"
 									error={formState.errors.password}
 								/>
-								<Button text="Change" label='Change' />
+								<Button text="Change" label="Change" />
 							</form>
 						</div>
 					)}

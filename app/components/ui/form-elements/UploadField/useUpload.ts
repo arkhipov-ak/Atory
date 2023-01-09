@@ -2,7 +2,7 @@ import { ChangeEvent, useMemo, useState } from 'react'
 import { useCallback } from 'react'
 import { useMutation } from 'react-query'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import { FileService } from '@/services/file.service'
 

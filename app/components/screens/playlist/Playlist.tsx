@@ -4,7 +4,7 @@ import { FC } from 'react'
 import Layout from '@/components/layout/Layout'
 import { Catalog, Empty, SkeletonLoader } from '@/components/ui'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 import { useAuth } from '@/hooks/useAuth'
 
 import Meta from '@/utils/Meta'
@@ -25,7 +25,11 @@ const Playlist: FC = () => {
 			<Layout haveGradient="gradientBlue">
 				<DynamicHeader
 					subtitle="Open playlist"
-					title={playlist?.name === 'My playlist' ? t('My playlist') :  playlist?.name || t('Loading...')}
+					title={
+						playlist?.name === 'My playlist'
+							? t('My playlist')
+							: playlist?.name || t('Loading...')
+					}
 					description={`${
 						playlist?.author[0].name
 							? playlist?.author[0].name

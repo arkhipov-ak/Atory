@@ -4,7 +4,7 @@ import { useMemo } from 'react'
 import { SubmitHandler } from 'react-hook-form'
 import { useMutation, useQuery } from 'react-query'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 import { useAuth } from '@/hooks/useAuth'
 
 import { IPlaylist } from '@/shared/types/track.types'

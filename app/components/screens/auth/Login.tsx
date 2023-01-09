@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
 import { Heading, Logo } from '@/components/ui'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 import { useActions } from '@/hooks/useActions'
 
 import Meta from '@/utils/Meta'
@@ -53,7 +53,9 @@ const Login: FC = () => {
 						isPasswordRequired
 					/>
 
-					<button type="submit" aria-label='Login'>{t('Login')}</button>
+					<button type="submit" aria-label="Login">
+						{t('Login')}
+					</button>
 					<p>
 						{t(`Don't have an account?`)}
 						<Link href="/signup">{t('SignUp')}</Link>

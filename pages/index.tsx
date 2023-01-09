@@ -1,7 +1,7 @@
 import { getAlbumUrl, getAuthorUrl } from 'config/url.config'
 import { GetStaticProps, NextPage } from 'next'
 
-import Home from '@/components/screens/home/Home'
+import { Home } from '@/components/screens'
 import { IHome } from '@/components/screens/home/Home.interface'
 
 import { AlbumService } from '@/services/album.service'

@@ -7,7 +7,7 @@ import { AiOutlineEllipsis } from 'react-icons/ai'
 import { usePlaylist } from '@/components/screens/playlist/usePlaylist'
 
 import { clickOutside } from '@/hooks/clickOutside'
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 import { useAuth } from '@/hooks/useAuth'
 
 import { IAlbum, IAuthor } from '@/shared/types/track.types'

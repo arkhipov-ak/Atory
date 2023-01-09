@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 
-import Login from '@/components/screens/auth/Login'
+import { Login } from '@/components/screens'
 
 const LoginPage: NextPage = () => {
 	return <Login />

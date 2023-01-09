@@ -1,4 +1,4 @@
-import Admin from '@/components/screens/admin'
+import { Admin } from '@/components/screens'
 
 import { NextPageAuth } from '@/shared/types/auth.types'
 

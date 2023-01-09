@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { FC } from 'react'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import styles from './Empty.module.scss'
 

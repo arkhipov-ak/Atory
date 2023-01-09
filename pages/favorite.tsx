@@ -1,9 +1,9 @@
-import Favorite from '@/components/screens/favorites/Favorites'
+import { Favorites } from '@/components/screens'
 
 import { NextPageAuth } from '@/shared/types/auth.types'
 
 const FavoritePage: NextPageAuth = () => {
-	return <Favorite />
+	return <Favorites />
 }
 
 FavoritePage.isOnlyUser = true

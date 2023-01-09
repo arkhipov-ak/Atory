@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 
-import Search from '@/components/screens/search/Search'
+import { Search } from '@/components/screens'
 
 const SearchPage: NextPage = () => {
 	return <Search />

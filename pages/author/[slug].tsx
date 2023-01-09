@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
-import Author from '@/components/screens/author/Author'
+import { Author } from '@/components/screens'
 
 import { IAuthor, ITrack } from '@/shared/types/track.types'
 

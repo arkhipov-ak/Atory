@@ -2,7 +2,7 @@ import Image, { StaticImageData } from 'next/image'
 import { FC } from 'react'
 import { HiOutlinePencil } from 'react-icons/hi'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import MaterialIcon from '../../MaterialIcon'
 import SkeletonLoader from '../../SkeletonLoader'

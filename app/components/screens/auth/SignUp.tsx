@@ -4,7 +4,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 
 import { Heading, Logo } from '@/components/ui'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 import { useActions } from '@/hooks/useActions'
 
 import Meta from '@/utils/Meta'
@@ -53,7 +53,9 @@ const SignUp = () => {
 						isPasswordRequired
 						isRegister
 					/>
-					<button type="submit" aria-label='SignUp'>{t('SignUp')}</button>
+					<button type="submit" aria-label="SignUp">
+						{t('SignUp')}
+					</button>
 					<p>
 						{t('Already have an account?')}
 						<Link href="/login">{t('Login')}</Link>

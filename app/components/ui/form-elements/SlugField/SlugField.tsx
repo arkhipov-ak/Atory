@@ -3,7 +3,7 @@ import { UseFormRegister } from 'react-hook-form'
 
 import { IData } from '@/components/screens/admin/newTrack/newTrack.interface'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import Field from '../Field'
 

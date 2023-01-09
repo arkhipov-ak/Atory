@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import Select, { GroupBase, OptionsOrGroups, SingleValue } from 'react-select'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import styles from './Select.module.scss'
 

@@ -3,7 +3,7 @@ import { FieldValues, FormState, UseFormRegister } from 'react-hook-form'
 
 import { Field } from '@/components/ui'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import { validEmail } from '@/shared/regex'
 

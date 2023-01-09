@@ -1,4 +1,5 @@
-import { FC } from 'react'
+import { useRouter } from 'next/router'
+import { FC, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 
 import {
@@ -11,11 +12,17 @@ import styles from './Player.module.scss'
 import PlayerControls from './PlayerControls'
 
 const PlayerContainer: FC = () => {
+	const { pathname } = useRouter()
+
 	const activeIndex = useSelector(getActiveTrackIndex)
 	const tracks = useSelector(getActivePlaylist)
 	if (!tracks) return null
 
 	const track = tracks[activeIndex]
+
+	if (pathname === '/login' || pathname === '/signup') {
+		return null
+	}
 
 	return (
 		<>

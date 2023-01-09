@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { FC } from 'react'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import logoImage from '@/assets/images/logo.png'
 

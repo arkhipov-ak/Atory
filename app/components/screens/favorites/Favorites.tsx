@@ -9,7 +9,7 @@ import {
 	useFavorites,
 } from '@/components/ui'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 import { useAuth } from '@/hooks/useAuth'
 
 import FavoriteCover from '@/assets/images/favorite.png'

@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import style from './Button.module.scss'
 

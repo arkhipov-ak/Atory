@@ -5,7 +5,7 @@ import { FC } from 'react'
 import Layout from '@/components/layout/Layout'
 import { Gallery, SkeletonLoader } from '@/components/ui'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 import { useAuth } from '@/hooks/useAuth'
 
 import Meta from '@/utils/Meta'

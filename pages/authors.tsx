@@ -1,7 +1,7 @@
 import { getAuthorUrl } from 'config/url.config'
 import { GetStaticProps, NextPage } from 'next'
 
-import Authors from '@/components/screens/authors/Authors'
+import { Authors } from '@/components/screens'
 
 import { IAuthor } from '@/shared/types/track.types'
 

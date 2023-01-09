@@ -2,7 +2,7 @@ import cn from 'clsx'
 import Link from 'next/link'
 import { FC } from 'react'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import { IAlbum, IAuthor, IPlaylist } from '@/shared/types/track.types'
 

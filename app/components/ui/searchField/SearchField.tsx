@@ -1,6 +1,6 @@
 import { ChangeEvent, FC } from 'react'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import MaterialIcon from '../MaterialIcon'
 

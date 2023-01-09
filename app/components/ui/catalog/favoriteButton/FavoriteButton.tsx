@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react'
 import { useMutation } from 'react-query'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import { UserService } from '@/services/user.service'
 
@@ -44,7 +44,11 @@ const FavoriteButton: FC<{ trackId: string }> = ({ trackId }) => {
 	}
 
 	return (
-		<button className={styles.favoriteWrapper} onClick={handleFavorite} aria-label='Add favorite'>
+		<button
+			className={styles.favoriteWrapper}
+			onClick={handleFavorite}
+			aria-label="Add favorite"
+		>
 			{isFavorite ? (
 				<span className={styles.favoriteActive}>
 					<MaterialIcon name="MdFavorite" />

@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
-import Album from '@/components/screens/album/Album'
+import { Album } from '@/components/screens'
 
 import { IAlbum, ITrack } from '@/shared/types/track.types'
 

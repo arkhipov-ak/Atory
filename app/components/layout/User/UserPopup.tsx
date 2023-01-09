@@ -6,7 +6,7 @@ import { FC, useRef, useState } from 'react'
 import { MaterialIcon } from '@/components/ui'
 
 import { clickOutside } from '@/hooks/clickOutside'
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 import { useActions } from '@/hooks/useActions'
 import { useAuth } from '@/hooks/useAuth'
 

@@ -5,7 +5,7 @@ import { FC } from 'react'
 
 import MaterialIcon from '@/components/ui/MaterialIcon'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import styles from './Menu.module.scss'
 import { IMenuItem } from './menu.interface'

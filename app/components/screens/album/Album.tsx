@@ -3,7 +3,7 @@ import { FC } from 'react'
 import Layout from '@/components/layout/Layout'
 import { Catalog, Header } from '@/components/ui'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import { IAuthor, ITrack } from '@/shared/types/track.types'
 

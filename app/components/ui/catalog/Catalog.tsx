@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic'
 import { FC } from 'react'
 import { IoMdTime } from 'react-icons/io'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import { ITrack } from '@/shared/types/track.types'
 

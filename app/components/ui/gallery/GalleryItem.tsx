@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { FC } from 'react'
 import { IoMdMusicalNotes } from 'react-icons/io'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import { IAuthor } from '@/shared/types/track.types'
 

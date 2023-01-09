@@ -1,7 +1,7 @@
 import cn from 'clsx'
 import { forwardRef } from 'react'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import { IField } from './form.interface'
 import styles from './form.module.scss'

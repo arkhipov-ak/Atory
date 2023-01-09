@@ -10,7 +10,7 @@ import {
 import { Button, Field, Heading, Select, SlugField } from '@/components/ui'
 import UploadField from '@/components/ui/form-elements/UploadField/UploadFields'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import { generateSlug } from '@/utils/string/generateSlug'
 
@@ -71,7 +71,7 @@ const AuthorData: FC<IAuthorData> = ({
 					setValue('slugAuthor', generateSlug(getValues('titleAuthor')))
 				}
 			/>
-			<Button text="Next" onClick={() => nextPage(2)} label='Next' />
+			<Button text="Next" onClick={() => nextPage(2)} label="Next" />
 		</div>
 	)
 }

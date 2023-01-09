@@ -1,4 +1,4 @@
-import NewTrack from '@/components/screens/admin/newTrack/NewTrack'
+import { NewTrack } from '@/components/screens'
 
 import { NextPageAuth } from '@/shared/types/auth.types'
 

@@ -4,7 +4,7 @@ import { FC } from 'react'
 import Layout from '@/components/layout/Layout'
 import { Catalog, Gallery, Header } from '@/components/ui'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import { ITrack } from '@/shared/types/track.types'
 

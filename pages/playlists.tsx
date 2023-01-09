@@ -1,4 +1,4 @@
-import Playlists from '@/components/screens/playlists/Playlists'
+import { Playlists } from '@/components/screens'
 
 import { NextPageAuth } from '@/shared/types/auth.types'
 

@@ -4,7 +4,7 @@ import { Control, Controller, UseFormRegister } from 'react-hook-form'
 import { Button, Field, Heading } from '@/components/ui'
 import UploadField from '@/components/ui/form-elements/UploadField/UploadFields'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import { IData } from './newTrack.interface'
 
@@ -50,7 +50,7 @@ const TrackData: FC<ITrackData> = ({ register, control, nextPage }) => {
 			/>
 			<p>{t('Specify track duration')}</p>
 			<Field {...register('duration')} type="number" placeholder="Duration" />
-			<Button text="Next" onClick={() => nextPage(1)} label='Next' />
+			<Button text="Next" onClick={() => nextPage(1)} label="Next" />
 		</div>
 	)
 }

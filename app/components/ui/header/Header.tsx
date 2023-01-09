@@ -7,7 +7,7 @@ import { Controller, useForm } from 'react-hook-form'
 import { HiOutlinePencil } from 'react-icons/hi'
 import { FormattedMessage } from 'react-intl'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import { IAuthor } from '@/shared/types/track.types'
 

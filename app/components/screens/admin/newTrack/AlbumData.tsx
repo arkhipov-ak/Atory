@@ -10,7 +10,7 @@ import {
 import { Button, Field, Heading, Select, SlugField } from '@/components/ui'
 import UploadField from '@/components/ui/form-elements/UploadField/UploadFields'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import { generateSlug } from '@/utils/string/generateSlug'
 
@@ -63,7 +63,7 @@ const AlbumData: FC<IAlbumData> = ({
 					setValue('slugAlbum', generateSlug(getValues('titleAlbum')))
 				}
 			/>
-			<Button text="Create" label='Create' />
+			<Button text="Create" label="Create" />
 		</div>
 	)
 }

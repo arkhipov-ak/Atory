@@ -1,7 +1,7 @@
 import { getAlbumUrl } from 'config/url.config'
 import { GetStaticProps, NextPage } from 'next'
 
-import Albums from '@/components/screens/albums/Albums'
+import { Albums } from '@/components/screens'
 
 import { IAlbum } from '@/shared/types/track.types'
 
@@ -12,7 +12,7 @@ interface IAlbumsPage {
 }
 
 const AlbumsPage: NextPage<IAlbumsPage> = ({ albums }) => {
-	return <Albums albums={albums} title='Most streamed albums' />
+	return <Albums albums={albums} title="Most streamed albums" />
 }
 
 export const getStaticProps: GetStaticProps = async () => {

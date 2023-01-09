@@ -3,7 +3,7 @@ import { useMutation } from 'react-query'
 
 import { usePlaylist } from '@/components/screens/playlist/usePlaylist'
 
-import t from '@/hooks/getLang'
+import { t } from '@/hooks/getLang'
 
 import { PlaylistService } from '@/services/playlist.service'
 
