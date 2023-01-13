@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import { FC, useEffect } from 'react'
+import { FC } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
-import { Heading, Logo } from '@/components/ui'
+import { Button, Heading, Logo } from '@/components/ui'
 
 import { t } from '@/hooks/getLang'
 import { useActions } from '@/hooks/useActions'
@@ -24,7 +24,7 @@ const Login: FC = () => {
 		setValue,
 		reset,
 	} = useForm<IAuthInput>({
-		mode: 'onChange',
+		mode: 'onSubmit',
 	})
 
 	const { login } = useActions()
@@ -52,10 +52,7 @@ const Login: FC = () => {
 						register={registerInput}
 						isPasswordRequired
 					/>
-
-					<button type="submit" aria-label="Login">
-						{t('Login')}
-					</button>
+					<Button text="SignUp" label="SignUp" />
 					<p>
 						{t(`Don't have an account?`)}
 						<Link href="/signup">{t('SignUp')}</Link>

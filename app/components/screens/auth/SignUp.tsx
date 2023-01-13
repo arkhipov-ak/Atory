@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
-import { Heading, Logo } from '@/components/ui'
+import { Button, Heading, Logo } from '@/components/ui'
 
 import { t } from '@/hooks/getLang'
 import { useActions } from '@/hooks/useActions'
@@ -24,7 +24,7 @@ const SignUp = () => {
 		setValue,
 		reset,
 	} = useForm<IAuthInput>({
-		mode: 'onChange',
+		mode: 'onSubmit',
 	})
 
 	setValue('errorText', t('User already exists'))
@@ -53,9 +53,7 @@ const SignUp = () => {
 						isPasswordRequired
 						isRegister
 					/>
-					<button type="submit" aria-label="SignUp">
-						{t('SignUp')}
-					</button>
+					<Button text='SignUp' label='SignUp' />
 					<p>
 						{t('Already have an account?')}
 						<Link href="/login">{t('Login')}</Link>

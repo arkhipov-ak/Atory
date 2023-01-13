@@ -17,9 +17,9 @@ const DynamicUser = dynamic(() => import('./User/User'), {
 
 const Layout: FC<ILayout> = ({ children, haveGradient, showUser = true }) => {
 	return (
-		<div className={cn(styles.layout)}>
+		<div className={styles.layout}>
 			<MenuContainer />
-			<div className={cn(styles.center)}>
+			<div className={styles.center}>
 				{haveGradient && (
 					<div className={cn(styles.gradient, styles[haveGradient])}></div>
 				)}
