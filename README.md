@@ -1,4 +1,4 @@
-DEMO - https://atory.vercel.app/settings
+DEMO - https://atory.vercel.app
 
 ---
 
