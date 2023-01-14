@@ -26,7 +26,7 @@ const Author: FC<IAuthorProps> = ({ title, poster, data, totalPlays }) => {
 
 	return (
 		<Meta title="Your favorite artists are here">
-			<Layout haveGradient="gradientBlue">
+			<Layout poster={poster}>
 				<Header
 					subtitle="Performer"
 					title={title}

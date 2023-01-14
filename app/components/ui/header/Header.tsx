@@ -53,6 +53,7 @@ const Header: FC<IHeader> = ({
 			setIsOpen(!isOpen)
 		}
 	}
+
 	return (
 		<>
 			<div

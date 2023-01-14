@@ -21,9 +21,9 @@ interface IAlbum {
 const Album: FC<IAlbum> = ({ title, poster, totalDuration, data, author }) => {
 	return (
 		<Meta>
-			<Layout haveGradient="gradientBlue">
+			<Layout poster={poster}>
 				<Header
-					subtitle="Album"
+					subtitle='Album'
 					title={title}
 					poster={poster}
 					description={` · ${data.length} ${
