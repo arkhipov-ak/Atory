@@ -22,7 +22,7 @@ const Playlist: FC = () => {
 
 	return (
 		<Meta>
-			<Layout haveGradient="gradientBlue">
+			<Layout haveGradient='gradientBlue' poster={playlist?.poster}>
 				<DynamicHeader
 					subtitle="Open playlist"
 					title={
