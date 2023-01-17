@@ -1,0 +1,65 @@
+yarn run v1.22.19
+$ next build
+info  - Loaded env from D:\Projects\Atorify\atorify\.env
+warn  - You have enabled experimental feature (appDir) in next.config.js.
+warn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
+
+info  - Thank you for testing `appDir` please leave your feedback at https://nextjs.link/app-feedback
+info  - Creating an optimized production build...
+info  - Compiled successfully
+info  - Linting and checking validity of types...
+info  - Collecting page data...
+info  - Generating static pages (0/155)
+info  - Generating static pages (38/155)
+info  - Generating static pages (77/155)
+info  - Generating static pages (116/155)
+info  - Generating static pages (155/155)
+info  - Finalizing page optimization...
+
+Route (pages)                                    Size     First Load JS
+┌ ● /                                            330 B           605 kB
+├   /_app                                        0 B             576 kB
+├ ○ /404 (446 ms)                                256 B           605 kB
+├ ● /album/[slug] (ISR: 60 Seconds) (24675 ms)   350 B           605 kB
+├   ├ /ru/album/deluxe (2371 ms)
+├   ├ /ru/album/everybodys-everything (2076 ms)
+├   ├ /ru/album/nightvisions (2038 ms)
+├   ├ /ru/album/runitback (1849 ms)
+├   ├ /ru/album/morelovelessego (1826 ms)
+├   ├ /ru/album/riot (1820 ms)
+├   ├ /ru/album/gangstasparadise (1819 ms)
+├   └ [+6 more paths] (avg 1813 ms)
+├ ● /albums                                      299 B           605 kB
+├ ● /author/[slug] (ISR: 60 Seconds) (18979 ms)  350 B           605 kB
+├   ├ /ru/author/xxxtentacion (2316 ms)
+├   ├ /ru/author/bones (2027 ms)
+├   ├ /ru/author/lil-peep (2014 ms)
+├   ├ /ru/author/imaginedragons (1996 ms)
+├   ├ /ru/author/ragnbone-man (1795 ms)
+├   ├ /ru/author/craigxen (1793 ms)
+├   ├ /ru/author/lil-god-dan (1783 ms)
+├   └ [+3 more paths] (avg 1752 ms)
+├ ● /authors                                     290 B           605 kB
+├ ○ /favorite (435 ms)                           267 B           605 kB
+├ ○ /login (438 ms)                              252 B           605 kB
+├ ○ /manage                                      268 B           605 kB
+├ ○ /manage/new-track (436 ms)                   275 B           605 kB
+├ ○ /playlist/[id] (434 ms)                      259 B           605 kB
+├ ○ /playlists (436 ms)                          268 B           605 kB
+├ ● /popular-albums                              312 B           605 kB
+├ ○ /profile (436 ms)                            265 B           605 kB
+├ ○ /profile/[id] (439 ms)                       258 B           605 kB
+├ ○ /search (435 ms)                             253 B           605 kB
+├ ○ /settings (435 ms)                           322 B           577 kB
+└ ○ /signup (450 ms)                             253 B           605 kB
++ First Load JS shared by all                    585 kB
+  ├ chunks/main-5c9555cdcf2fc5f4.js              82.3 kB
+  ├ chunks/pages/_app-3274dc7f416d132b.js        492 kB
+  ├ chunks/webpack-f074356f701ae891.js           2.46 kB
+  └ css/db4bd0bec6c73bd7.css                     8.74 kB
+
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+●  (SSG)     automatically generated as static HTML + JSON (uses getStaticProps)
+   (ISR)     incremental static regeneration (uses revalidate in getStaticProps)
+
+Done in 63.98s.
