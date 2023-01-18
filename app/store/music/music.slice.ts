@@ -9,15 +9,13 @@ interface IState {
 	activeId: string | null
 	isPlaying: boolean
 	activePlaylist: ITrack[]
-	isListened: false
 }
 
 const initialState: IState = {
-	activeIndex: getStoreLocal('activeTrackIndex') || 0,
-	activeId: getStoreLocal('activeTrackId') || null,
-	activePlaylist: getStoreLocal('activePlaylist') || null,
+	activeIndex: getStoreLocal('activeTrackIndex'),
+	activeId: getStoreLocal('activeTrackId'),
+	activePlaylist: getStoreLocal('activePlaylist'),
 	isPlaying: false,
-	isListened: false,
 }
 
 export const musicSlice = createSlice({
