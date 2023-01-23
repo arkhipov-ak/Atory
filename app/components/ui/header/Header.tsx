@@ -105,7 +105,7 @@ const Header: FC<IHeader> = ({
 										alt="Author photo"
 										draggable={false}
 									/>
-									{author.title}
+									{author.title} ·
 								</Link>
 							))}
 						<span>{description}</span>

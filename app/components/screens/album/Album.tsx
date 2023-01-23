@@ -26,7 +26,7 @@ const Album: FC<IAlbum> = ({ title, poster, totalDuration, data, author }) => {
 					subtitle='Album'
 					title={title}
 					poster={poster}
-					description={` · ${data.length} ${
+					description={`${data.length} ${
 						data.length > 1 ? t('Tracks') : t('Track')
 					}, ${fmtMSSNamed(totalDuration)}`}
 					author={author}

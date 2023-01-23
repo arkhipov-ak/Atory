@@ -1,544 +1,65 @@
-$ turbo build
-‚Ä¢ Running build
-‚Ä¢ Remote caching disabled
-build: cache miss, executing b712506cbd56b2eb
-build: $ turbo build
-build: ‚Ä¢ Running build
-build: ‚Ä¢ Remote caching disabled
-build: build: cache miss, executing 3b67812bcfc2bd9a
-build: build: $ turbo build
-build: build: ‚Ä¢ Running build
-build: build: ‚Ä¢ Remote caching disabled
-build: build: build: cache miss, executing 4f4cbe029a7e0351
-build: build: build: $ turbo build
-build: build: build: ‚Ä¢ Running build
-build: build: build: ‚Ä¢ Remote caching disabled
-build: build: build: build: cache miss, executing 26be7c5369b7fb1b
-build: build: build: build: $ turbo build
-build: build: build: build: ‚Ä¢ Running build
-build: build: build: build: ‚Ä¢ Remote caching disabled
-build: build: build: build: build: cache miss, executing 185ddea498ab9510
-build: build: build: build: build: $ turbo build
-build: build: build: build: build: "turbo" ≠• Ô¢´Ô•‚·Ô ¢≠„‚‡•≠≠•© ®´® ¢≠•Ë≠•©
-build: build: build: build: build: ™Æ¨†≠§Æ©, ®·ØÆ´≠Ô•¨Æ© Ø‡Æ£‡†¨¨Æ© ®´® Ø†™•‚≠Î¨ ‰†©´Æ¨.
-build: build: build: build: build: error Command failed with exit code 1.
-build: build: build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: build: 
-build: build: build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: build: Cached:    0 cached, 1 total
-build: build: build: build:   Time:    1.144s 
-build: build: build: build: 
-build: build: build: build: error Command failed with exit code 1.
-build: build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: 
-build: build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: Cached:    0 cached, 1 total
-build: build: build:   Time:    2.427s 
-build: build: build: 
-build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: error Command failed with exit code 1.
-build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: 
-build: build:  Tasks:    0 successful, 1 total
-build: build: Cached:    0 cached, 1 total
-build: build:   Time:    3.746s 
-build: build: 
-build: build:  ERROR  run failed: command  exited (1)
-build: build: error Command failed with exit code 1.
-build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: 
-build:  Tasks:    0 successful, 1 total
-build: Cached:    0 cached, 1 total
-build:   Time:    4.92s 
-build: 
-build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build:  ERROR  run failed: command  exited (1)
-build: error Command failed with exit code 1.
-build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+yarn run v1.22.19
+$ next build
+info  - Loaded env from D:\Projects\Atorify\atorify\.env
+warn  - You have enabled experimental feature (appDir) in next.config.js.
+info  - Thank you for testing `appDir` please leave your feedback at https://nextjs.link/app-feedback
+warn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
 
-build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-command (D:\Projects\Atorify\atorify) yarn run build exited (1)
- ERROR  run failed: command  exited (1)
- Tasks:    0 successful, 1 total
-Cached:    0 cached, 1 total
-  Time:    6.131s 
+info  - Creating an optimized production build...
+info  - Compiled successfully
+info  - Linting and checking validity of types...
+info  - Collecting page data...
+info  - Generating static pages (0/155)
+info  - Generating static pages (38/155)
+info  - Generating static pages (77/155)
+info  - Generating static pages (116/155)
+info  - Generating static pages (155/155)
+info  - Finalizing page optimization...
 
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-ild: error Command failed with exit code 1.
-build: build: info Visit https://yarnpkg.rify\atorify) yarn run build exited (1)
-build: build: build: build: build: 
-build: build: build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: build: build: Cached:    0 cached, 1 total
-build: build: build: build: build:   Time:    3.746s 
-build: build: build: build: build: 
-build: build: build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: build: build: error Command failed with exit code 1.
-build: build: build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: build: 
-build: build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: build: Cached:    0 cached, 1 total
-build: build: build: build:   Time:    4.92s 
-build: build: build: build: 
-build: build: build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: build: error Command failed with exit code 1.
-build: build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: 
-build: build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: Cached:    0 cached, 1 total
-build: build: build:   Time:    6.131s 
-build: build: build: 
-build: build: build: error Command failed with exit code 1.
-build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: 
-build: build:  Tasks:    0 successful, 1 total
-build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: Cached:    0 cached, 1 total
-build: build:   Time:    7.378s 
-build: build: 
-build: build:  ERROR  run failed: command  exited (1)
-build: build: error Command failed with exit code 1.
-build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: 
-build:  Tasks:    0 successful, 1 total
-build: Cached:    0 cached, 1 total
-build:   Time:    8.577s 
-build: 
-build:  ERROR  run failed: command  exited (1)
-build: error Command failed with exit code 1.
-build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Route (pages)                                    Size     First Load JS
+‚îå ‚óè /                                            330 B           604 kB
+‚îú   /_app                                        0 B             576 kB
+‚îú ‚óã /404                                         256 B           604 kB
+‚îú ‚óè /album/[slug] (ISR: 60 Seconds) (24769 ms)   350 B           604 kB
+‚îú   ‚îú /ru/album/deluxe (2357 ms)
+‚îú   ‚îú /ru/album/nightvisions (2070 ms)
+‚îú   ‚îú /ru/album/everybodys-everything (2054 ms)
+‚îú   ‚îú /ru/album/morelovelessego (1866 ms)
+‚îú   ‚îú /ru/album/seeyouagain (1856 ms)
+‚îú   ‚îú /ru/album/burden (1841 ms)
+‚îú   ‚îú /ru/album/marceline (1830 ms)
+‚îú   ‚îî [+6 more paths] (avg 1816 ms)
+‚îú ‚óè /albums                                      299 B           604 kB
+‚îú ‚óè /author/[slug] (ISR: 60 Seconds) (19962 ms)  350 B           604 kB
+‚îú   ‚îú /ru/author/bones (2514 ms)
+‚îú   ‚îú /ru/author/ragnbone-man (2495 ms)
+‚îú   ‚îú /ru/author/xxxtentacion (2118 ms)
+‚îú   ‚îú /ru/author/imaginedragons (1988 ms)
+‚îú   ‚îú /ru/author/lil-peep (1981 ms)
+‚îú   ‚îú /ru/author/craigxen (1830 ms)
+‚îú   ‚îú /ru/author/coolio (1794 ms)
+‚îú   ‚îî [+3 more paths] (avg 1747 ms)
+‚îú ‚óè /authors                                     290 B           604 kB
+‚îú ‚óã /favorite (436 ms)                           267 B           604 kB
+‚îú ‚óã /login (465 ms)                              252 B           604 kB
+‚îú ‚óã /manage (444 ms)                             268 B           604 kB
+‚îú ‚óã /manage/new-track (455 ms)                   275 B           604 kB
+‚îú ‚óã /playlist/[id] (455 ms)                      259 B           604 kB
+‚îú ‚óã /playlists (435 ms)                          268 B           604 kB
+‚îú ‚óè /popular-albums                              312 B           604 kB
+‚îú ‚óã /profile (439 ms)                            265 B           604 kB
+‚îú ‚óã /profile/[id] (447 ms)                       258 B           604 kB
+‚îú ‚óã /search (464 ms)                             253 B           604 kB
+‚îú ‚óã /settings (433 ms)                           322 B           577 kB
+‚îî ‚óã /signup (461 ms)                             253 B           604 kB
++ First Load JS shared by all                    585 kB
+  ‚îú chunks/main-5c9555cdcf2fc5f4.js              82.3 kB
+  ‚îú chunks/pages/_app-7633e40750b85c37.js        492 kB
+  ‚îú chunks/webpack-6f405d50398fd0b1.js           2.46 kB
+  ‚îî css/62d7674ed3de8051.css                     8.77 kB
 
- Tasks:    0 successful, 1 total
-build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-Cached:    0 cached, 1 total
-  Time:    9.816s 
+‚óã  (Static)  automatically rendered as static HTML (uses no initial props)
+‚óè  (SSG)     automatically generated as static HTML + JSON (uses getStaticProps)
+   (ISR)     incremental static regeneration (uses revalidate in getStaticProps)
 
- ERROR  run failed: command  exited (1)
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: 
-build: build:  Tasks:    0 successful, 1 total
-build: build: Cached:    0 cached, 1 total
-build: build:   Time:    8.577s 
-build: build: 
-build: build:  ERROR  run failed: command  exited (1)
-build: build: error Command failed with exit code 1.
-build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: 
-build:  Tasks:    0 successful, 1 total
-build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: Cached:    0 cached, 1 total
-build:   Time:    9.816s 
-build: 
-tion about this command.
-build: build: build: build: build: 
-build: build: build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: build: build: Cached:    0 cached, 1 total
-build: build: build: build: build:   Time:    7.378s 
-build: build: build: build: build: 
-build: build: build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: build: build: error Command failed with exit code 1.
-build: build: build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: build: 
-build: build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: build: Cached:    0 cached, 1 total
-build: build: build: build:   Time:    8.577s 
-build: build: build: build: 
-build: build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: build: error Command failed with exit code 1.
-build: build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: 
-build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: Cached:    0 cached, 1 total
-build: build: build:   Time:    9.816s 
-build: build: build: 
-build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: error Command failed with exit code 1.
-build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: 
-build: build:  Tasks:    0 successful, 1 total
-build: build: Cached:    0 cached, 1 total
-build: build:   Time:    11.02s 
-build: build: 
-build: build:  ERROR  run failed: command  exited (1)
-build: build: error Command failed with exit code 1.
-build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: 
-build:  Tasks:    0 successful, 1 total
-build: Cached:    0 cached, 1 total
-build:   Time:    12.22s 
-build: 
-build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build:  ERROR  run failed: command  exited (1)
-build: error Command failed with exit code 1.
-build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-command (D:\Projects\Atorify\atorify) yarn run build exited (1)
- ERROR  run failed: command  exited (1)
-
- Tasks:    0 successful, 1 total
-Cached:    0 cached, 1 total
-  Time:    13.342s 
-
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-d (1)
-build: build: build: error Command failed with exit code 1.
-build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: 
-build: build:  Tasks:    0 successful, 1 total
-build: build: Cached:    0 cached, 1 total
-build: build:   Time:    12.22s 
-build: build: 
-build: build: command (D:\Projects\Atorify\atorify) yarn run build://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: build: 
-build: build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: build: Cached:    0 cached, 1 total
-build: build: build: build:   Time:    11.02s 
-build: build: build: build: 
-build: build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: build: error Command failed with exit code 1.
-build: build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: 
-build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: Cached:    0 cached, 1 total
-build: build: build:   Time:    12.22s 
-build: build: build: 
-build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: error Command failed with exit code 1.
-build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build:  ERROR  run failed: command  exited (1)
-build: build: 
-build: build:  Tasks:    0 successful, 1 total
-build: build: Cached:    0 cached, 1 total
-build: build:   Time:    13.342s 
-build: build: 
-build: build: error Command failed with exit code 1.
-build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: 
-build:  Tasks:    0 successful, 1 total
-build: Cached:    0 cached, 1 total
-build:   Time:    14.446s 
-build: 
-build:  ERROR  run failed: command  exited (1)
-build: error Command failed with exit code 1.
-build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-
- Tasks:    0 successful, 1 total
-build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-Cached:    0 cached, 1 total
-  Time:    15.501s 
-
- ERROR  run failed: command  exited (1)
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
- exited (1)
-build: build: build: 
-build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: Cached:    0 cached, 1 total
-build: build: build:   Time:    13.342s 
-build: build: build: 
-build: build: build: error Command failed with exit code 1.
-build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: 
-build: build:  Tasks:    0 successful, 1 total
-build: build: Cached:    0 cached, 1 total
-build: build:   Time:    14.446s 
-build: build: 
-build: build:  ERROR  run failed: command  exited (1)
-build: build: error Command failed with exit code 1.
-build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: 
-build:  Tasks:    0 successful, 1 total
-build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: Cached:    0 cached, 1 total
-build:   Time:    15.501s 
-build: 
-builrun failed: command  exited (1)
-build: build: build: build: 
-build: build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: build: Cached:    0 cached, 1 total
-build: build: build: build:   Time:    13.342s 
-build: build: build: build: 
-build: build: build: build: error Command failed with exit code 1.
-build: build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: 
-build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: Cached:    0 cached, 1 total
-build: build: build:   Time:    14.446s 
-build: build: build: 
-build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: error Command failed with exit code 1.
-build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: 
-build: build:  Tasks:    0 successful, 1 total
-build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: Cached:    0 cached, 1 total
-build: build:   Time:    15.501s 
-build: build: 
-build: build:  ERROR  run failed: command  exited (1)
-build: build: error Command failed with exit code 1.
-build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: 
-build:  Tasks:    0 successful, 1 total
-build: Cached:    0 cached, 1 total
-build:   Time:    16.517s 
-build: 
-build:  ERROR  run failed: command  exited (1)
-build: error Command failed with exit code 1.
-build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-
-command (D:\Projects\Atorify\atorify) yarn run build exited (1)
- Tasks:    0 successful, 1 total
-Cached:    0 cached, 1 total
-  Time:    17.481s 
-
- ERROR  run failed: command  exited (1)
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-, 1 total
-build: build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: Cached:    0 cached, 1 total
-build: build: build:   Time:    15.501s 
-build: build: build: 
-build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: error Command failed with exit code 1.
-build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: 
-build: build:  Tasks:    0 successful, 1 total
-build: build: Cached:    0 cached, 1 total
-build: build:   Time:    16.517s 
-build: build: 
-build: build:  ERROR  run failed: command  exited (1)
-build: build: error Command failed with exit code 1.
-build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: 
-build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build:  Tasks:    0 successful, 1 total
-build: Cached:    0 cached, 1 total
-build:   Time:    17.481s 
-build: 
-build:  ERROR  run failed: command  exited (1)
-build: error Command failed with exit code 1.
-build: info Visit https://yarnpkg.com/en/docsrn run build exited (1)
-build: build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: build: Cached:    0 cached, 1 total
-build: build: build: build:   Time:    15.501s 
-build: build: build: build: 
-build: build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: build: error Command failed with exit code 1.
-build: build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: 
-build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: Cached:    0 cached, 1 total
-build: build: build:   Time:    16.517s 
-build: build: build: 
-build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: error Command failed with exit code 1.
-build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: 
-build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build:  Tasks:    0 successful, 1 total
-build: build: Cached:    0 cached, 1 total
-build: build:   Time:    17.481s 
-build: build: 
-build: build:  ERROR  run failed: command  exited (1)
-build: build: error Command failed with exit code 1.
-build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: 
-build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build:  Tasks:    0 successful, 1 total
-build: Cached:    0 cached, 1 total
-build:   Time:    18.446s 
-build: 
-build:  ERROR  run failed: command  exited (1)
-build: error Command failed with exit code 1.
-build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-
-build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-command (D:\Projects\Atorify\atorify) yarn run build exited (1)
- Tasks:    0 successful, 1 total
-Cached:    0 cached, 1 total
-  Time:    19.418s 
-
- ERROR  run failed: command  exited (1)
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-ith exit code 1.
-build: build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: 
-build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: Cached:    0 cached, 1 total
-build: build: build:   Time:    17.481s 
-build: build: build: 
-build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: error Command failed with exit code 1.
-build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: 
-build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build:  Tasks:    0 successful, 1 total
-build: build: Cached:    0 cached, 1 total
-build: build:   Time:    18.446s 
-build: build: 
-build: build:  ERROR  run failed: command  exited (1)
-build: build: error Command failed with exit code 1.
-build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: 
-build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: command (D:\Projects\Atorify\atorify) yarn run build exild: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: build: build: error Command failed with exit code 1.
-build: build: build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: build: 
-build: build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: build: Cached:    0 cached, 1 total
-build: build: build: build:   Time:    17.481s 
-build: build: build: build: 
-build: build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: build: error Command failed with exit code 1.
-build: build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: 
-build: build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: Cached:    0 cached, 1 total
-build: build: build:   Time:    18.446s 
-build: build: build: 
-build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: error Command failed with exit code 1.
-build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: 
-build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build:  Tasks:    0 successful, 1 total
-build: build: Cached:    0 cached, 1 total
-build: build:   Time:    19.418s 
-build: build: 
-build: build:  ERROR  run failed: command  exited (1)
-build: build: error Command failed with exit code 1.
-build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: 
-build:  Tasks:    0 successful, 1 total
-build: Cached:    0 cached, 1 total
-build:   Time:    20.388s 
-build: 
-build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build:  ERROR  run failed: command  exited (1)
-build: error Command failed with exit code 1.
-build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-
- Tasks:    0 successful, 1 total
-Cached:    0 cached, 1 total
-  Time:    21.27s 
-
- ERROR  run failed: command  exited (1)
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-  0 cached, 1 total
-build: build: build: build:   Time:    18.446s 
-build: build: build: build: 
-build: build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: build: error Command failed with exit code 1.
-build: build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: 
-build: build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: build:  Tasks:    0 successful, 1 total
-build: build: build: Cached:    0 cached, 1 total
-build: build: build:   Time:    19.418s 
-build: build: build: 
-build: build: build:  ERROR  run failed: command  exited (1)
-build: build: build: error Command failed with exit code 1.
-build: build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build: 
-build: build:  Tasks:    0 successful, 1 total
-build: build: Cached:    0 cached, 1 total
-build: build:   Time:    20.388s 
-build: build: 
-build: build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: build:  ERROR  run failed: command  exited (1)
-build: build: error Command failed with exit code 1.
-build: build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-build: build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-build: 
-build:  Tasks:    0 successful, 1 total
-build: Cached:    0 cached, 1 total
-build:   Time:    21.27s 
-build: 
-build:  ERROR  run failed: command  exited (1)
-build: error Command failed with exit code 1.
-build: info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-
-build: ERROR: command finished with error: command (D:\Projects\Atorify\atorify) yarn run build exited (1)
-command (D:\Projects\Atorify\atorify) yarn run build exited (1)
- Tasks:    0 successful, 1 total
-Cached:    0 cached, 1 total
-  Time:    22.187s 
-
- ERROR  run failed: command  exited (1)
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Done in 66.75s.

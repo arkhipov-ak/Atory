@@ -13,7 +13,7 @@
 			word-spacing: 3px;
 			@apply opacity-80 text-sm flex items-center flex-wrap sm3:text-xs;
 			> a {
-				@apply flex items-center mr-1 mb-1;
+				@apply flex items-center mr-1 mb-[3px];
 				> img {
 					@apply mx-2 rounded-full;
 				}
@@ -26,9 +26,6 @@
 			}
 			> a:last-child {
 				@apply mr-1;
-			}
-			> span {
-				@apply mb-1;
 			}
 		}
 	}
