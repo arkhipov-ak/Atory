@@ -52,7 +52,7 @@ const Login: FC = () => {
 						register={registerInput}
 						isPasswordRequired
 					/>
-					<Button text="SignUp" label="SignUp" />
+					<Button text="Login" label="Login" />
 					<p>
 						{t(`Don't have an account?`)}
 						<Link href="/signup">{t('SignUp')}</Link>
