@@ -40,7 +40,10 @@ const Login: FC = () => {
 	return (
 		<Meta title="Login">
 			<div className={styles.auth}>
-				<Logo isBig />
+				<Link href='/'>
+						<Logo isBig />
+				</Link>
+		
 				<Heading title="Login and listen music for free" />
 				<form
 					className={styles.authForm}

@@ -40,7 +40,9 @@ const SignUp = () => {
 	return (
 		<Meta title="SignUp">
 			<div className={styles.auth}>
-				<Logo isBig />
+				<Link href="/">
+					<Logo isBig />
+				</Link>
 				<Heading title="Register and listen music for free" />
 				<form
 					className={styles.authForm}
@@ -53,7 +55,7 @@ const SignUp = () => {
 						isPasswordRequired
 						isRegister
 					/>
-					<Button text='SignUp' label='SignUp' />
+					<Button text="SignUp" label="SignUp" />
 					<p>
 						{t('Already have an account?')}
 						<Link href="/login">{t('Login')}</Link>
