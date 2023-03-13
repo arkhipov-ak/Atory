@@ -11,35 +11,24 @@ import { useSlider } from './useSlider'
 const DynamicSlideItem = dynamic(() => import('./SlideItem'))
 
 interface ISlider {
-	buttonTitle?: string
-	slides: IAuthor[]
+  buttonTitle?: string
+  slides: IAuthor[]
 }
 
 const Slider: FC<ISlider> = ({ buttonTitle, slides }) => {
-	const { handleClick, index, isNext, isPrev, slideIn } = useSlider(
-		slides.length
-	)
+  const { handleClick, index, isNext, isPrev, slideIn } = useSlider(slides.length)
 
-	if (!slides.length) return null
+  if (!slides.length) return null
 
-	return (
-		<div className={styles.slider}>
-			{isPrev && (
-				<SlideArrow variant="left" clickHandler={() => handleClick('prev')} />
-			)}
-			<CSSTransition
-				in={slideIn}
-				timeout={300}
-				classNames="slide-animation"
-				unmountOnExit
-			>
-				<DynamicSlideItem slide={slides[index]} buttonTitle={buttonTitle} />
-			</CSSTransition>
+  return (
+    <div className={styles.slider}>
+      {isPrev && <SlideArrow variant="left" clickHandler={() => handleClick('prev')} />}
+      <CSSTransition in={slideIn} timeout={300} classNames="slide-animation" unmountOnExit>
+        <DynamicSlideItem slide={slides[index]} buttonTitle={buttonTitle} />
+      </CSSTransition>
 
-			{isNext && (
-				<SlideArrow variant="right" clickHandler={() => handleClick('next')} />
-			)}
-		</div>
-	)
+      {isNext && <SlideArrow variant="right" clickHandler={() => handleClick('next')} />}
+    </div>
+  )
 }
 export default Slider

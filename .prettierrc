@@ -1,9 +1,10 @@
 {
-	"trailingComma": "es5",
-	"tabWidth": 2,
-	"useTabs": true,
-	"semi": false,
-	"singleQuote": true,
+  "semi": false,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "printWidth": 100,
+  "tabWidth": 2,
+  "endOfLine": "auto",
 	"importOrder": [
 		"<THIRD_PARTY_MODULES>",
 		"^@/screens/(.*)$",

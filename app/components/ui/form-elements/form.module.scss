@@ -1,18 +1,18 @@
 .field {
-	@apply mb-4;
-	> label {
-		> span {
-			@apply opacity-80 mb-2 pl-1;
-		}
-		> input {
-			@apply w-full outline-none px-3 py-2.5 bg-gray-500 rounded-md opacity-80;
-		}
-	}
-	.error {
-		color: red;
-		@apply opacity-80 text-right text-sm;
-	}
-	.fieldError {
-		border: 1px solid red;
-	}
+  @apply mb-4;
+  > label {
+    > span {
+      @apply opacity-80 mb-2 pl-1;
+    }
+    > input {
+      @apply w-full outline-none px-3 py-2.5 bg-gray-500 rounded-md opacity-80;
+    }
+  }
+  .error {
+    color: red;
+    @apply opacity-80 text-right text-sm;
+  }
+  .fieldError {
+    border: 1px solid red;
+  }
 }

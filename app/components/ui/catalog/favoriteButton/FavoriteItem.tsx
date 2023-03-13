@@ -5,8 +5,8 @@ import { useAuth } from '@/hooks/useAuth'
 import FavoriteButton from './FavoriteButton'
 
 const FavoriteItem: FC<{ trackId: string }> = ({ trackId }) => {
-	const { user } = useAuth()
+  const { user } = useAuth()
 
-	return <>{user && <FavoriteButton trackId={trackId} />}</>
+  return <>{user && <FavoriteButton trackId={trackId} />}</>
 }
 export default FavoriteItem

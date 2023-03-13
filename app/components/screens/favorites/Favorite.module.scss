@@ -1,22 +1,22 @@
 .containerLoader {
-	@apply w-full flex flex-wrap mt-7;
+  @apply w-full flex flex-wrap mt-7;
 
-	.skeletonLoader {
-		@apply relative mb-8 h-16 w-full;
-	}
-	.skeletonLoader:first-child {
-		@apply relative mb-8 h-10 w-full;
-	}
+  .skeletonLoader {
+    @apply relative mb-8 h-16 w-full;
+  }
+  .skeletonLoader:first-child {
+    @apply relative mb-8 h-10 w-full;
+  }
 }
 .emptyFavorite {
-	@apply flex items-center flex-col pt-24;
-	> h1 {
-		@apply text-4xl mb-6 opacity-90 font-semibold;
-	}
-	> p {
-		@apply text-2xl mb-8 opacity-80;
-	}
-	> a {
-		@apply bg-white rounded-2xl text-black px-10 py-3 uppercase font-semibold;
-	}
+  @apply flex items-center flex-col pt-24;
+  > h1 {
+    @apply text-4xl mb-6 opacity-90 font-semibold;
+  }
+  > p {
+    @apply text-2xl mb-8 opacity-80;
+  }
+  > a {
+    @apply bg-white rounded-2xl text-black px-10 py-3 uppercase font-semibold;
+  }
 }

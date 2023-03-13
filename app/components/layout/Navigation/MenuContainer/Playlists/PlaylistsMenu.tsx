@@ -7,18 +7,18 @@ import styles from '../../Menu.module.scss'
 import PlaylistItem from './PlaylistItem'
 
 const PlaylistsMenu: FC = () => {
-	const { queryData } = usePlaylist()
+  const { queryData } = usePlaylist()
 
-	if (!queryData.data?.length) return null
+  if (!queryData.data?.length) return null
 
-	return (
-		<div className={styles.submenu}>
-			<ul>
-				{queryData.data?.map((playlist, i) => (
-					<PlaylistItem key={i} index={i} {...playlist} />
-				))}
-			</ul>
-		</div>
-	)
+  return (
+    <div className={styles.submenu}>
+      <ul>
+        {queryData.data?.map((playlist, i) => (
+          <PlaylistItem key={i} index={i} {...playlist} />
+        ))}
+      </ul>
+    </div>
+  )
 }
 export default PlaylistsMenu

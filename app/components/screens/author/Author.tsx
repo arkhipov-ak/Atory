@@ -13,34 +13,32 @@ import Meta from '@/utils/Meta'
 import { useAuthor } from './useAuthor'
 
 interface IAuthorProps {
-	title: string
-	poster: string
-	data: ITrack[]
-	totalPlays: number
+  title: string
+  poster: string
+  data: ITrack[]
+  totalPlays: number
 }
 
 const Author: FC<IAuthorProps> = ({ title, poster, data, totalPlays }) => {
-	const { query } = useRouter()
+  const { query } = useRouter()
 
-	const { data: albums } = useAuthor(String(query.slug))
+  const { data: albums } = useAuthor(String(query.slug))
 
-	return (
-		<Meta title="Your favorite artists are here">
-			<Layout poster={poster}>
-				<Header
-					subtitle="Performer"
-					title={title}
-					description={`${totalPlays.toLocaleString()} ${t(
-						'Listeners all the time'
-					)}`}
-					poster={poster}
-				/>
-				<Catalog title="Trending right now" tracks={data.slice(0, 20)} />
-				{albums && albums?.length > 0 && (
-					<Gallery title="Albums" data={albums} type="albums" isWrap />
-				)}
-			</Layout>
-		</Meta>
-	)
+  return (
+    <Meta title="Your favorite artists are here">
+      <Layout poster={poster}>
+        <Header
+          subtitle="Performer"
+          title={title}
+          description={`${totalPlays.toLocaleString()} ${t('Listeners all the time')}`}
+          poster={poster}
+        />
+        <Catalog title="Trending right now" tracks={data.slice(0, 20)} />
+        {albums && albums?.length > 0 && (
+          <Gallery title="Albums" data={albums} type="albums" isWrap />
+        )}
+      </Layout>
+    </Meta>
+  )
 }
 export default Author

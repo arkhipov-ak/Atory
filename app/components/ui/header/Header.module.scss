@@ -1,116 +1,116 @@
 .header {
-	@apply flex items-center mb-10 pt-2;
+  @apply flex items-center mb-10 pt-2;
 
-	.info {
-		@apply flex flex-col overflow-hidden;
-		> p:first-child {
-			@apply opacity-80 mb-8 pt-5 text-base uppercase sm4:mb-5;
-		}
-		> h1 {
-			@apply text-5xl leading-normal  mb-8 text-ellipsis overflow-hidden whitespace-nowrap xl:text-2xl xl3:text-xl sm4:mb-6 sm5:text-sm;
-		}
-		> p:last-child {
-			word-spacing: 3px;
-			@apply opacity-80 text-sm flex items-center flex-wrap sm3:text-xs;
-			> a {
-				@apply flex items-center mr-1 mb-[3px];
-				> img {
-					@apply mx-2 rounded-full;
-				}
-			}
+  .info {
+    @apply flex flex-col overflow-hidden;
+    > p:first-child {
+      @apply opacity-80 mb-8 pt-5 text-base uppercase sm4:mb-5;
+    }
+    > h1 {
+      @apply text-5xl leading-normal  mb-8 text-ellipsis overflow-hidden whitespace-nowrap xl:text-2xl xl3:text-xl sm4:mb-6 sm5:text-sm;
+    }
+    > p:last-child {
+      word-spacing: 3px;
+      @apply opacity-80 text-sm flex items-center flex-wrap sm3:text-xs;
+      > a {
+        @apply flex items-center mr-1 mb-[3px];
+        > img {
+          @apply mx-2 rounded-full;
+        }
+      }
 
-			> a:first-child {
-				> img {
-					@apply mx-0 mr-2  sm3:mr-1 sm3:w-6 sm3:h-6;
-				}
-			}
-			> a:last-child {
-				@apply mr-1;
-			}
-		}
-	}
+      > a:first-child {
+        > img {
+          @apply mx-0 mr-2  sm3:mr-1 sm3:w-6 sm3:h-6;
+        }
+      }
+      > a:last-child {
+        @apply mr-1;
+      }
+    }
+  }
 }
 .avatar {
-	@apply bg-gray-600 mr-8 relative rounded-full min-w-[240px] min-h-[240px] xl3:min-w-[180px] xl3:min-h-[180px] sm2:mr-4 sm3:min-h-[120px] sm3:min-w-[120px] sm3:mr-2;
-	.shadow {
-		background-color: rgba(51, 49, 45, 0.4);
-		transition: all 0.2s ease;
-		@apply rounded-full absolute top-0 left-0 w-full h-full z-2 opacity-0;
-	}
-	> img {
-		@apply rounded-full h-full object-cover w-full;
-	}
-	> svg {
-		fill: #7f7f7f;
-		transition: all 0.2s ease;
-		@apply w-[90px] h-[90px] top-1/2 left-1/2 absolute xl3:w-16 xl3:h-16 sm4:w-12 sm4:h-12 sm3:w-8 sm3:h-8 -translate-y-1/2 -translate-x-1/2;
-	}
-	.edit {
-		transition: all 0.4s ease;
-		@apply w-full top-1/2 left-1/2 absolute flex flex-col items-center opacity-0 z-3 -translate-y-1/2 -translate-x-1/2;
-		> svg {
-			@apply w-12 h-12 xl3:w-8 xl3:h-8 sm3:w-6 sm3:h-6;
-		}
-		> p {
-			@apply xl3:text-sm text-center sm3:text-xs;
-		}
-	}
+  @apply bg-gray-600 mr-8 relative rounded-full min-w-[240px] min-h-[240px] xl3:min-w-[180px] xl3:min-h-[180px] sm2:mr-4 sm3:min-h-[120px] sm3:min-w-[120px] sm3:mr-2;
+  .shadow {
+    background-color: rgba(51, 49, 45, 0.4);
+    transition: all 0.2s ease;
+    @apply rounded-full absolute top-0 left-0 w-full h-full z-2 opacity-0;
+  }
+  > img {
+    @apply rounded-full h-full object-cover w-full;
+  }
+  > svg {
+    fill: #7f7f7f;
+    transition: all 0.2s ease;
+    @apply w-[90px] h-[90px] top-1/2 left-1/2 absolute xl3:w-16 xl3:h-16 sm4:w-12 sm4:h-12 sm3:w-8 sm3:h-8 -translate-y-1/2 -translate-x-1/2;
+  }
+  .edit {
+    transition: all 0.4s ease;
+    @apply w-full top-1/2 left-1/2 absolute flex flex-col items-center opacity-0 z-3 -translate-y-1/2 -translate-x-1/2;
+    > svg {
+      @apply w-12 h-12 xl3:w-8 xl3:h-8 sm3:w-6 sm3:h-6;
+    }
+    > p {
+      @apply xl3:text-sm text-center sm3:text-xs;
+    }
+  }
 }
 .avatarAuth:hover {
-	> svg {
-		@apply opacity-0;
-	}
-	.edit,
-	.shadow {
-		@apply opacity-100;
-	}
+  > svg {
+    @apply opacity-0;
+  }
+  .edit,
+  .shadow {
+    @apply opacity-100;
+  }
 }
 .modal {
-	background-color: rgba(5, 5, 5, 0.6);
-	@apply fixed top-0 left-0 w-full h-full hidden z-50;
-	> div {
-		@apply absolute top-1/2 left-1/2 bg-gray-700 p-10 rounded-lg w-[550px] -translate-y-1/2 -translate-x-1/2 sm3:w-[300px] sm3:p-8;
-		> form {
-			@apply sm3:flex-col;
-		}
-		> form,
-		div {
-			@apply flex justify-between items-center;
-			.avatar {
-				@apply w-[180px] h-[180px];
-			}
-			> div {
-				@apply flex flex-col sm3:mr-0;
-				> button {
-					@apply py-3 w-40 ml-auto sm3:w-full;
-				}
-			}
-		}
-		> div:first-child {
-			@apply mb-5;
-			> p {
-				@apply text-lg opacity-80;
-			}
-			> span {
-				> svg {
-					transition: all 0.4s ease;
-					@apply cursor-pointer w-5 h-5 opacity-70;
-				}
-				:hover {
-					@apply opacity-100;
-				}
-			}
-		}
-	}
+  background-color: rgba(5, 5, 5, 0.6);
+  @apply fixed top-0 left-0 w-full h-full hidden z-50;
+  > div {
+    @apply absolute top-1/2 left-1/2 bg-gray-700 p-10 rounded-lg w-[550px] -translate-y-1/2 -translate-x-1/2 sm3:w-[300px] sm3:p-8;
+    > form {
+      @apply sm3:flex-col;
+    }
+    > form,
+    div {
+      @apply flex justify-between items-center;
+      .avatar {
+        @apply w-[180px] h-[180px];
+      }
+      > div {
+        @apply flex flex-col sm3:mr-0;
+        > button {
+          @apply py-3 w-40 ml-auto sm3:w-full;
+        }
+      }
+    }
+    > div:first-child {
+      @apply mb-5;
+      > p {
+        @apply text-lg opacity-80;
+      }
+      > span {
+        > svg {
+          transition: all 0.4s ease;
+          @apply cursor-pointer w-5 h-5 opacity-70;
+        }
+        :hover {
+          @apply opacity-100;
+        }
+      }
+    }
+  }
 }
 .settings {
-	> div {
-		@apply relative;
-		> svg {
-			@apply opacity-100 h-8 w-8;
-		}
-		> div {
-			@apply left-1;
-		}
-	}
+  > div {
+    @apply relative;
+    > svg {
+      @apply opacity-100 h-8 w-8;
+    }
+    > div {
+      @apply left-1;
+    }
+  }
 }

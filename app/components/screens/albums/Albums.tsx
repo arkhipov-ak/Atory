@@ -8,17 +8,17 @@ import { IAlbum } from '@/shared/types/track.types'
 import Meta from '@/utils/Meta'
 
 interface IAlbumsPage {
-	albums: IAlbum[]
-	title: string
+  albums: IAlbum[]
+  title: string
 }
 
 const Albums: FC<IAlbumsPage> = ({ albums, title }) => {
-	return (
-		<Meta>
-			<Layout haveGradient="gradientBlue">
-				<Gallery data={albums} title={title} type="albums" isWrap />
-			</Layout>
-		</Meta>
-	)
+  return (
+    <Meta>
+      <Layout haveGradient="gradientBlue">
+        <Gallery data={albums} title={title} type="albums" isWrap />
+      </Layout>
+    </Meta>
+  )
 }
 export default Albums

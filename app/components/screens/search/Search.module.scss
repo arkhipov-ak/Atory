@@ -1,9 +1,9 @@
 .header {
-	@apply flex items-center xl2:flex-col-reverse;
-	> div::first-child {
-		@apply pt-2;
-	}
-	> div {
-		@apply xl2:ml-auto;
-	}
+  @apply flex items-center xl2:flex-col-reverse;
+  > div::first-child {
+    @apply pt-2;
+  }
+  > div {
+    @apply xl2:ml-auto;
+  }
 }

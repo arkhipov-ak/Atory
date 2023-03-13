@@ -1,7 +1,7 @@
 .containerLoader {
-	@apply w-full flex flex-wrap gap-6 mt-24;
+  @apply w-full flex flex-wrap gap-6 mt-24;
 
-	.skeletonLoader {
-		@apply relative h-60 w-[182px];
-	}
+  .skeletonLoader {
+    @apply relative h-60 w-[182px];
+  }
 }

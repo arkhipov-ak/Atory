@@ -1,68 +1,68 @@
 .field {
-	@apply cursor-pointer mr-8 relative rounded-full min-w-[160px] w-40 h-40 bg-gray-600;
-	> div {
-		> img {
-			@apply rounded-full h-full object-cover;
-		}
-	}
-	.uploadImage {
-		> svg {
-			fill: #7f7f7f;
-			transition: all 0.2s ease;
-			@apply absolute top-1/2 left-1/2 w-[75px] h-[75px] -translate-y-1/2 -translate-x-1/2;
-		}
-	}
-	.edit {
-		transition: all 0.4s ease;
-		@apply w-full absolute flex flex-col items-center opacity-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2;
-		> svg {
-			@apply w-12 h-12;
-		}
-		> p {
-			@apply text-center;
-		}
-	}
-	> input {
-		@apply absolute left-0 top-0 w-full h-full rounded-full opacity-0 z-2 cursor-pointer;
-	}
-	.shadow {
-		transition: all 0.2s ease;
-		background-color: rgba(51, 49, 45, 0.4);
-		@apply rounded-full absolute top-0 left-0 w-full h-full opacity-0 z-1;
-	}
-	.error {
-		@apply relative top-full;
-	}
+  @apply cursor-pointer mr-8 relative rounded-full min-w-[160px] w-40 h-40 bg-gray-600;
+  > div {
+    > img {
+      @apply rounded-full h-full object-cover;
+    }
+  }
+  .uploadImage {
+    > svg {
+      fill: #7f7f7f;
+      transition: all 0.2s ease;
+      @apply absolute top-1/2 left-1/2 w-[75px] h-[75px] -translate-y-1/2 -translate-x-1/2;
+    }
+  }
+  .edit {
+    transition: all 0.4s ease;
+    @apply w-full absolute flex flex-col items-center opacity-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2;
+    > svg {
+      @apply w-12 h-12;
+    }
+    > p {
+      @apply text-center;
+    }
+  }
+  > input {
+    @apply absolute left-0 top-0 w-full h-full rounded-full opacity-0 z-2 cursor-pointer;
+  }
+  .shadow {
+    transition: all 0.2s ease;
+    background-color: rgba(51, 49, 45, 0.4);
+    @apply rounded-full absolute top-0 left-0 w-full h-full opacity-0 z-1;
+  }
+  .error {
+    @apply relative top-full;
+  }
 }
 
 .fieldImg {
-	@apply pl-14;
-	> input::file-selector-button {
-		transition: all 0.3s ease;
-		@apply bg-gray-600 border-none p-2 px-4 rounded-md cursor-pointer;
-	}
+  @apply pl-14;
+  > input::file-selector-button {
+    transition: all 0.3s ease;
+    @apply bg-gray-600 border-none p-2 px-4 rounded-md cursor-pointer;
+  }
 
-	> input::file-selector-button:hover {
-		@apply bg-gray-500;
-	}
+  > input::file-selector-button:hover {
+    @apply bg-gray-500;
+  }
 }
 
 .field:hover {
-	.uploadImage {
-		> svg {
-			@apply opacity-0;
-		}
-	}
-	.edit,
-	.shadow {
-		@apply opacity-100;
-	}
+  .uploadImage {
+    > svg {
+      @apply opacity-0;
+    }
+  }
+  .edit,
+  .shadow {
+    @apply opacity-100;
+  }
 }
 
 .containerLoader {
-	@apply w-40 h-40 absolute z-50 -top-1 left-0;
+  @apply w-40 h-40 absolute z-50 -top-1 left-0;
 
-	.skeletonLoader {
-		@apply relative h-full w-full rounded-full;
-	}
+  .skeletonLoader {
+    @apply relative h-full w-full rounded-full;
+  }
 }

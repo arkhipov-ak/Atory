@@ -1,17 +1,17 @@
 .wrapper {
-	@apply absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-fit;
-	> h1 {
-		@apply text-9xl mb-8 text-blue;
-	}
-	> p:nth-child(2) {
-		@apply text-4xl mb-3 whitespace-nowrap sm4:text-2xl;
-	}
-	> p:nth-child(3) {
-		@apply text-3xl mb-5 sm4:text-xl whitespace-nowrap sm:text-xl sm4:whitespace-normal;
-	}
-	> a {
-		> button {
-			@apply py-3;
-		}
-	}
+  @apply absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-fit;
+  > h1 {
+    @apply text-9xl mb-8 text-blue;
+  }
+  > p:nth-child(2) {
+    @apply text-4xl mb-3 whitespace-nowrap sm4:text-2xl;
+  }
+  > p:nth-child(3) {
+    @apply text-3xl mb-5 sm4:text-xl whitespace-nowrap sm:text-xl sm4:whitespace-normal;
+  }
+  > a {
+    > button {
+      @apply py-3;
+    }
+  }
 }

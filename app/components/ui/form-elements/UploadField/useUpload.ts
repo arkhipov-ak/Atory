@@ -9,46 +9,46 @@ import { FileService } from '@/services/file.service'
 import { toastrError } from '@/utils/toastr-error'
 
 type TypeUpload = (
-	onChange: (arg: string) => void,
-	folder?: string
+  onChange: (arg: string) => void,
+  folder?: string,
 ) => {
-	uploadFile: (e: ChangeEvent<HTMLInputElement>) => Promise<void>
-	isLoading: boolean
+  uploadFile: (e: ChangeEvent<HTMLInputElement>) => Promise<void>
+  isLoading: boolean
 }
 
 export const useUpload: TypeUpload = (onChange, folder) => {
-	const uploadError = t('Upload file')
-	const [isLoading, setIsLoading] = useState(false)
+  const uploadError = t('Upload file')
+  const [isLoading, setIsLoading] = useState(false)
 
-	const { mutateAsync } = useMutation(
-		'upload file',
-		(data: FormData) => FileService.upload(data, folder),
-		{
-			onSuccess({ data }) {
-				onChange(data[0].url)
-			},
-			onError(error) {
-				toastrError(error, uploadError)
-			},
-		}
-	)
+  const { mutateAsync } = useMutation(
+    'upload file',
+    (data: FormData) => FileService.upload(data, folder),
+    {
+      onSuccess({ data }) {
+        onChange(data[0].url)
+      },
+      onError(error) {
+        toastrError(error, uploadError)
+      },
+    },
+  )
 
-	const uploadFile = useCallback(
-		async (e: ChangeEvent<HTMLInputElement>) => {
-			setIsLoading(true)
-			const files = e.target.files
-			if (files?.length) {
-				const formData = new FormData()
-				formData.append('image', files[0])
-				await mutateAsync(formData)
+  const uploadFile = useCallback(
+    async (e: ChangeEvent<HTMLInputElement>) => {
+      setIsLoading(true)
+      const files = e.target.files
+      if (files?.length) {
+        const formData = new FormData()
+        formData.append('image', files[0])
+        await mutateAsync(formData)
 
-				setTimeout(() => {
-					setIsLoading(false)
-				}, 1000)
-			}
-		},
-		[mutateAsync]
-	)
+        setTimeout(() => {
+          setIsLoading(false)
+        }, 1000)
+      }
+    },
+    [mutateAsync],
+  )
 
-	return useMemo(() => ({ uploadFile, isLoading }), [uploadFile, isLoading])
+  return useMemo(() => ({ uploadFile, isLoading }), [uploadFile, isLoading])
 }

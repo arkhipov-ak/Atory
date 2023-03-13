@@ -1,74 +1,74 @@
 .user {
-	@apply flex cursor-pointer items-center relative w-fit ml-auto xl2:pr-10;
-	.userWrapper {
-		@apply flex items-center ml-auto;
-		> div:first-of-type {
-			@apply bg-gray-500 w-[37px] h-[37px] rounded-full pl-0 relative;
-			> svg {
-				fill: #7f7f7f;
-				@apply mx-auto;
-			}
-			> img {
-				@apply absolute left-0 top-0 h-full w-full rounded-full object-cover;
-			}
-		}
-		> div {
-			@apply pl-2 flex items-center;
-			> p {
-				@apply pr-2.5 max-w-[300px] overflow-hidden text-ellipsis sm3:max-w-[200px];
-			}
-			> span {
-				border: solid #858586;
-				border-width: 0 3px 3px 0;
-				@apply inline-block rotate-[45deg] p-[3px];
-			}
-			.active {
-				@apply rotate-[225deg] mt-1.5;
-			}
-		}
-	}
-	.popup {
-		@apply mt-2 p-2 pl-3 rounded-xl rounded-tr-none bg-gray-700 absolute top-8 right-0 xl2:right-10 flex-col z-[999];
-		> a,
-		button {
-			@apply flex items-center mb-1;
-			> p {
-				transition: all 0.5s ease;
-				@apply mr-1.5 opacity-80;
-			}
-			> svg {
-				transition: all 0.5s ease;
-				@apply opacity-80;
-			}
-		}
-		> a:hover {
-			> p {
-				@apply opacity-100;
-			}
-			> svg {
-				@apply opacity-100;
-			}
-		}
-		> div:hover {
-			> p {
-				@apply opacity-100;
-			}
-			> svg {
-				@apply opacity-100;
-			}
-		}
-	}
+  @apply flex cursor-pointer items-center relative w-fit ml-auto xl2:pr-10;
+  .userWrapper {
+    @apply flex items-center ml-auto;
+    > div:first-of-type {
+      @apply bg-gray-500 w-[37px] h-[37px] rounded-full pl-0 relative;
+      > svg {
+        fill: #7f7f7f;
+        @apply mx-auto;
+      }
+      > img {
+        @apply absolute left-0 top-0 h-full w-full rounded-full object-cover;
+      }
+    }
+    > div {
+      @apply pl-2 flex items-center;
+      > p {
+        @apply pr-2.5 max-w-[300px] overflow-hidden text-ellipsis sm3:max-w-[200px];
+      }
+      > span {
+        border: solid #858586;
+        border-width: 0 3px 3px 0;
+        @apply inline-block rotate-[45deg] p-[3px];
+      }
+      .active {
+        @apply rotate-[225deg] mt-1.5;
+      }
+    }
+  }
+  .popup {
+    @apply mt-2 p-2 pl-3 rounded-xl rounded-tr-none bg-gray-700 absolute top-8 right-0 xl2:right-10 flex-col z-[999];
+    > a,
+    button {
+      @apply flex items-center mb-1;
+      > p {
+        transition: all 0.5s ease;
+        @apply mr-1.5 opacity-80;
+      }
+      > svg {
+        transition: all 0.5s ease;
+        @apply opacity-80;
+      }
+    }
+    > a:hover {
+      > p {
+        @apply opacity-100;
+      }
+      > svg {
+        @apply opacity-100;
+      }
+    }
+    > div:hover {
+      > p {
+        @apply opacity-100;
+      }
+      > svg {
+        @apply opacity-100;
+      }
+    }
+  }
 }
 .userLogin {
-	@apply flex items-center xl2:pr-10 xl2:pt-1;
-	> a {
-		transition: all 0.5s ease;
-		@apply opacity-80 font-semibold flex justify-between text-lg;
-	}
-	> a:last-child {
-		@apply ml-3;
-	}
-	> a:hover {
-		@apply opacity-100;
-	}
+  @apply flex items-center xl2:pr-10 xl2:pt-1;
+  > a {
+    transition: all 0.5s ease;
+    @apply opacity-80 font-semibold flex justify-between text-lg;
+  }
+  > a:last-child {
+    @apply ml-3;
+  }
+  > a:hover {
+    @apply opacity-100;
+  }
 }

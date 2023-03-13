@@ -13,52 +13,48 @@ import styles from './FavoriteButton.module.scss'
 import useFavorites from './useFavorites'
 
 const FavoriteButton: FC<{ trackId: string }> = ({ trackId }) => {
-	const [isFavorite, setIsFavorite] = useState(false)
-	const { favoriteTracks, refetch } = useFavorites()
-	const updateError = t('Update favorite list')
+  const [isFavorite, setIsFavorite] = useState(false)
+  const { favoriteTracks, refetch } = useFavorites()
+  const updateError = t('Update favorite list')
 
-	useEffect(() => {
-		if (!favoriteTracks) return
+  useEffect(() => {
+    if (!favoriteTracks) return
 
-		const isHasTrack = favoriteTracks.some((f) => f._id == trackId)
-		if (isFavorite !== isHasTrack) setIsFavorite(isHasTrack)
-	}, [favoriteTracks, trackId])
+    const isHasTrack = favoriteTracks.some((f) => f._id == trackId)
+    if (isFavorite !== isHasTrack) setIsFavorite(isHasTrack)
+  }, [favoriteTracks, trackId])
 
-	const { mutateAsync } = useMutation(
-		'update favorites',
-		() => UserService.toggleFavorite(trackId),
+  const { mutateAsync } = useMutation(
+    'update favorites',
+    () => UserService.toggleFavorite(trackId),
 
-		{
-			onSuccess: () => {
-				refetch()
-			},
-			onError: (error) => {
-				toastrError(error, updateError)
-			},
-		}
-	)
+    {
+      onSuccess: () => {
+        refetch()
+      },
+      onError: (error) => {
+        toastrError(error, updateError)
+      },
+    },
+  )
 
-	const handleFavorite = () => {
-		setIsFavorite(!isFavorite)
-		mutateAsync()
-	}
+  const handleFavorite = () => {
+    setIsFavorite(!isFavorite)
+    mutateAsync()
+  }
 
-	return (
-		<button
-			className={styles.favoriteWrapper}
-			onClick={handleFavorite}
-			aria-label="Add favorite"
-		>
-			{isFavorite ? (
-				<span className={styles.favoriteActive}>
-					<MaterialIcon name="MdFavorite" />
-				</span>
-			) : (
-				<span className={styles.favorite}>
-					<MaterialIcon name="MdFavoriteBorder" />
-				</span>
-			)}
-		</button>
-	)
+  return (
+    <button className={styles.favoriteWrapper} onClick={handleFavorite} aria-label="Add favorite">
+      {isFavorite ? (
+        <span className={styles.favoriteActive}>
+          <MaterialIcon name="MdFavorite" />
+        </span>
+      ) : (
+        <span className={styles.favorite}>
+          <MaterialIcon name="MdFavoriteBorder" />
+        </span>
+      )}
+    </button>
+  )
 }
 export default FavoriteButton

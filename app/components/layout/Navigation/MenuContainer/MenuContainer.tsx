@@ -15,55 +15,47 @@ import { navMenu } from '../menu.data'
 import Playlists from './Playlists/PlaylistsMenu'
 
 const DynamicMenu = dynamic(() => import('../Menu'), {
-	ssr: false,
+  ssr: false,
 })
 
 const DynamicAuthMenu = dynamic(() => import('./AuthMenu'), {
-	ssr: false,
+  ssr: false,
 })
 
 const MenuContainer: FC = () => {
-	const [isOpen, setIsOpen] = useState(false)
-	const menuRef = useRef(null)
+  const [isOpen, setIsOpen] = useState(false)
+  const menuRef = useRef(null)
 
-	const { user } = useAuth()
-	const { createAsync } = usePlaylist()
+  const { user } = useAuth()
+  const { createAsync } = usePlaylist()
 
-	clickOutside(menuRef, () => {
-		setIsOpen(false)
-	})
+  clickOutside(menuRef, () => {
+    setIsOpen(false)
+  })
 
-	useEffect(() => {
-		if (isOpen) {
-			document.body.classList.add('hide')
-		} else {
-			document.body.classList.remove('hide')
-		}
-	}, [isOpen])
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('hide')
+    } else {
+      document.body.classList.remove('hide')
+    }
+  }, [isOpen])
 
-	return (
-		<>
-			<div
-				className={cn(styles.menu, { [styles.active]: isOpen })}
-				ref={menuRef}
-			>
-				<Logo />
-				<ul className={styles.ul}>
-					<DynamicMenu menu={navMenu} />
-					<DynamicAuthMenu handleData={createAsync} />
-				</ul>
-				{user && <Playlists />}
-			</div>
-			<div className={styles.wrapper}>
-				<Hamburger
-					size={22}
-					color="#858586"
-					toggled={isOpen}
-					toggle={setIsOpen}
-				/>
-			</div>
-			<div className={cn(styles.wrapperBg, { [styles.active]: isOpen })} />
-		</>
-	)
+  return (
+    <>
+      <div className={cn(styles.menu, { [styles.active]: isOpen })} ref={menuRef}>
+        <Logo />
+        <ul className={styles.ul}>
+          <DynamicMenu menu={navMenu} />
+          <DynamicAuthMenu handleData={createAsync} />
+        </ul>
+        {user && <Playlists />}
+      </div>
+      <div className={styles.wrapper}>
+        <Hamburger size={22} color="#858586" toggled={isOpen} toggle={setIsOpen} />
+      </div>
+      <div className={cn(styles.wrapperBg, { [styles.active]: isOpen })} />
+    </>
+  )
 }
 export default MenuContainer

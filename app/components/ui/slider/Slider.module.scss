@@ -1,53 +1,53 @@
 @mixin fade-bg-gradient($direction: 45deg) {
-	&::before {
-		@apply w-full h-full absolute top-0 left-0 z-1;
-		content: '';
+  &::before {
+    @apply w-full h-full absolute top-0 left-0 z-1;
+    content: '';
 
-		background: linear-gradient(
-			$direction,
-			#101215 3.31%,
-			rgba(#101215, 0.99) 7.71%,
-			rgba(#101215, 0.96) 12.11%,
-			rgba(#101215, 0.91) 16.51%,
-			rgba(#101215, 0.85) 20.91%,
-			rgba(#101215, 0.76) 25.31%,
-			rgba(#101215, 0.67) 29.71%,
-			rgba(#101215, 0.55) 34.11%,
-			rgba(#101215, 0.44) 38.52%,
-			rgba(#101215, 0.33) 42.92%,
-			rgba(#101215, 0.23) 47.32%,
-			rgba(#101215, 0.15) 51.72%,
-			rgba(#101215, 0.08) 56.12%,
-			rgba(#101215, 0.03) 60.52%,
-			rgba(#101215, 0.01) 64.92%,
-			rgba(#101215, 0) 69.32%
-		);
-	}
+    background: linear-gradient(
+      $direction,
+      #101215 3.31%,
+      rgba(#101215, 0.99) 7.71%,
+      rgba(#101215, 0.96) 12.11%,
+      rgba(#101215, 0.91) 16.51%,
+      rgba(#101215, 0.85) 20.91%,
+      rgba(#101215, 0.76) 25.31%,
+      rgba(#101215, 0.67) 29.71%,
+      rgba(#101215, 0.55) 34.11%,
+      rgba(#101215, 0.44) 38.52%,
+      rgba(#101215, 0.33) 42.92%,
+      rgba(#101215, 0.23) 47.32%,
+      rgba(#101215, 0.15) 51.72%,
+      rgba(#101215, 0.08) 56.12%,
+      rgba(#101215, 0.03) 60.52%,
+      rgba(#101215, 0.01) 64.92%,
+      rgba(#101215, 0) 69.32%
+    );
+  }
 }
 
 .slider {
-	@apply relative mx-auto pt-5;
+  @apply relative mx-auto pt-5;
 
-	.slide {
-		@apply relative h-96 rounded-3xl overflow-hidden shadow-xl flex items-end sm2:h-60;
-		@include fade-bg-gradient();
-		.image {
-			object-position: 40% 33%;
-			@apply object-cover pointer-events-none;
-		}
-		.content {
-			@apply relative z-2 p-8 max-w-full sm2:p-4;
-			.heading {
-				text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
-				@apply text-white uppercase text-5xl font-semibold mb-1 text-ellipsis overflow-hidden whitespace-nowrap sm2:text-2xl;
-			}
-			.subHeading {
-				text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
-				@apply text-gray-300 font-semibold  mb-4 sm2:text-sm sm3:text-white sm3:opacity-80;
-			}
-			> button {
-				@apply  sm4:text-sm sm4:px-5;
-			}
-		}
-	}
+  .slide {
+    @apply relative h-96 rounded-3xl overflow-hidden shadow-xl flex items-end sm2:h-60;
+    @include fade-bg-gradient();
+    .image {
+      object-position: 40% 33%;
+      @apply object-cover pointer-events-none;
+    }
+    .content {
+      @apply relative z-2 p-8 max-w-full sm2:p-4;
+      .heading {
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+        @apply text-white uppercase text-5xl font-semibold mb-1 text-ellipsis overflow-hidden whitespace-nowrap sm2:text-2xl;
+      }
+      .subHeading {
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+        @apply text-gray-300 font-semibold  mb-4 sm2:text-sm sm3:text-white sm3:opacity-80;
+      }
+      > button {
+        @apply sm4:text-sm sm4:px-5;
+      }
+    }
+  }
 }

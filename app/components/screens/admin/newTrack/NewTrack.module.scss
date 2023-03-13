@@ -1,24 +1,24 @@
 .form {
-	@apply flex flex-col max-w-md mx-auto items-center text-center w-full;
-	> div {
-		@apply flex items-center flex-col;
-		> h1 {
-			@apply mb-7;
-		}
-		> div {
-			@apply mr-0 mb-5;
-		}
-		> p {
-			@apply mb-1.5 opacity-80 text-lg;
-		}
-		> button {
-			@apply px-14;
-		}
-		.separator {
-			@apply text-2xl mb-5;
-		}
-		> div:nth-child(2) {
-			@apply w-[250px];
-		}
-	}
+  @apply flex flex-col max-w-md mx-auto items-center text-center w-full;
+  > div {
+    @apply flex items-center flex-col;
+    > h1 {
+      @apply mb-7;
+    }
+    > div {
+      @apply mr-0 mb-5;
+    }
+    > p {
+      @apply mb-1.5 opacity-80 text-lg;
+    }
+    > button {
+      @apply px-14;
+    }
+    .separator {
+      @apply text-2xl mb-5;
+    }
+    > div:nth-child(2) {
+      @apply w-[250px];
+    }
+  }
 }

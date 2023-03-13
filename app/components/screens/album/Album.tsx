@@ -11,29 +11,29 @@ import Meta from '@/utils/Meta'
 import { fmtMSSNamed } from '@/utils/string/fmtMSS'
 
 interface IAlbum {
-	title: string
-	poster: string
-	totalDuration: number
-	data: ITrack[]
-	author: IAuthor[]
+  title: string
+  poster: string
+  totalDuration: number
+  data: ITrack[]
+  author: IAuthor[]
 }
 
 const Album: FC<IAlbum> = ({ title, poster, totalDuration, data, author }) => {
-	return (
-		<Meta>
-			<Layout poster={poster}>
-				<Header
-					subtitle='Album'
-					title={title}
-					poster={poster}
-					description={`${data.length} ${
-						data.length > 1 ? t('Tracks') : t('Track')
-					}, ${fmtMSSNamed(totalDuration)}`}
-					author={author}
-				/>
-				<Catalog tracks={data} />
-			</Layout>
-		</Meta>
-	)
+  return (
+    <Meta>
+      <Layout poster={poster}>
+        <Header
+          subtitle="Album"
+          title={title}
+          poster={poster}
+          description={`${data.length} ${data.length > 1 ? t('Tracks') : t('Track')}, ${fmtMSSNamed(
+            totalDuration,
+          )}`}
+          author={author}
+        />
+        <Catalog tracks={data} />
+      </Layout>
+    </Meta>
+  )
 }
 export default Album

@@ -1,41 +1,40 @@
 $bar-width: 250px;
 
 .layout {
-	@apply relative;
-	> div:first-child {
-		width: $bar-width;
-		@apply fixed top-0 bottom-0 overflow-y-scroll;
-	}
-	::-webkit-scrollbar {
-		@apply w-3 h-3;
-	}
-	> .center {
-		@apply p-10 pt-6 xl2:py-5 xl2:px-2.5;
-		margin: 0 0 0px $bar-width;
-		@apply xl2:ml-0;
-		.header {
-			@apply flex justify-end;
-		}
-	}
-	.active {
-		@apply mb-20;
-	}
+  @apply relative;
+  > div:first-child {
+    width: $bar-width;
+    @apply fixed top-0 bottom-0 overflow-y-scroll;
+  }
+  ::-webkit-scrollbar {
+    @apply w-3 h-3;
+  }
+  > .center {
+    @apply p-10 pt-6 xl2:py-5 xl2:px-2.5;
+    margin: 0 0 0px $bar-width;
+    @apply xl2:ml-0;
+    .header {
+      @apply flex justify-end;
+    }
+  }
+  .active {
+    @apply mb-20;
+  }
 }
 
 .layoutActive {
-	@apply pb-16;
+  @apply pb-16;
 }
 
 .gradient {
-	transition: background 1s ease 0s;
-	@apply w-full absolute top-0 left-0 -z-1 h-80;
+  transition: background 1s ease 0s;
+  @apply w-full absolute top-0 left-0 -z-1 h-80;
 }
 
 .gradientPurple {
-	background: linear-gradient(transparent, rgb(12, 12, 14)) rgb(80, 56, 160);
+  background: linear-gradient(transparent, rgb(12, 12, 14)) rgb(80, 56, 160);
 }
 
 .gradientBlue {
-	background: linear-gradient(transparent, rgb(12, 12, 14))
-		rgba(16, 144, 184, 0.3);
+  background: linear-gradient(transparent, rgb(12, 12, 14)) rgba(16, 144, 184, 0.3);
 }

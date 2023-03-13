@@ -12,35 +12,32 @@ import AuthProvider from './AuthProvider/AuthProvider'
 import HeaderProvider from './HeadProvider/HeaderProvider'
 import LangProvider from './LangProvider/LangProvider'
 
-const DynamicPlayer = dynamic(
-	() => import('@/components/ui/player/PlayerContainer'),
-	{
-		ssr: false,
-	}
-)
+const DynamicPlayer = dynamic(() => import('@/components/ui/player/PlayerContainer'), {
+  ssr: false,
+})
 
 const queryClient = new QueryClient({
-	defaultOptions: {
-		queries: {
-			refetchOnWindowFocus: false,
-		},
-	},
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
 })
 
 const MainProvider: FC<TypeComponentAuthFields> = ({ children, Component }) => {
-	return (
-		<HeaderProvider>
-			<Provider store={store}>
-				<LangProvider>
-					<QueryClientProvider client={queryClient}>
-						<AuthProvider Component={Component}>{children}</AuthProvider>
-						<DynamicPlayer />
-						<ReduxToastr />
-					</QueryClientProvider>
-				</LangProvider>
-			</Provider>
-		</HeaderProvider>
-	)
+  return (
+    <HeaderProvider>
+      <Provider store={store}>
+        <LangProvider>
+          <QueryClientProvider client={queryClient}>
+            <AuthProvider Component={Component}>{children}</AuthProvider>
+            <DynamicPlayer />
+            <ReduxToastr />
+          </QueryClientProvider>
+        </LangProvider>
+      </Provider>
+    </HeaderProvider>
+  )
 }
 
 export default MainProvider

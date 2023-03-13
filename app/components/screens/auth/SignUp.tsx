@@ -15,54 +15,50 @@ import { IAuthInput } from './auth.interface'
 import { useAuthRedirect } from './useAuthRedirect'
 
 const SignUp = () => {
-	useAuthRedirect()
+  useAuthRedirect()
 
-	const {
-		register: registerInput,
-		handleSubmit,
-		formState,
-		setValue,
-		reset,
-	} = useForm<IAuthInput>({
-		mode: 'onSubmit',
-	})
+  const {
+    register: registerInput,
+    handleSubmit,
+    formState,
+    setValue,
+    reset,
+  } = useForm<IAuthInput>({
+    mode: 'onSubmit',
+  })
 
-	setValue('errorText', t('User already exists'))
-	setValue('errorTitle', t('Error'))
+  setValue('errorText', t('User already exists'))
+  setValue('errorTitle', t('Error'))
 
-	const { register } = useActions()
+  const { register } = useActions()
 
-	const onSubmit: SubmitHandler<IAuthInput> = (data) => {
-		register(data)
-		reset()
-	}
+  const onSubmit: SubmitHandler<IAuthInput> = (data) => {
+    register(data)
+    reset()
+  }
 
-	return (
-		<Meta title="SignUp">
-			<div className={styles.auth}>
-				<Link href="/">
-					<Logo isBig />
-				</Link>
-				<Heading title="Register and listen music for free" />
-				<form
-					className={styles.authForm}
-					autoComplete="off"
-					onSubmit={handleSubmit(onSubmit)}
-				>
-					<AuthFields
-						formState={formState}
-						register={registerInput}
-						isPasswordRequired
-						isRegister
-					/>
-					<Button text="SignUp" label="SignUp" />
-					<p>
-						{t('Already have an account?')}
-						<Link href="/login">{t('Login')}</Link>
-					</p>
-				</form>
-			</div>
-		</Meta>
-	)
+  return (
+    <Meta title="SignUp">
+      <div className={styles.auth}>
+        <Link href="/">
+          <Logo isBig />
+        </Link>
+        <Heading title="Register and listen music for free" />
+        <form className={styles.authForm} autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
+          <AuthFields
+            formState={formState}
+            register={registerInput}
+            isPasswordRequired
+            isRegister
+          />
+          <Button text="SignUp" label="SignUp" />
+          <p>
+            {t('Already have an account?')}
+            <Link href="/login">{t('Login')}</Link>
+          </p>
+        </form>
+      </div>
+    </Meta>
+  )
 }
 export default SignUp

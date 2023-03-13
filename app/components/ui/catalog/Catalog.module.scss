@@ -1,136 +1,136 @@
 .catalogWrapper {
-	@apply relative;
-	> h1 {
-		@apply mt-10;
-	}
-	.tableHeader {
-		border-bottom: 1px solid #282828;
-		@apply grid items-center px-3 py-2 mt-5 mb-2 gap-1 
+  @apply relative;
+  > h1 {
+    @apply mt-10;
+  }
+  .tableHeader {
+    border-bottom: 1px solid #282828;
+    @apply grid items-center px-3 py-2 mt-5 mb-2 gap-1 
 			grid-cols-[40px_2fr_1fr_160px_60px]
 			xl:grid-cols-[40px_2fr_2fr_60px] xl:gap-2
 			xl3:grid-cols-[40px_3fr_2fr_60px]
 			sm2:grid-cols-[30px_1fr_60px];
-		> span {
-			@apply opacity-80 xl:text-sm;
-			> svg {
-				@apply opacity-80 ml-2;
-			}
-		}
-		> span:nth-child(3) {
-			@apply sm2:hidden;
-		}
-		> span:nth-child(4) {
-			@apply xl:hidden;
-		}
-		> span:first-child {
-			@apply pl-1.5;
-		}
-	}
-	.catalog {
-		@apply relative;
-		.table {
-			> li {
-				transition: all 0.3s ease-in-out;
-				@apply grid items-center py-2 px-3 rounded-lg gap-1 
+    > span {
+      @apply opacity-80 xl:text-sm;
+      > svg {
+        @apply opacity-80 ml-2;
+      }
+    }
+    > span:nth-child(3) {
+      @apply sm2:hidden;
+    }
+    > span:nth-child(4) {
+      @apply xl:hidden;
+    }
+    > span:first-child {
+      @apply pl-1.5;
+    }
+  }
+  .catalog {
+    @apply relative;
+    .table {
+      > li {
+        transition: all 0.3s ease-in-out;
+        @apply grid items-center py-2 px-3 rounded-lg gap-1 
 					grid-cols-[40px_2fr_1fr_160px_60px]
 					xl:grid-cols-[40px_2fr_2fr_60px] xl:gap-2
 					xl3:grid-cols-[40px_3fr_2fr_60px]
 					sm2:grid-cols-[30px_1fr_60px];
-				> div {
-					@apply flex items-center relative;
-					> p {
-						@apply text-base text-gray-300 xl:text-sm;
-					}
-					> div {
-						@apply ml-3 sm2:ml-1.5;
-						> p {
-							@apply text-lg xl:text-base sm:text-sm;
-						}
-						> p:nth-child(2) {
-							@apply text-base text-gray-300 mx-auto xl:text-sm sm:text-xs;
-							> a {
-								@apply mr-1;
-							}
-							> a:last-child {
-								@apply mr-0;
-							}
-						}
-						> span {
-							transition: all 0.3s ease;
-							@apply opacity-0;
-						}
-					}
-				}
-				> div:first-child {
-					> img {
-						@apply w-4 h-4 ml-0.5;
-					}
-				}
-				> div:nth-child(2) {
-					> img {
-						@apply w-10 h-10;
-					}
-					> div {
-						> h3 {
-							@apply text-ellipsis overflow-hidden sm4:max-w-[120px] sm4:whitespace-nowrap sm4:text-xs;
-						}
-						> p {
-							@apply text-ellipsis overflow-hidden  sm4:whitespace-nowrap sm4:max-w-[180px] sm5:max-w-[140px] sm5:text-xs sm6:max-w-[100px];
-						}
-					}
-				}
-				> div:nth-child(3) {
-					@apply sm2:hidden;
-					> p {
-						@apply text-ellipsis overflow-hidden whitespace-nowrap sm3:max-w-[100px];
-					}
-				}
-				> div:nth-child(4) {
-					@apply xl:hidden;
-				}
-				> div:last-child {
-					> p {
-						@apply mx-auto;
-					}
-				}
-			}
-			.playIndicator {
-				@apply block;
-				> svg {
-					@apply fill-gray-300 cursor-pointer w-[25px] h-[25px] hidden sm2:w-5 sm2:h-5;
-				}
-			}
-			> li:hover {
-				@apply bg-gray-450;
-				> div {
-					> div {
-						> svg {
-							@apply opacity-100;
-						}
-					}
-					> button {
-						> span {
-							> svg {
-								@apply opacity-100;
-							}
-						}
-					}
-				}
-				.playWrapper {
-					> p {
-						@apply hidden;
-					}
-					> img {
-						@apply hidden;
-					}
+        > div {
+          @apply flex items-center relative;
+          > p {
+            @apply text-base text-gray-300 xl:text-sm;
+          }
+          > div {
+            @apply ml-3 sm2:ml-1.5;
+            > p {
+              @apply text-lg xl:text-base sm:text-sm;
+            }
+            > p:nth-child(2) {
+              @apply text-base text-gray-300 mx-auto xl:text-sm sm:text-xs;
+              > a {
+                @apply mr-1;
+              }
+              > a:last-child {
+                @apply mr-0;
+              }
+            }
+            > span {
+              transition: all 0.3s ease;
+              @apply opacity-0;
+            }
+          }
+        }
+        > div:first-child {
+          > img {
+            @apply w-4 h-4 ml-0.5;
+          }
+        }
+        > div:nth-child(2) {
+          > img {
+            @apply w-10 h-10;
+          }
+          > div {
+            > h3 {
+              @apply text-ellipsis overflow-hidden sm4:max-w-[120px] sm4:whitespace-nowrap sm4:text-xs;
+            }
+            > p {
+              @apply text-ellipsis overflow-hidden  sm4:whitespace-nowrap sm4:max-w-[180px] sm5:max-w-[140px] sm5:text-xs sm6:max-w-[100px];
+            }
+          }
+        }
+        > div:nth-child(3) {
+          @apply sm2:hidden;
+          > p {
+            @apply text-ellipsis overflow-hidden whitespace-nowrap sm3:max-w-[100px];
+          }
+        }
+        > div:nth-child(4) {
+          @apply xl:hidden;
+        }
+        > div:last-child {
+          > p {
+            @apply mx-auto;
+          }
+        }
+      }
+      .playIndicator {
+        @apply block;
+        > svg {
+          @apply fill-gray-300 cursor-pointer w-[25px] h-[25px] hidden sm2:w-5 sm2:h-5;
+        }
+      }
+      > li:hover {
+        @apply bg-gray-450;
+        > div {
+          > div {
+            > svg {
+              @apply opacity-100;
+            }
+          }
+          > button {
+            > span {
+              > svg {
+                @apply opacity-100;
+              }
+            }
+          }
+        }
+        .playWrapper {
+          > p {
+            @apply hidden;
+          }
+          > img {
+            @apply hidden;
+          }
 
-					.playIndicator {
-						> svg {
-							@apply block;
-						}
-					}
-				}
-			}
-		}
-	}
+          .playIndicator {
+            > svg {
+              @apply block;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,12 +1,12 @@
 .search {
-	@apply relative w-[80%] max-w-[600px] h-max mr-auto pr-2 xl2:mt-5 xl2:pr-0 sm3:w-full;
-	> input {
-		@apply py-2.5 placeholder-[#8D8D8D] pl-10 pr-5 rounded-3xl w-full outline-none bg-gray-700;
-	}
-	> input::placeholder {
-		@apply sm6:text-sm;
-	}
-	> svg {
-		@apply fill-[#8D8D8D] w-5 h-5 top-[53%] absolute left-[15px] -translate-y-1/2;
-	}
+  @apply relative w-[80%] max-w-[600px] h-max mr-auto pr-2 xl2:mt-5 xl2:pr-0 sm3:w-full;
+  > input {
+    @apply py-2.5 placeholder-[#8D8D8D] pl-10 pr-5 rounded-3xl w-full outline-none bg-gray-700;
+  }
+  > input::placeholder {
+    @apply sm6:text-sm;
+  }
+  > svg {
+    @apply fill-[#8D8D8D] w-5 h-5 top-[53%] absolute left-[15px] -translate-y-1/2;
+  }
 }

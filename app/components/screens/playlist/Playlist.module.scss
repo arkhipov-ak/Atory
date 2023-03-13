@@ -1,10 +1,10 @@
 .containerLoader {
-	@apply w-full flex flex-wrap mt-7;
+  @apply w-full flex flex-wrap mt-7;
 
-	.skeletonLoader {
-		@apply relative mb-8 h-16 w-full;
-	}
-	.skeletonLoader:first-child {
-		@apply relative mb-8 h-10 w-full;
-	}
+  .skeletonLoader {
+    @apply relative mb-8 h-16 w-full;
+  }
+  .skeletonLoader:first-child {
+    @apply relative mb-8 h-10 w-full;
+  }
 }

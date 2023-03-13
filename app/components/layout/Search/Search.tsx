@@ -5,8 +5,8 @@ import { SearchField } from '@/components/ui'
 import useSearch from './useSearch'
 
 const Search: FC = () => {
-	const { handleSearch, searchTerm } = useSearch()
+  const { handleSearch, searchTerm } = useSearch()
 
-	return <SearchField searchTerm={searchTerm} handleSearch={handleSearch} />
+  return <SearchField searchTerm={searchTerm} handleSearch={handleSearch} />
 }
 export default Search

@@ -1,29 +1,29 @@
 .auth {
-	@apply flex flex-col items-center p-10 max-w-fit mx-auto;
-	> div:first-child {
-		@apply mb-7;
-	}
-	> h1 {
-		@apply text-3xl font-semibold mb-5 opacity-80 text-center;
-	}
-	.authForm {
-		@apply w-full flex flex-col max-w-[380px];
-		> button {
-			transition: all 0.5s ease;
-			@apply mb-3  w-fit mx-auto px-10 py-2 rounded-xl;
-		}
-		> button:hover {
-			@apply opacity-100;
-		}
-		> p {
-			@apply text-sm text-center opacity-80;
-			> a {
-				transition: all 0.5s ease;
-				@apply border-b border-solid border-blueLight text-blueLight opacity-90 ml-1;
-			}
-			> a:hover {
-				@apply opacity-100;
-			}
-		}
-	}
+  @apply flex flex-col items-center p-10 max-w-fit mx-auto;
+  > div:first-child {
+    @apply mb-7;
+  }
+  > h1 {
+    @apply text-3xl font-semibold mb-5 opacity-80 text-center;
+  }
+  .authForm {
+    @apply w-full flex flex-col max-w-[380px];
+    > button {
+      transition: all 0.5s ease;
+      @apply mb-3  w-fit mx-auto px-10 py-2 rounded-xl;
+    }
+    > button:hover {
+      @apply opacity-100;
+    }
+    > p {
+      @apply text-sm text-center opacity-80;
+      > a {
+        transition: all 0.5s ease;
+        @apply border-b border-solid border-blueLight text-blueLight opacity-90 ml-1;
+      }
+      > a:hover {
+        @apply opacity-100;
+      }
+    }
+  }
 }

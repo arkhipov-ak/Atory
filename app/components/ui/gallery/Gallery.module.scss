@@ -1,52 +1,52 @@
 .wrapper {
-	@apply pt-10;
-	.heading {
-		@apply flex justify-between items-center mb-5;
-		> a {
-			@apply text-gray-300 text-lg ml-1 sm2:text-base sm3:text-sm sm5:text-xs;
-		}
-	}
-	.gallery {
-		@apply flex items-stretch flex-wrap mx-auto justify-items-stretch gap-6 sm2:gap-3 sm5:justify-around;
-		.block {
-			transition: all 0.5s ease;
-			@apply p-4 rounded-2xl relative w-[182px] bg-gray-700 h-[249px] sm2:w-[30%] sm3:h-[220px] sm4:h-[190px] sm5:w-[40%];
-			> div {
-				@apply relative mb-3 w-[150px] h-[150px] sm2:w-full sm3:h-[130px] sm4:h-[100px];
-				> img {
-					@apply object-cover;
-				}
-				.emptyAvatar {
-					box-shadow: 0px 5px 10px 2px rgba(19, 19, 19, 0.2);
-					@apply h-[150px] w-[150px] bg-gray-600 relative sm3:h-[130px] sm3:w-[130px] sm5:h-[100px] sm5:w-[100px];
-					> svg {
-						@apply absolute w-14 h-14 fill-gray-400 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2;
-					}
-				}
-				> svg {
-					@apply h-12 w-12 absolute right-1 bottom-1 hidden fill-blue;
-				}
-			}
-			> p {
-				@apply opacity-80 mb-1 text-ellipsis overflow-hidden whitespace-nowrap sm2:text-sm;
-			}
-			> span {
-				@apply text-gray-300 text-sm text-ellipsis inline-block max-w-full overflow-hidden whitespace-nowrap sm2:text-xs;
-			}
-		}
-		.block:hover {
-			@apply bg-gray-650;
-			> div {
-				> svg {
-					@apply flex animate-up;
-				}
-			}
-		}
-	}
-	.galleryHidden {
-		@apply overflow-hidden h-[249px] sm3:h-[220px] sm4:h-[190px];
-		.block {
-			@apply mb-0;
-		}
-	}
+  @apply pt-10;
+  .heading {
+    @apply flex justify-between items-center mb-5;
+    > a {
+      @apply text-gray-300 text-lg ml-1 sm2:text-base sm3:text-sm sm5:text-xs;
+    }
+  }
+  .gallery {
+    @apply flex items-stretch flex-wrap mx-auto justify-items-stretch gap-6 sm2:gap-3 sm5:justify-around;
+    .block {
+      transition: all 0.5s ease;
+      @apply p-4 rounded-2xl relative w-[182px] bg-gray-700 h-[249px] sm2:w-[30%] sm3:h-[220px] sm4:h-[190px] sm5:w-[40%];
+      > div {
+        @apply relative mb-3 w-[150px] h-[150px] sm2:w-full sm3:h-[130px] sm4:h-[100px];
+        > img {
+          @apply object-cover;
+        }
+        .emptyAvatar {
+          box-shadow: 0px 5px 10px 2px rgba(19, 19, 19, 0.2);
+          @apply h-[150px] w-[150px] bg-gray-600 relative sm3:h-[130px] sm3:w-[130px] sm5:h-[100px] sm5:w-[100px];
+          > svg {
+            @apply absolute w-14 h-14 fill-gray-400 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2;
+          }
+        }
+        > svg {
+          @apply h-12 w-12 absolute right-1 bottom-1 hidden fill-blue;
+        }
+      }
+      > p {
+        @apply opacity-80 mb-1 text-ellipsis overflow-hidden whitespace-nowrap sm2:text-sm;
+      }
+      > span {
+        @apply text-gray-300 text-sm text-ellipsis inline-block max-w-full overflow-hidden whitespace-nowrap sm2:text-xs;
+      }
+    }
+    .block:hover {
+      @apply bg-gray-650;
+      > div {
+        > svg {
+          @apply flex animate-up;
+        }
+      }
+    }
+  }
+  .galleryHidden {
+    @apply overflow-hidden h-[249px] sm3:h-[220px] sm4:h-[190px];
+    .block {
+      @apply mb-0;
+    }
+  }
 }

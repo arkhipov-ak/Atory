@@ -1,21 +1,21 @@
 .wrapper {
-	@apply ml-auto w-full flex flex-col;
-	> div {
-		@apply flex flex-col w-full mb-6;
-		> h1 {
-			@apply text-2xl mb-2;
-		}
-		> div,
-		form {
-			@apply flex items-center justify-between;
-			> p {
-				@apply opacity-70;
-			}
-		}
-		> form {
-			> div {
-				@apply max-w-[400px] w-full mb-0 sm3:max-w-[50%];
-			}
-		}
-	}
+  @apply ml-auto w-full flex flex-col;
+  > div {
+    @apply flex flex-col w-full mb-6;
+    > h1 {
+      @apply text-2xl mb-2;
+    }
+    > div,
+    form {
+      @apply flex items-center justify-between;
+      > p {
+        @apply opacity-70;
+      }
+    }
+    > form {
+      > div {
+        @apply max-w-[400px] w-full mb-0 sm3:max-w-[50%];
+      }
+    }
+  }
 }

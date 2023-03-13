@@ -9,26 +9,20 @@ import { useAuth } from '@/hooks/useAuth'
 import MenuItem from '../MenuItem'
 
 const AuthMenu: FC<{ handleData: () => void }> = ({ handleData }) => {
-	const { user } = useAuth()
+  const { user } = useAuth()
 
-	return (
-		<>
-			{user?.isAdmin && (
-				<MenuItem
-					icon="MdOutlineLock"
-					link={getAdminUrl()}
-					title="Admin panel"
-				/>
-			)}
-			{user && (
-				<li>
-					<a onClick={() => handleData()}>
-						<MaterialIcon name="MdAdd" />
-						<span>{t('Create playlist')}</span>
-					</a>
-				</li>
-			)}
-		</>
-	)
+  return (
+    <>
+      {user?.isAdmin && <MenuItem icon="MdOutlineLock" link={getAdminUrl()} title="Admin panel" />}
+      {user && (
+        <li>
+          <a onClick={() => handleData()}>
+            <MaterialIcon name="MdAdd" />
+            <span>{t('Create playlist')}</span>
+          </a>
+        </li>
+      )}
+    </>
+  )
 }
 export default AuthMenu
