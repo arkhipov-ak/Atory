@@ -37,7 +37,7 @@ export const getStaticProps: GetStaticProps = async () => {
 			link: getAuthorUrl(author.slug),
 		}))
 
-		const slides = authors.slice(0, 3)
+		const slides = authors.slice(0, 2)
 
 		const { data: album } = await AlbumService.getAll()
 
